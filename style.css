@@ -64,7 +64,6 @@ body {
     line-height: 1.6;
     min-height: 100vh;
     overflow-x: hidden;
-    /* Espaço inferior para a barra de navegação no iPhone 11 */
     padding-bottom: calc(var(--bottom-nav-height) + env(safe-area-inset-bottom, 0px));
 }
 
@@ -324,8 +323,8 @@ body {
 }
 
 .module-tree i {
-    color: #dc2626;
-    font-size: 1rem;
+    color: var(--lms-primary);
+    font-size: 1.05rem;
 }
 
 /* ==========================================================================
@@ -624,7 +623,7 @@ select:focus, textarea:focus {
 }
 
 /* ==========================================================================
-   8. SALA DE AULA (VISUALIZADOR PDF, VÍDEO E APONTAMENTOS)
+   8. SALA DE AULA (LEITOR MARKDOWN, VÍDEO E APONTAMENTOS)
    ========================================================================== */
 .resource-toolbar {
     display: flex;
@@ -679,7 +678,7 @@ select:focus, textarea:focus {
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-sm);
     overflow: hidden;
-    background: var(--bg-muted);
+    background: var(--bg-surface);
     display: flex;
     flex-direction: column;
 }
@@ -695,11 +694,124 @@ select:focus, textarea:focus {
     align-items: center;
 }
 
-#frame-pdf {
+/* Estilização Editorial do Leitor Markdown (#leitor-markdown) */
+.markdown-body {
+    padding: 1.35rem;
+    max-height: 520px;
+    overflow-y: auto;
+    background: var(--bg-surface);
+    color: var(--text-main);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4 {
+    color: var(--lms-navy);
+    margin-top: 1.4rem;
+    margin-bottom: 0.6rem;
+    line-height: 1.3;
+}
+
+.markdown-body h1:first-child,
+.markdown-body h2:first-child {
+    margin-top: 0;
+}
+
+.markdown-body h1 {
+    font-size: 1.35rem;
+    padding-bottom: 0.45rem;
+    border-bottom: 2px solid var(--border-subtle);
+}
+
+.markdown-body h2 {
+    font-size: 1.15rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.markdown-body h3 {
+    font-size: 1.02rem;
+    color: var(--lms-primary);
+}
+
+.markdown-body p {
+    margin-bottom: 0.9rem;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+    padding-left: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.markdown-body li {
+    margin-bottom: 0.35rem;
+}
+
+.markdown-body strong {
+    color: var(--lms-navy);
+    font-weight: 700;
+}
+
+.markdown-body blockquote {
+    margin: 1rem 0;
+    padding: 0.75rem 1rem;
+    background: var(--lms-primary-light);
+    border-left: 4px solid var(--lms-primary);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    color: var(--text-secondary);
+}
+
+.markdown-body code {
+    background: #f1f5f9;
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.86em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.markdown-body pre {
+    background: var(--lms-navy);
+    color: #f8fafc;
+    padding: 1rem;
+    border-radius: var(--radius-sm);
+    overflow-x: auto;
+    margin-bottom: 1rem;
+}
+
+.markdown-body pre code {
+    background: transparent;
+    color: inherit;
+    padding: 0;
+}
+
+.markdown-body table {
     width: 100%;
-    height: 420px;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.88rem;
+}
+
+.markdown-body th,
+.markdown-body td {
+    border: 1px solid var(--border-subtle);
+    padding: 0.55rem 0.75rem;
+    text-align: left;
+}
+
+.markdown-body th {
+    background: var(--bg-muted);
+    font-weight: 700;
+    color: var(--lms-navy);
+}
+
+.markdown-body hr {
     border: none;
-    background: #525659;
+    border-top: 1px solid var(--border-subtle);
+    margin: 1.5rem 0;
 }
 
 #frame-video {
@@ -736,7 +848,7 @@ select:focus, textarea:focus {
 }
 
 /* ==========================================================================
-   9. SIMULADOR DE EXAMES (20 ESCOLHAS MÚLTIPLAS E 4 DESENVOLVIMENTO)
+   9. SIMULADOR DE EXAMES (ESCOLHA SIMPLES/MÚLTIPLA E DESENVOLVIMENTO)
    ========================================================================== */
 .quiz-layout {
     display: grid;
@@ -750,7 +862,7 @@ select:focus, textarea:focus {
     gap: 1.25rem;
 }
 
-/* Cartão Individual de Questão (Gerado pelo script.js) */
+/* Cartão Individual de Questão */
 .pergunta-bloco {
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-md);
@@ -764,6 +876,8 @@ select:focus, textarea:focus {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
     margin-bottom: 0.65rem;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid var(--border-subtle);
@@ -779,6 +893,21 @@ select:focus, textarea:focus {
     border-radius: 4px;
 }
 
+.badge-tipo-questao {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.18rem 0.55rem;
+    border-radius: 999px;
+    background: #e2e8f0;
+    color: var(--text-secondary);
+}
+
+.badge-tipo-questao.multipla {
+    background: #fef3c7;
+    color: #92400e;
+    border: 1px solid #fde68a;
+}
+
 .pergunta-cotacao {
     font-size: 0.78rem;
     color: var(--text-muted);
@@ -791,7 +920,7 @@ select:focus, textarea:focus {
     margin-bottom: 0.9rem;
 }
 
-/* Opções de Escolha Múltipla */
+/* Opções de Escolha Múltipla (Radio e Checkbox) */
 .opcoes-lista {
     display: flex;
     flex-direction: column;
@@ -816,10 +945,12 @@ select:focus, textarea:focus {
     background: var(--lms-primary-light);
 }
 
-.opcao-item input[type="radio"] {
+.opcao-item input[type="radio"],
+.opcao-item input[type="checkbox"] {
     margin-top: 0.25rem;
-    transform: scale(1.15);
+    transform: scale(1.18);
     accent-color: var(--lms-primary);
+    flex-shrink: 0;
 }
 
 /* Estados de Correção Automática */
@@ -836,7 +967,7 @@ select:focus, textarea:focus {
     color: var(--status-danger);
 }
 
-/* Paleta de Navegação 1-20 do Moodle */
+/* Paleta de Navegação do Moodle */
 .quiz-sidebar h3 {
     font-size: 0.95rem;
     color: var(--lms-navy);
@@ -906,7 +1037,7 @@ select:focus, textarea:focus {
     border-left: 4px solid var(--lms-primary);
 }
 
-/* Validador de Palavras-Chave nas 4 Questões Abertas */
+/* Validador de Palavras-Chave nas Questões Abertas */
 .dica-palavras-chave {
     font-size: 0.82rem;
     color: var(--text-secondary);
@@ -1078,8 +1209,9 @@ select:focus, textarea:focus {
         min-width: 340px;
     }
 
-    #frame-pdf {
-        height: 600px;
+    .markdown-body {
+        max-height: 620px;
+        padding: 1.75rem;
     }
 
     #frame-video {
@@ -1110,14 +1242,14 @@ select:focus, textarea:focus {
         flex-shrink: 0;
     }
 
-    /* Vista Lado a Lado: PDF à esquerda, Vídeo + Notas à direita */
+    /* Vista Lado a Lado: Resumo Markdown à esquerda, Vídeo + Notas à direita */
     .media-workspace.modo-ambos {
         grid-template-columns: 1.15fr 0.85fr;
         align-items: start;
     }
 
-    #frame-pdf {
-        height: 740px;
+    .markdown-body {
+        max-height: 740px;
     }
 
     /* Exame com Grelha Lateral Fixa ao estilo Moodle */

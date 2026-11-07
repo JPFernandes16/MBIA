@@ -9,6 +9,8 @@
     <title>BIA_DC | Direito no Ciberespaço — Moodle MBIA</title>
     <!-- Biblioteca de ícones académicos leves para interface LMS -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Parser de Markdown (Marked.js) para renderizar os ficheiros AulaXX.md -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -52,14 +54,14 @@
                 </button>
                 <button class="nav-item" data-target="view-recursos">
                     <i class="ri-folder-video-line"></i>
-                    <span>Aulas (PDF &amp; Vídeo)</span>
+                    <span>Aulas (Markdown &amp; Vídeo)</span>
                 </button>
                 <button class="nav-item" data-target="view-teste-em">
                     <i class="ri-checkbox-multiple-line"></i>
-                    <span>Exame: Escolha Múltipla (20)</span>
+                    <span>Exame: Escolha Múltipla</span>
                 </button>
                 <button class="nav-item" data-target="view-teste-aberto">
-                    <i class="ri-File-edit-line"></i>
+                    <i class="ri-file-edit-line"></i>
                     <span>Exame: Desenvolvimento (4)</span>
                 </button>
                 <button class="nav-item" data-target="view-fuc">
@@ -69,26 +71,31 @@
             </nav>
 
             <div class="sidebar-modules">
-                <h4>Conteúdos Programáticos</h4>
+                <h4>Ficheiros de Aula (.md / .mp4)</h4>
                 <ul class="module-tree">
                     <li>
                         <a href="#" onclick="abrirAulaDireta(1); return false;">
-                            <i class="ri-file-pdf-2-line"></i> 1. Direito e TIC
+                            <i class="ri-markdown-line"></i> Aula 01 — Direito e TIC
                         </a>
                     </li>
                     <li>
                         <a href="#" onclick="abrirAulaDireta(2); return false;">
-                            <i class="ri-file-pdf-2-line"></i> 2. Propriedade Intelectual Digital
+                            <i class="ri-markdown-line"></i> Aula 02 — Propriedade Intelectual I
                         </a>
                     </li>
                     <li>
                         <a href="#" onclick="abrirAulaDireta(3); return false;">
-                            <i class="ri-file-pdf-2-line"></i> 3. Proteção de Dados (RGPD)
+                            <i class="ri-markdown-line"></i> Aula 03 — Propriedade Intelectual II
                         </a>
                     </li>
                     <li>
                         <a href="#" onclick="abrirAulaDireta(4); return false;">
-                            <i class="ri-file-pdf-2-line"></i> 4. Desafios Emergentes (IA e Crime)
+                            <i class="ri-markdown-line"></i> Aula 04 — Proteção de Dados (RGPD)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="abrirAulaDireta(5); return false;">
+                            <i class="ri-markdown-line"></i> Aula 05 — Contratação, IA e Crime
                         </a>
                     </li>
                 </ul>
@@ -130,23 +137,23 @@
                     <div class="kpi-card">
                         <div class="kpi-icon"><i class="ri-book-open-line"></i></div>
                         <div class="kpi-info">
-                            <span class="kpi-label">Módulos Programáticos</span>
-                            <strong class="kpi-value" id="kpi-aulas">4 Unidades</strong>
+                            <span class="kpi-label">Aulas Sincronizadas</span>
+                            <strong class="kpi-value" id="kpi-aulas">5 Aulas (.md / .mp4)</strong>
                             <span class="kpi-sub">42h Contacto | 60h Autónomo</span>
                         </div>
                     </div>
                     <div class="kpi-card">
                         <div class="kpi-icon"><i class="ri-list-check-2"></i></div>
                         <div class="kpi-info">
-                            <span class="kpi-label">Última Simulação (20 EM)</span>
+                            <span class="kpi-label">Última Simulação (EM)</span>
                             <strong class="kpi-value" id="kpi-score-em">Sem registo</strong>
-                            <span class="kpi-sub">Meta de aprovação: 50%</span>
+                            <span class="kpi-sub">Suporte a escolha única e múltipla</span>
                         </div>
                     </div>
                     <div class="kpi-card">
                         <div class="kpi-icon"><i class="ri-key-2-line"></i></div>
                         <div class="kpi-info">
-                            <span class="kpi-label">Domínio Lexical (4 Abertas)</span>
+                            <span class="kpi-label">Domínio Lexical (Abertas)</span>
                             <strong class="kpi-value" id="kpi-score-dev">0 / 4 validadas</strong>
                             <span class="kpi-sub">Validação por palavras-chave</span>
                         </div>
@@ -163,41 +170,41 @@
                             <i class="ri-play-circle-line"></i>
                             <div>
                                 <strong>Abrir Sala de Estudo</strong>
-                                <p>Consultar PDFs de resumo e vídeos das aulas lado a lado</p>
+                                <p>Ler resumos em Markdown e assistir aos vídeos das aulas lado a lado</p>
                             </div>
                         </button>
                         <button class="action-card" onclick="mudarVista('view-teste-em')">
-                            <i class="ri-Task-line"></i>
+                            <i class="ri-task-line"></i>
                             <div>
-                                <strong>Simular 20 Escolhas Múltiplas</strong>
-                                <p>Treinar questões fechadas com correção automática</p>
+                                <strong>Simular Exame de Escolha Múltipla</strong>
+                                <p>Questões de escolha simples e múltipla com correção automática</p>
                             </div>
                         </button>
                         <button class="action-card" onclick="mudarVista('view-teste-aberto')">
                             <i class="ri-edit-box-line"></i>
                             <div>
-                                <strong>Resolver 4 Questões de Desenvolvimento</strong>
+                                <strong>Resolver Questões de Desenvolvimento</strong>
                                 <p>Praticar escrita jurídica com verificação de conceitos-chave</p>
                             </div>
                         </button>
                     </div>
                 </div>
 
-                <!-- Tópicos da Disciplina (Estilo Secções do Moodle) -->
+                <!-- Lista das 5 Aulas (Mapeadas para Aula01 a Aula05) -->
                 <div class="moodle-block">
                     <div class="block-header">
-                        <h2><i class="ri-folder-open-line"></i> Estrutura de Aulas e Recursos</h2>
+                        <h2><i class="ri-folder-open-line"></i> Repositório de Aulas (Markdown &amp; Vídeo)</h2>
                     </div>
                     <div class="topics-list">
-                        <!-- Tópico 1 -->
+                        <!-- Aula 01 -->
                         <article class="topic-item">
                             <div class="topic-info">
-                                <h3>Módulo 1: O Direito e as Tecnologias de Informação e Comunicação</h3>
-                                <p>Enquadramento jurídico do fenómeno da comunicação em rede e ciberespaço.</p>
+                                <h3>Aula 01: O Direito e as Tecnologias de Informação e Comunicação</h3>
+                                <p>Ficheiros: <code>aulas/Aula01.md</code> e <code>aulas/Aula01.mp4</code></p>
                             </div>
                             <div class="topic-actions">
-                                <button class="btn-outline" onclick="abrirAulaDireta(1, 'pdf')">
-                                    <i class="ri-file-pdf-line"></i> Resumo PDF
+                                <button class="btn-outline" onclick="abrirAulaDireta(1, 'md')">
+                                    <i class="ri-markdown-line"></i> Ler Resumo (.md)
                                 </button>
                                 <button class="btn-outline" onclick="abrirAulaDireta(1, 'video')">
                                     <i class="ri-video-line"></i> Vídeo Aula
@@ -205,15 +212,15 @@
                             </div>
                         </article>
 
-                        <!-- Tópico 2 -->
+                        <!-- Aula 02 -->
                         <article class="topic-item">
                             <div class="topic-info">
-                                <h3>Módulo 2: Proteção da Propriedade Intelectual na Era Digital</h3>
-                                <p>Programas de computador, bases de dados, nomes de domínio, direitos de autor (2.1) e propriedade industrial (2.2).</p>
+                                <h3>Aula 02: Proteção da Propriedade Intelectual na Era Digital (Parte I)</h3>
+                                <p>Ficheiros: <code>aulas/Aula02.md</code> e <code>aulas/Aula02.mp4</code></p>
                             </div>
                             <div class="topic-actions">
-                                <button class="btn-outline" onclick="abrirAulaDireta(2, 'pdf')">
-                                    <i class="ri-file-pdf-line"></i> Resumo PDF
+                                <button class="btn-outline" onclick="abrirAulaDireta(2, 'md')">
+                                    <i class="ri-markdown-line"></i> Ler Resumo (.md)
                                 </button>
                                 <button class="btn-outline" onclick="abrirAulaDireta(2, 'video')">
                                     <i class="ri-video-line"></i> Vídeo Aula
@@ -221,15 +228,15 @@
                             </div>
                         </article>
 
-                        <!-- Tópico 3 -->
+                        <!-- Aula 03 -->
                         <article class="topic-item">
                             <div class="topic-info">
-                                <h3>Módulo 3: Proteção de Dados Pessoais</h3>
-                                <p>RGPD da UE (3.1), sistemas de privacidade na Internet (3.2), direito português e o papel da CNPD (3.3).</p>
+                                <h3>Aula 03: Proteção da Propriedade Intelectual na Era Digital (Parte II)</h3>
+                                <p>Ficheiros: <code>aulas/Aula03.md</code> e <code>aulas/Aula03.mp4</code></p>
                             </div>
                             <div class="topic-actions">
-                                <button class="btn-outline" onclick="abrirAulaDireta(3, 'pdf')">
-                                    <i class="ri-file-pdf-line"></i> Resumo PDF
+                                <button class="btn-outline" onclick="abrirAulaDireta(3, 'md')">
+                                    <i class="ri-markdown-line"></i> Ler Resumo (.md)
                                 </button>
                                 <button class="btn-outline" onclick="abrirAulaDireta(3, 'video')">
                                     <i class="ri-video-line"></i> Vídeo Aula
@@ -237,17 +244,33 @@
                             </div>
                         </article>
 
-                        <!-- Tópico 4 -->
+                        <!-- Aula 04 -->
                         <article class="topic-item">
                             <div class="topic-info">
-                                <h3>Módulo 4: Desafios Emergentes no Ciberespaço</h3>
-                                <p>Contratação eletrónica (4.1), Inteligência Artificial e opacidade algorítmica (4.2) e Cibercrime (4.3).</p>
+                                <h3>Aula 04: Proteção de Dados Pessoais (RGPD e CNPD)</h3>
+                                <p>Ficheiros: <code>aulas/Aula04.md</code> e <code>aulas/Aula04.mp4</code></p>
                             </div>
                             <div class="topic-actions">
-                                <button class="btn-outline" onclick="abrirAulaDireta(4, 'pdf')">
-                                    <i class="ri-file-pdf-line"></i> Resumo PDF
+                                <button class="btn-outline" onclick="abrirAulaDireta(4, 'md')">
+                                    <i class="ri-markdown-line"></i> Ler Resumo (.md)
                                 </button>
                                 <button class="btn-outline" onclick="abrirAulaDireta(4, 'video')">
+                                    <i class="ri-video-line"></i> Vídeo Aula
+                                </button>
+                            </div>
+                        </article>
+
+                        <!-- Aula 05 -->
+                        <article class="topic-item">
+                            <div class="topic-info">
+                                <h3>Aula 05: Desafios Emergentes (Contratação Eletrónica, IA e Cibercrime)</h3>
+                                <p>Ficheiros: <code>aulas/Aula05.md</code> e <code>aulas/Aula05.mp4</code></p>
+                            </div>
+                            <div class="topic-actions">
+                                <button class="btn-outline" onclick="abrirAulaDireta(5, 'md')">
+                                    <i class="ri-markdown-line"></i> Ler Resumo (.md)
+                                </button>
+                                <button class="btn-outline" onclick="abrirAulaDireta(5, 'video')">
                                     <i class="ri-video-line"></i> Vídeo Aula
                                 </button>
                             </div>
@@ -257,55 +280,58 @@
             </section>
 
             <!-- =========================================================
-                 VISTA 2: SALA DE AULA (Visualizador PDF e Vídeo por Aula)
+                 VISTA 2: SALA DE AULA (Leitor Markdown e Vídeo por Aula)
                  ========================================================= -->
             <section id="view-recursos" class="lms-view oculto">
                 <div class="moodle-block">
                     <div class="resource-toolbar">
                         <div class="toolbar-group">
-                            <label for="seletor-aula">Selecionar Unidade Programática:</label>
+                            <label for="seletor-aula">Selecionar Aula:</label>
                             <select id="seletor-aula" onchange="carregarMaterialAula()">
-                                <option value="1">Aula 1 — O Direito e as TIC</option>
-                                <option value="2">Aula 2 — Propriedade Intelectual (Software, BD, Domínios)</option>
-                                <option value="3">Aula 3 — Proteção de Dados Pessoais (RGPD e CNPD)</option>
-                                <option value="4">Aula 4 — Contratação Eletrónica, IA e Cibercrime</option>
+                                <option value="1">Aula 01 — O Direito e as TIC</option>
+                                <option value="2">Aula 02 — Propriedade Intelectual na Era Digital I</option>
+                                <option value="3">Aula 03 — Propriedade Intelectual na Era Digital II</option>
+                                <option value="4">Aula 04 — Proteção de Dados Pessoais (RGPD e CNPD)</option>
+                                <option value="5">Aula 05 — Contratação Eletrónica, IA e Cibercrime</option>
                             </select>
                         </div>
 
                         <!-- Alternador de modo de visualização para ecrãs móveis -->
                         <div class="view-mode-tabs">
-                            <button type="button" class="mode-btn ativo" onclick="alternarModoMedia('ambos')">Ambos</button>
-                            <button type="button" class="mode-btn" onclick="alternarModoMedia('pdf')">Apenas PDF</button>
-                            <button type="button" class="mode-btn" onclick="alternarModoMedia('video')">Apenas Vídeo</button>
+                            <button type="button" class="mode-btn ativo" data-modo="ambos" onclick="alternarModoMedia('ambos')">Ambos</button>
+                            <button type="button" class="mode-btn" data-modo="md" onclick="alternarModoMedia('md')">Apenas Resumo</button>
+                            <button type="button" class="mode-btn" data-modo="video" onclick="alternarModoMedia('video')">Apenas Vídeo</button>
                         </div>
                     </div>
 
                     <div id="media-workspace" class="media-workspace">
-                        <!-- Painel do Documento PDF -->
-                        <div id="painel-pdf" class="media-panel">
+                        <!-- Painel do Documento Markdown Renderizado -->
+                        <div id="painel-md" class="media-panel">
                             <div class="panel-header">
-                                <span><i class="ri-file-pdf-2-line"></i> Resumo em PDF (<span id="nome-ficheiro-pdf">aulas/aula1.pdf</span>)</span>
-                                <a id="link-abrir-pdf" href="aulas/aula1.pdf" target="_blank" class="btn-sm">
-                                    Abrir em Ecrã Inteiro <i class="ri-external-link-line"></i>
+                                <span><i class="ri-markdown-line"></i> Resumo da Aula (<span id="nome-ficheiro-md">aulas/Aula01.md</span>)</span>
+                                <a id="link-abrir-md" href="aulas/Aula01.md" target="_blank" class="btn-sm">
+                                    Ver Ficheiro Raw <i class="ri-external-link-line"></i>
                                 </a>
                             </div>
-                            <iframe id="frame-pdf" src="aulas/aula1.pdf" title="Leitor de Resumo PDF"></iframe>
+                            <article id="leitor-markdown" class="markdown-body">
+                                <p class="md-loading">A carregar apontamentos em Markdown...</p>
+                            </article>
                         </div>
 
                         <!-- Painel do Vídeo da Aula -->
                         <div id="painel-video" class="media-panel">
                             <div class="panel-header">
-                                <span><i class="ri-vidicon-line"></i> Explicação em Vídeo (<span id="nome-ficheiro-video">aulas/aula1.mp4</span>)</span>
+                                <span><i class="ri-vidicon-line"></i> Explicação em Vídeo (<span id="nome-ficheiro-video">aulas/Aula01.mp4</span>)</span>
                             </div>
                             <video id="frame-video" controls playsinline preload="metadata">
-                                <source id="source-video" src="aulas/aula1.mp4" type="video/mp4">
+                                <source id="source-video" src="aulas/Aula01.mp4" type="video/mp4">
                                 O seu navegador não suporta a reprodução nativa de vídeo MP4.
                             </video>
 
                             <!-- Bloco de Apontamentos Rápidos da Aula (Persistido no Dispositivo) -->
                             <div class="lesson-notes">
                                 <label for="notas-aula"><i class="ri-sticky-note-line"></i> Apontamentos Pessoais desta Aula:</label>
-                                <textarea id="notas-aula" placeholder="Escreva aqui notas importantes enquanto assiste ao vídeo ou lê o PDF..."></textarea>
+                                <textarea id="notas-aula" placeholder="Escreva aqui notas importantes enquanto assiste ao vídeo ou lê o resumo..."></textarea>
                                 <span id="status-notas" class="save-indicator">Guardado automaticamente no dispositivo</span>
                             </div>
                         </div>
@@ -314,26 +340,26 @@
             </section>
 
             <!-- =========================================================
-                 VISTA 3: SIMULADOR DE EXAME — 20 ESCOLHAS MÚLTIPLAS
+                 VISTA 3: SIMULADOR DE EXAME — ESCOLHA MÚLTIPLA
                  ========================================================= -->
             <section id="view-teste-em" class="lms-view oculto">
                 <div class="quiz-layout">
 
-                    <!-- Coluna Principal das 20 Perguntas -->
+                    <!-- Coluna Principal das Perguntas -->
                     <div class="quiz-main moodle-block">
                         <div class="block-header">
-                            <h2>Prova Escrita: Módulo de Escolha Múltipla (20 Questões)</h2>
-                            <p>Selecione apenas uma opção por questão. Ao submeter, o sistema calcula a nota e destaca as respostas corretas.</p>
+                            <h2>Prova Escrita: Módulo de Escolha Múltipla (<span id="titulo-total-em">0</span> Questões)</h2>
+                            <p>Questões com círculo (⚪) admitem apenas <strong>uma opção correta</strong>. Questões com quadrado (☑️) exigem a seleção de <strong>todas as opções corretas</strong>.</p>
                         </div>
 
                         <form id="form-em">
                             <div id="contentor-escolha-multipla" class="questions-stream">
-                                <!-- As 20 perguntas do testes.json são injetadas aqui pelo script.js -->
+                                <!-- As perguntas do testes.json são injetadas aqui pelo script.js -->
                             </div>
 
                             <div class="quiz-actions">
                                 <button type="submit" class="btn-primary">
-                                    <i class="ri-check-double-line"></i> Submeter e Corrigir Prova (20 Questões)
+                                    <i class="ri-check-double-line"></i> Submeter e Corrigir Prova
                                 </button>
                                 <button type="button" class="btn-secondary" onclick="reiniciarTesteEM()">
                                     <i class="ri-refresh-line"></i> Limpar Tentativa
@@ -347,9 +373,9 @@
                     <!-- Grelha Lateral de Navegação do Teste (Estilo Moodle Quiz Navigation) -->
                     <aside class="quiz-sidebar moodle-block">
                         <h3>Navegação do Teste</h3>
-                        <p class="quiz-progress-text">Respondidas: <strong id="contador-respondidas-em">0 / 20</strong></p>
+                        <p class="quiz-progress-text">Respondidas: <strong id="contador-respondidas-em">0 / 0</strong></p>
                         <div id="grelha-navegacao-em" class="question-palette">
-                            <!-- Botões numerados de 1 a 20 gerados via JS -->
+                            <!-- Botões numerados gerados via JS -->
                         </div>
                     </aside>
 
@@ -362,16 +388,16 @@
             <section id="view-teste-aberto" class="lms-view oculto">
                 <div class="moodle-block">
                     <div class="block-header">
-                        <h2>Prova Escrita: Questões de Desenvolvimento (4 Questões)</h2>
+                        <h2>Prova Escrita: Questões de Desenvolvimento</h2>
                         <p>Elabore a sua resposta jurídica para cada caso. O motor de avaliação analisa o seu texto e valida a inclusão dos conceitos e termos técnicos obrigatórios definidos no ficheiro JSON.</p>
                     </div>
 
                     <form id="form-dev">
                         <div id="contentor-desenvolvimento" class="questions-stream">
-                            <!-- As 4 questões abertas e validadores de palavras-chave são injetados via JS -->
+                            <!-- As questões abertas e validadores de palavras-chave são injetados via JS -->
                         </div>
 
-                        <div class="quiz-actions">
+                        <div class="quiz-actions" id="acoes-form-dev">
                             <button type="submit" class="btn-primary">
                                 <i class="ri-search-eye-line"></i> Validar Termos Jurídicos e Palavras-Chave
                             </button>
@@ -442,11 +468,11 @@
         </button>
         <button class="mob-nav-btn" data-target="view-teste-em">
             <i class="ri-checkbox-multiple-line"></i>
-            <span>20 EM</span>
+            <span>Exame EM</span>
         </button>
         <button class="mob-nav-btn" data-target="view-teste-aberto">
             <i class="ri-file-edit-line"></i>
-            <span>4 Abertas</span>
+            <span>Abertas</span>
         </button>
         <button class="mob-nav-btn" data-target="view-fuc">
             <i class="ri-book-read-line"></i>

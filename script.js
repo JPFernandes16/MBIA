@@ -1,6 +1,6 @@
 /**
  * PLATAFORMA LMS — DIREITO NO CIBERESPAÇO (MBIA)
- * Motor Lógico SPA, Gestão Multimédia, Persistência Local e Avaliação Automática
+ * Motor Lógico SPA, Renderizador Markdown (Aula01..05), Multi-Select Quiz e Persistência Local
  */
 
 document.addEventListener('DOMContentLoaded', inicializarAplicacao);
@@ -19,9 +19,9 @@ const estadoApp = {
 // Mapa de Títulos para os Breadcrumbs Institucionais
 const mapaBreadcrumbs = {
     'view-dashboard': 'Painel da Disciplina',
-    'view-recursos': 'Sala de Estudo (PDF & Vídeo)',
-    'view-teste-em': 'Exame: Escolha Múltipla (20 Questões)',
-    'view-teste-aberto': 'Exame: Desenvolvimento (4 Questões)',
+    'view-recursos': 'Sala de Estudo (Markdown & Vídeo)',
+    'view-teste-em': 'Exame: Escolha Múltipla',
+    'view-teste-aberto': 'Exame: Desenvolvimento',
     'view-fuc': 'Ficha da UC & Bibliografia'
 };
 
@@ -43,8 +43,8 @@ async function inicializarAplicacao() {
         workspace.classList.add('modo-ambos');
     }
 
-    // Carregar apontamentos da Aula 1 e métricas guardadas no dispositivo
-    carregarApontamentosAula(estadoApp.aulaAtual);
+    // Carregar material inicial (Aula01.md e Aula01.mp4) e métricas guardadas
+    await carregarMaterialAula();
     atualizarKPIsDashboard();
 
     // Carregar base de dados de perguntas (testes.json)
@@ -131,8 +131,13 @@ function fecharMenuMobile() {
 }
 
 /* ==========================================================================
-   2. GESTÃO DA SALA DE AULA (PDF, VÍDEO E APONTAMENTOS POR AULA)
+   2. GESTÃO DA SALA DE AULA (MARKDOWN Aula01..05, VÍDEO E APONTAMENTOS)
    ========================================================================== */
+function formatarCodigoAula(numero) {
+    // Converte 1 -> "01", 2 -> "02" para coincidir exatamente com "Aula01.md"
+    return String(numero).padStart(2, '0');
+}
+
 function abrirAulaDireta(numeroAula, modoPreferencial = null) {
     const seletor = document.getElementById('seletor-aula');
     if (seletor) {
@@ -142,36 +147,33 @@ function abrirAulaDireta(numeroAula, modoPreferencial = null) {
     mudarVista('view-recursos');
     carregarMaterialAula();
 
-    // Em ecrãs móveis ou quando clicado num botão específico do Dashboard, focar no meio pretendido
     if (modoPreferencial) {
         alternarModoMedia(modoPreferencial);
     } else if (window.innerWidth < 768) {
-        alternarModoMedia('pdf');
+        alternarModoMedia('md');
     } else {
         alternarModoMedia('ambos');
     }
 }
 
-function carregarMaterialAula() {
+async function carregarMaterialAula() {
     const seletor = document.getElementById('seletor-aula');
     if (!seletor) return;
 
     const numAula = seletor.value;
     estadoApp.aulaAtual = numAula;
 
-    const caminhoPDF = `aulas/aula${numAula}.pdf`;
-    const caminhoVideo = `aulas/aula${numAula}.mp4`;
+    const codigo = formatarCodigoAula(numAula);
+    const caminhoMD = `aulas/Aula${codigo}.md`;
+    const caminhoVideo = `aulas/Aula${codigo}.mp4`;
 
-    // Atualizar componente PDF
-    const framePDF = document.getElementById('frame-pdf');
-    const labelPDF = document.getElementById('nome-ficheiro-pdf');
-    const linkPDF = document.getElementById('link-abrir-pdf');
+    // 1. Atualizar cabeçalhos e links do Markdown
+    const labelMD = document.getElementById('nome-ficheiro-md');
+    const linkMD = document.getElementById('link-abrir-md');
+    if (labelMD) labelMD.textContent = caminhoMD;
+    if (linkMD) linkMD.href = caminhoMD;
 
-    if (framePDF) framePDF.src = caminhoPDF;
-    if (labelPDF) labelPDF.textContent = caminhoPDF;
-    if (linkPDF) linkPDF.href = caminhoPDF;
-
-    // Atualizar componente Vídeo
+    // 2. Atualizar componente Vídeo
     const frameVideo = document.getElementById('frame-video');
     const sourceVideo = document.getElementById('source-video');
     const labelVideo = document.getElementById('nome-ficheiro-video');
@@ -180,41 +182,74 @@ function carregarMaterialAula() {
     if (labelVideo) labelVideo.textContent = caminhoVideo;
     if (frameVideo) frameVideo.load();
 
-    // Carregar os apontamentos específicos desta aula guardados localmente
+    // 3. Carregar apontamentos pessoais guardados desta aula
     carregarApontamentosAula(numAula);
+
+    // 4. Descarregar e converter o ficheiro Markdown (.md) em HTML
+    await renderizarFicheiroMarkdown(caminhoMD);
+}
+
+async function renderizarFicheiroMarkdown(caminhoMD) {
+    const contentorMD = document.getElementById('leitor-markdown');
+    if (!contentorMD) return;
+
+    contentorMD.innerHTML = `<p style="color: var(--text-muted);">A carregar <code>${caminhoMD}</code>...</p>`;
+
+    try {
+        const resposta = await fetch(caminhoMD, { cache: 'no-store' });
+        if (!resposta.ok) {
+            throw new Error(`HTTP ${resposta.status}`);
+        }
+        const textoMarkdown = await resposta.text();
+
+        // Utilizar a biblioteca Marked.js se disponível, ou fallback seguro
+        if (typeof marked !== 'undefined') {
+            contentorMD.innerHTML = marked.parse(textoMarkdown);
+        } else {
+            contentorMD.innerHTML = `<pre>${textoMarkdown}</pre>`;
+        }
+        contentorMD.scrollTop = 0;
+    } catch (erro) {
+        console.error('Erro ao ler ficheiro Markdown:', erro);
+        contentorMD.innerHTML = `
+            <div style="padding: 1rem; background: var(--status-warning-bg); border-left: 4px solid var(--status-warning); border-radius: 4px;">
+                <strong>Não foi possível carregar <code>${caminhoMD}</code>.</strong>
+                <p style="margin-top: 0.4rem; font-size: 0.88rem;">
+                    Verifique se o ficheiro existe na pasta <code>aulas/</code> com o nome exato <strong>${caminhoMD.split('/').pop()}</strong> e se está a abrir a aplicação através do <em>Live Server</em> ou do <em>GitHub Pages</em>.
+                </p>
+            </div>
+        `;
+    }
 }
 
 function alternarModoMedia(modo) {
-    estadoApp.modoMedia = modo;
+    // Compatibilidade caso algum botão antigo invoque 'pdf'
+    const modoNormalizado = modo === 'pdf' ? 'md' : modo;
+    estadoApp.modoMedia = modoNormalizado;
 
     const workspace = document.getElementById('media-workspace');
-    const painelPDF = document.getElementById('painel-pdf');
+    const painelMD = document.getElementById('painel-md');
     const painelVideo = document.getElementById('painel-video');
     const botoesModo = document.querySelectorAll('.mode-btn');
 
-    // Atualizar estado visual dos botões de alternância
     botoesModo.forEach(btn => {
-        const texto = btn.textContent.toLowerCase();
-        const corresponde =
-            (modo === 'ambos' && texto.includes('ambos')) ||
-            (modo === 'pdf' && texto.includes('pdf')) ||
-            (modo === 'video' && texto.includes('vídeo'));
-        btn.classList.toggle('ativo', corresponde);
+        const btnModo = btn.getAttribute('data-modo');
+        btn.classList.toggle('ativo', btnModo === modoNormalizado);
     });
 
-    if (!workspace || !painelPDF || !painelVideo) return;
+    if (!workspace || !painelMD || !painelVideo) return;
 
-    if (modo === 'ambos') {
+    if (modoNormalizado === 'ambos') {
         workspace.classList.add('modo-ambos');
-        painelPDF.classList.remove('oculto');
+        painelMD.classList.remove('oculto');
         painelVideo.classList.remove('oculto');
-    } else if (modo === 'pdf') {
+    } else if (modoNormalizado === 'md') {
         workspace.classList.remove('modo-ambos');
-        painelPDF.classList.remove('oculto');
+        painelMD.classList.remove('oculto');
         painelVideo.classList.add('oculto');
-    } else if (modo === 'video') {
+    } else if (modoNormalizado === 'video') {
         workspace.classList.remove('modo-ambos');
-        painelPDF.classList.add('oculto');
+        painelMD.classList.add('oculto');
         painelVideo.classList.remove('oculto');
     }
 }
@@ -244,7 +279,7 @@ function carregarApontamentosAula(numAula) {
     campoNotas.value = localStorage.getItem(chave) || '';
 
     if (indicador) {
-        indicador.textContent = `Apontamentos da Aula ${numAula} sincronizados localmente`;
+        indicador.textContent = `Apontamentos da Aula 0${numAula} sincronizados localmente`;
     }
 }
 
@@ -275,7 +310,7 @@ function apresentarAvisoCarregamento() {
         <div class="pergunta-bloco">
             <p class="pergunta-enunciado">Não foi possível carregar o ficheiro <code>testes.json</code>.</p>
             <p style="font-size: 0.88rem; color: var(--text-secondary);">
-                Certifique-se de que o ficheiro <strong>testes.json</strong> tem uma estrutura JSON válida e de que está a abrir o projeto através do GitHub Pages ou da extensão <em>Live Server</em> do VS Code (os navegadores bloqueiam pedidos <code>fetch</code> quando abertos diretamente com duplo clique via protocolo <code>file://</code>).
+                Certifique-se de que o ficheiro <strong>testes.json</strong> tem uma estrutura JSON válida e de que está a abrir o projeto através do GitHub Pages ou da extensão <em>Live Server</em> do VS Code.
             </p>
         </div>
     `;
@@ -284,30 +319,41 @@ function apresentarAvisoCarregamento() {
 }
 
 /* ==========================================================================
-   4. MÓDULO DE EXAME: 20 QUESTÕES DE ESCOLHA MÚLTIPLA
+   4. MÓDULO DE EXAME: ESCOLHA MÚLTIPLA (SUPORTE HÍBRIDO RADIO + CHECKBOX)
    ========================================================================== */
+function obterArrayRespostasCorretas(respostaCorreta) {
+    return Array.isArray(respostaCorreta) ? respostaCorreta : [respostaCorreta];
+}
+
 function renderizarEscolhaMultipla(listaQuestoes) {
     const containerEM = document.getElementById('contentor-escolha-multipla');
     const grelhaNav = document.getElementById('grelha-navegacao-em');
+    const spanTotal = document.getElementById('titulo-total-em');
     if (!containerEM || !grelhaNav) return;
 
     containerEM.innerHTML = '';
     grelhaNav.innerHTML = '';
 
     const total = listaQuestoes.length;
-    const cotacaoUnitaria = total > 0 ? (20 / total).toFixed(1) : '1.0';
+    if (spanTotal) spanTotal.textContent = total;
+    const cotacaoUnitaria = total > 0 ? (20 / total).toFixed(2) : '1.00';
 
     listaQuestoes.forEach((questao, idx) => {
         const numero = idx + 1;
         const idBloco = `questao-em-${questao.id}`;
+        const ehMultipla = Array.isArray(questao.resposta_correta);
+        const tipoInput = ehMultipla ? 'checkbox' : 'radio';
+        const textoBadge = ehMultipla
+            ? `Escolha Múltipla (${questao.resposta_correta.length} corretas)`
+            : 'Escolha Única (1 correta)';
 
-        // 1. Construir opções de resposta
+        // 1. Construir opções de resposta (Radio para resposta única, Checkbox para várias)
         let opcoesHTML = '';
         questao.opcoes.forEach((textoOpcao, opcaoIdx) => {
             const letra = String.fromCharCode(65 + opcaoIdx); // A, B, C, D...
             opcoesHTML += `
                 <label class="opcao-item" id="label-em-${questao.id}-${opcaoIdx}">
-                    <input type="radio" name="em_${questao.id}" value="${opcaoIdx}" data-qid="${questao.id}">
+                    <input type="${tipoInput}" name="em_${questao.id}" value="${opcaoIdx}" data-qid="${questao.id}">
                     <span><strong>${letra})</strong> ${textoOpcao}</span>
                 </label>
             `;
@@ -320,6 +366,7 @@ function renderizarEscolhaMultipla(listaQuestoes) {
         artigo.innerHTML = `
             <div class="pergunta-cabecalho">
                 <span class="pergunta-numero">Questão ${numero}</span>
+                <span class="badge-tipo-questao ${ehMultipla ? 'multipla' : ''}">${textoBadge}</span>
                 <span class="pergunta-cotacao">Cotação: ${cotacaoUnitaria} val.</span>
             </div>
             <p class="pergunta-enunciado">${questao.pergunta}</p>
@@ -330,7 +377,7 @@ function renderizarEscolhaMultipla(listaQuestoes) {
         `;
         containerEM.appendChild(artigo);
 
-        // 3. Criar botão correspondente na Paleta Lateral do Moodle (1 a 20)
+        // 3. Criar botão correspondente na Paleta Lateral do Moodle
         const btnPaleta = document.createElement('button');
         btnPaleta.type = 'button';
         btnPaleta.className = 'palette-btn';
@@ -342,13 +389,14 @@ function renderizarEscolhaMultipla(listaQuestoes) {
         grelhaNav.appendChild(btnPaleta);
     });
 
-    // Monitorizar seleção de respostas em tempo real para atualizar a paleta lateral
-    containerEM.querySelectorAll('input[type="radio"]').forEach(radio => {
-        radio.addEventListener('change', (e) => {
+    // Monitorizar seleção em tempo real (funciona para radio e checkbox)
+    containerEM.querySelectorAll('input[type="radio"], input[type="checkbox"]').forEach(input => {
+        input.addEventListener('change', (e) => {
             const qid = e.target.getAttribute('data-qid');
+            const selecionados = document.querySelectorAll(`input[name="em_${qid}"]:checked`);
             const btnPaleta = document.getElementById(`paleta-btn-${qid}`);
             if (btnPaleta) {
-                btnPaleta.classList.add('respondida');
+                btnPaleta.classList.toggle('respondida', selecionados.length > 0);
             }
             atualizarProgressoEM();
         });
@@ -363,8 +411,8 @@ function atualizarProgressoEM() {
     let respondidas = 0;
 
     lista.forEach(q => {
-        const selecionada = document.querySelector(`input[name="em_${q.id}"]:checked`);
-        if (selecionada) respondidas++;
+        const selecionadas = document.querySelectorAll(`input[name="em_${q.id}"]:checked`);
+        if (selecionadas.length > 0) respondidas++;
     });
 
     const contador = document.getElementById('contador-respondidas-em');
@@ -382,8 +430,10 @@ function corrigirEscolhaMultipla(evento) {
     let certas = 0;
 
     lista.forEach(q => {
-        const inputSelecionado = document.querySelector(`input[name="em_${q.id}"]:checked`);
-        const valorSelecionado = inputSelecionado ? parseInt(inputSelecionado.value, 10) : null;
+        const inputsSelecionados = Array.from(document.querySelectorAll(`input[name="em_${q.id}"]:checked`));
+        const valoresSelecionados = inputsSelecionados.map(inp => parseInt(inp.value, 10)).sort((a, b) => a - b);
+        const valoresCorretos = obterArrayRespostasCorretas(q.resposta_correta).slice().sort((a, b) => a - b);
+
         const btnPaleta = document.getElementById(`paleta-btn-${q.id}`);
 
         // Limpar classes de correção anteriores
@@ -393,23 +443,33 @@ function corrigirEscolhaMultipla(evento) {
         });
         if (btnPaleta) btnPaleta.classList.remove('correta', 'incorreta');
 
-        // Destacar sempre a opção correta a verde
-        const labelCorreta = document.getElementById(`label-em-${q.id}-${q.resposta_correta}`);
-        if (labelCorreta) labelCorreta.classList.add('correta');
+        // Destacar todas as opções corretas a verde
+        valoresCorretos.forEach(idxCorreto => {
+            const labelCorreta = document.getElementById(`label-em-${q.id}-${idxCorreto}`);
+            if (labelCorreta) labelCorreta.classList.add('correta');
+        });
 
-        // Verificar se o estudante acertou ou falhou
-        if (valorSelecionado === q.resposta_correta) {
+        // Destacar a vermelho quaisquer opções incorretas que o estudante tenha selecionado
+        valoresSelecionados.forEach(idxSel => {
+            if (!valoresCorretos.includes(idxSel)) {
+                const labelErrada = document.getElementById(`label-em-${q.id}-${idxSel}`);
+                if (labelErrada) labelErrada.classList.add('incorreta');
+            }
+        });
+
+        // A questão é considerada certa se o conjunto selecionado coincidir exatamente com o conjunto correto
+        const acertouTotalmente =
+            valoresSelecionados.length === valoresCorretos.length &&
+            valoresSelecionados.every((val, index) => val === valoresCorretos[index]);
+
+        if (acertouTotalmente) {
             certas++;
             if (btnPaleta) btnPaleta.classList.add('correta');
         } else {
-            if (valorSelecionado !== null) {
-                const labelErrada = document.getElementById(`label-em-${q.id}-${valorSelecionado}`);
-                if (labelErrada) labelErrada.classList.add('incorreta');
-            }
             if (btnPaleta) btnPaleta.classList.add('incorreta');
         }
 
-        // Mostrar fundamentação jurídica, caso exista no JSON (campo opcional "justificacao")
+        // Mostrar fundamentação jurídica
         const divExplicacao = document.getElementById(`explicacao-em-${q.id}`);
         if (divExplicacao && q.justificacao) {
             divExplicacao.classList.remove('oculto');
@@ -421,17 +481,15 @@ function corrigirEscolhaMultipla(evento) {
     const percentagem = Math.round((certas / total) * 100);
     const notaEscala20 = ((certas / total) * 20).toFixed(1);
 
-    // Guardar estatística no dispositivo e atualizar Dashboard
     localStorage.setItem(`${STORAGE_PREFIX}ultimo_score_em`, `${certas}/${total} (${notaEscala20} val.)`);
     atualizarKPIsDashboard();
 
-    // Apresentar sumário final da prova
     const painelResultados = document.getElementById('resultados-em');
     if (painelResultados) {
         painelResultados.classList.remove('oculto');
         painelResultados.innerHTML = `
             <h3>Resultado da Simulação: ${notaEscala20} / 20 valores (${percentagem}%)</h3>
-            <p>Acertou <strong>${certas}</strong> em <strong>${total}</strong> questões de escolha múltipla. Verifique no enunciado acima e na grelha lateral as respostas assinaladas a verde (corretas) e a vermelho (incorretas).</p>
+            <p>Acertou integralmente em <strong>${certas}</strong> de <strong>${total}</strong> questões. Reveja acima as opções corretas (a verde), eventuais seleções incorretas (a vermelho) e a respetiva fundamentação jurídica.</p>
         `;
         painelResultados.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
@@ -464,30 +522,48 @@ function reiniciarTesteEM() {
 }
 
 /* ==========================================================================
-   5. MÓDULO DE EXAME: 4 QUESTÕES DE DESENVOLVIMENTO (VALIDAÇÃO LEXICAL)
+   5. MÓDULO DE EXAME: QUESTÕES DE DESENVOLVIMENTO (VALIDAÇÃO LEXICAL)
    ========================================================================== */
 function renderizarDesenvolvimento(listaQuestoes) {
     const containerDev = document.getElementById('contentor-desenvolvimento');
+    const acoesDev = document.getElementById('acoes-form-dev');
     if (!containerDev) return;
 
     containerDev.innerHTML = '';
+
+    // Caso o array "desenvolvimento" esteja vazio no testes.json ([]), apresentar aviso limpo
+    if (listaQuestoes.length === 0) {
+        containerDev.innerHTML = `
+            <div class="pergunta-bloco">
+                <p class="pergunta-enunciado">Ainda não existem questões de desenvolvimento configuradas no <code>testes.json</code>.</p>
+                <p style="font-size: 0.88rem; color: var(--text-secondary);">
+                    Quando pretender treinar a escrita jurídica, adicione as 4 questões ao array <code>"desenvolvimento"</code> com os respetivos arrays <code>"palavras_chave"</code>.
+                </p>
+            </div>
+        `;
+        if (acoesDev) acoesDev.classList.add('oculto');
+        return;
+    }
+
+    if (acoesDev) acoesDev.classList.remove('oculto');
 
     listaQuestoes.forEach((questao, idx) => {
         const numero = idx + 1;
         const chaveRascunho = `${STORAGE_PREFIX}rascunho_dev_${questao.id}`;
         const textoGuardado = localStorage.getItem(chaveRascunho) || '';
-        const listaPalavras = (questao.palavras_chave || []).join(' • ');
+        const palavras = questao.palavras_chave || [];
+        const listaPalavras = palavras.join(' • ');
 
         const artigo = document.createElement('article');
         artigo.className = 'pergunta-bloco';
         artigo.innerHTML = `
             <div class="pergunta-cabecalho">
                 <span class="pergunta-numero">Questão de Desenvolvimento ${numero}</span>
-                <span class="pergunta-cotacao"> Validação por Conceitos-Chave</span>
+                <span class="pergunta-cotacao">Validação por Conceitos-Chave</span>
             </div>
             <p class="pergunta-enunciado">${questao.pergunta}</p>
             <div class="dica-palavras-chave oculto" id="dica-dev-${questao.id}">
-                <strong>Termos jurídicos esperados (${questao.palavras_chave.length}):</strong> ${listaPalavras}
+                <strong>Termos jurídicos esperados (${palavras.length}):</strong> ${listaPalavras}
             </div>
             <textarea
                 id="dev_${questao.id}"
@@ -500,7 +576,6 @@ function renderizarDesenvolvimento(listaQuestoes) {
         containerDev.appendChild(artigo);
     });
 
-    // Gravar rascunho em tempo real para proteger o texto em dispositivos móveis
     containerDev.querySelectorAll('.textarea-desenvolvimento').forEach(textarea => {
         textarea.addEventListener('input', (e) => {
             const qid = e.target.getAttribute('data-qid');
@@ -509,10 +584,6 @@ function renderizarDesenvolvimento(listaQuestoes) {
     });
 }
 
-/**
- * Normaliza texto removendo acentos e convertendo para minúsculas,
- * permitindo validar conceitos jurídicos mesmo que digitados rapidamente no telemóvel.
- */
 function normalizarTextoLexical(texto) {
     return texto
         .normalize('NFD')
@@ -536,8 +607,9 @@ function validarQuestoesDesenvolvimento(evento) {
         const respostaNormalizada = normalizarTextoLexical(campoTexto.value);
         const encontradas = [];
         const emFalta = [];
+        const palavrasChave = q.palavras_chave || [];
 
-        (q.palavras_chave || []).forEach(termoOriginal => {
+        palavrasChave.forEach(termoOriginal => {
             const termoNormalizado = normalizarTextoLexical(termoOriginal);
             if (respostaNormalizada.includes(termoNormalizado)) {
                 encontradas.push(termoOriginal);
@@ -546,7 +618,6 @@ function validarQuestoesDesenvolvimento(evento) {
             }
         });
 
-        // Gerar etiquetas visuais (Badges Verdes e Vermelhas)
         const badgesHTML = [
             ...encontradas.map(t => `<span class="kw-badge encontrada">✓ ${t}</span>`),
             ...emFalta.map(t => `<span class="kw-badge falta">✗ ${t}</span>`)
@@ -554,24 +625,23 @@ function validarQuestoesDesenvolvimento(evento) {
 
         divFeedback.classList.remove('oculto');
 
-        if (emFalta.length === 0 && q.palavras_chave.length > 0) {
+        if (emFalta.length === 0 && palavrasChave.length > 0) {
             questoesDominadas++;
             divFeedback.className = 'feedback-palavra-chave';
             divFeedback.innerHTML = `
-                <strong>Excelente rigor conceptual (${encontradas.length}/${q.palavras_chave.length} termos integrados).</strong>
+                <strong>Excelente rigor conceptual (${encontradas.length}/${palavrasChave.length} termos integrados).</strong>
                 <div class="kw-badges-container">${badgesHTML}</div>
             `;
         } else {
             divFeedback.className = 'feedback-palavra-chave falha';
             divFeedback.innerHTML = `
-                <strong>Cobertura parcial: incluiu ${encontradas.length} de ${q.palavras_chave.length} conceitos-chave.</strong>
+                <strong>Cobertura parcial: incluiu ${encontradas.length} de ${palavrasChave.length} conceitos-chave.</strong>
                 <p style="margin-top: 0.25rem;">Reveja a sua resposta para incorporar os termos a vermelho:</p>
                 <div class="kw-badges-container">${badgesHTML}</div>
             `;
         }
     });
 
-    // Atualizar KPI no localStorage e no Dashboard
     localStorage.setItem(`${STORAGE_PREFIX}ultimo_score_dev`, `${questoesDominadas} / ${lista.length} validadas`);
     atualizarKPIsDashboard();
 
