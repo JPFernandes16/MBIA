@@ -1,0 +1,302 @@
+{
+  "escolha_multipla": [
+    {
+      "id": 1,
+      "pergunta": "No enquadramento do Direito e das Tecnologias de Informação e Comunicação (Módulo 1), qual o princípio que orienta a regulação jurídica para que as normas não fiquem obsoletas perante a evolução de um meio técnico específico?",
+      "opcoes": [
+        "Princípio da territorialidade estrita dos servidores.",
+        "Princípio da neutralidade tecnológica.",
+        "Princípio da tipicidade algorítmica fechada.",
+        "Princípio da soberania digital exclusiva."
+      ],
+      "resposta_correta": 1,
+      "justificacao": "A neutralidade tecnológica garante que a norma jurídica regula os efeitos e as relações jurídicas independentemente da tecnologia subjacente, evitando a obsolescência legislativa."
+    },
+    {
+      "id": 2,
+      "pergunta": "Qual das seguintes características distingue a regulação jurídica do ciberespaço face ao direito clássico?",
+      "opcoes": [
+        "A ausência total de aplicação de normas de direito civil e penal.",
+        "A ubiquidade e a transnacionalidade das relações jurídicas em rede, que desafiam a jurisdição territorial tradicional.",
+        "A substituição integral dos tribunais estaduais por entidades de gestão de domínios.",
+        "A aplicação exclusiva do direito norte-americano a qualquer transação online."
+      ],
+      "resposta_correta": 1,
+      "justificacao": "A comunicação em rede caracteriza-se pela desmaterialização e transnacionalidade, exigindo critérios de conexão específicos para determinar a lei aplicável e o foro competente."
+    },
+    {
+      "id": 3,
+      "pergunta": "No âmbito da governação da Internet e dos nomes de domínio, qual o critério geral que preside ao registo de domínios sob o sufixo '.pt'?",
+      "opcoes": [
+        "Exclusividade para empresas com capital social superior a 50.000 euros.",
+        "Regra da prioridade temporal ('first come, first served'), sem prejuízo da proteção de marcas e direitos prévios.",
+        "Aprovação prévia obrigatória pela Comissão Nacional de Proteção de Dados.",
+        "Concurso público anual organizado pelo Instituto Nacional da Propriedade Industrial."
+      ],
+      "resposta_correta": 1,
+      "justificacao": "O registo de nomes de domínio rege-se pelo princípio da prioridade temporal, ressalvando os mecanismos de resolução de litígios e a proibição de registo abusivo (cybersquatting) que viole sinais distintivos de terceiros."
+    },
+    {
+      "id": 4,
+      "pergunta": "No ordenamento jurídico português e europeu (Módulo 2), qual o regime principal de proteção jurídica conferido aos programas de computador (software)?",
+      "opcoes": [
+        "Proteção equiparada às obras literárias no âmbito do Direito de Autor (DL n.º 252/94).",
+        "Proteção obrigatória como modelo de utilidade industrial.",
+        "Proteção exclusiva através do registo de segredo comercial na CNPD.",
+        "Ausência de proteção jurídica para o código-fonte, protegendo-se apenas o logótipo."
+      ],
+      "resposta_correta": 0,
+      "justificacao": "Os programas de computador dotados de carácter criativo gozam de proteção análoga à conferida às obras literárias pelo Direito de Autor, protegendo a expressão (código-fonte e código-objeto), mas não as ideias ou algoritmos matemáticos em abstrato."
+    },
+    {
+      "id": 5,
+      "pergunta": "No que respeita à proteção jurídica dos programas de computador, o que fica expressamente excluído da tutela do Direito de Autor?",
+      "opcoes": [
+        "O código-fonte escrito numa linguagem de programação de alto nível.",
+        "O código-objeto resultante da compilação.",
+        "As ideias, os princípios, a lógica e os algoritmos subjacentes aos elementos do programa.",
+        "O material de conceção preliminar que conduza ao desenvolvimento do programa."
+      ],
+      "resposta_correta": 2,
+      "justificacao": "O Direito de Autor tutela a forma de expressão criativa e nunca as ideias, princípios, interfaces conceptuais ou algoritmos na base de qualquer elemento de um programa."
+    },
+    {
+      "id": 6,
+      "pergunta": "Como se estrutura a dupla tutela jurídica das bases de dados na União Europeia e em Portugal (Decreto-Lei n.º 122/2000)?",
+      "opcoes": [
+        "Apenas através do registo de patente europeia.",
+        "Pelo Direito de Autor (quando a seleção ou disposição dos conteúdos constitui criação intelectual) e pelo Direito Sui Generis do fabricante (quando existe um investimento substancial).",
+        "Exclusivamente através das normas penais da Lei do Cibercrime.",
+        "Pela tutela de marcas registadas aplicável a cada linha (registo) da tabela."
+      ],
+      "resposta_correta": 1,
+      "justificacao": "As bases de dados beneficiam de proteção pelo Direito de Autor quanto à originalidade da sua arquitetura/seleção, e de um direito especial (sui generis) que protege o investimento substancial (quantitativo ou qualitativo) na obtenção, verificação ou apresentação do conteúdo."
+    },
+    {
+      "id": 7,
+      "pergunta": "No âmbito do direito 'sui generis' sobre bases de dados, que faculdade assiste ao respetivo fabricante?",
+      "opcoes": [
+        "Apropriar-se dos direitos de autor sobre as obras individuais pré-existentes contidas na base.",
+        "Proibir a extração e/ou a reutilização da totalidade ou de uma parte substancial do conteúdo da base de dados.",
+        "Impedir que qualquer utilizador legítimo consulte dados individuais para fins privados.",
+        "Exigir a renovação perpétua do monopólio sobre os dados brutos sem novo investimento."
+      ],
+      "resposta_correta": 1,
+      "justificacao": "O direito sui generis confere ao fabricante a faculdade de obstar a atos de extração (transferência) ou reutilização (disponibilização ao público) da totalidade ou de parte substancial do conteúdo avaliada qualitativa ou quantitativamente."
+    },
+    {
+      "id": 8,
+      "pergunta": "Qual a distinção essencial entre Direitos de Autor (2.1) e Direitos de Propriedade Industrial (2.2) quanto à constituição do direito?",
+      "opcoes": [
+        "O Direito de Autor nasce com a criação exteriorizada da obra (independentemente de registo), enquanto os direitos de Propriedade Industrial (marcas, patentes) dependem, em regra, de registo constitutivo.",
+        "Ambos exigem registo prévio obrigatório junto do INPI para produzirem efeitos legais.",
+        "O Direito de Autor aplica-se apenas a empresas industriais e a Propriedade Industrial apenas a obras artísticas.",
+        "A Propriedade Industrial vigora durante toda a vida do autor mais 70 anos sem necessidade de taxas."
+      ],
+      "resposta_correta": 0,
+      "justificacao": "O Direito de Autor rege-se pelo princípio da informalidade (reconhecido independentemente de registo ou depósito), ao passo que os direitos privativos de Propriedade Industrial têm natureza constitutiva associada ao ato de concessão/registo."
+    },
+    {
+      "id": 9,
+      "pergunta": "Segundo o artigo 4.º do Regulamento Geral sobre a Proteção de Dados - RGPD (Módulo 3), como se define 'dado pessoal'?",
+      "opcoes": [
+        "Qualquer informação financeira ou fiscal relativa a pessoas coletivas e sociedades comerciais.",
+        "Informação relativa a uma pessoa singular identificada ou identificável ('titular dos dados').",
+        "Apenas os dados constantes do Cartão de Cidadão e do registo criminal.",
+        "Conjuntos de dados anonimizados de forma irreversível utilizados em estatística macroeconómica."
+      ],
+      "resposta_correta": 1,
+      "justificacao": "O conceito de dado pessoal abrange qualquer informação relativa a uma pessoa singular identificada ou identificável (direta ou indiretamente, por referência a um identificador como nome, número de identificação, dados de localização ou identificadores por via eletrónica)."
+    },
+    {
+      "id": 10,
+      "pergunta": "Qual dos seguintes elementos NÃO constitui um fundamento de licitude do tratamento de dados pessoais nos termos do artigo 6.º do RGPD?",
+      "opcoes": [
+        "O consentimento do titular dos dados para uma ou mais finalidades específicas.",
+        "A execução de um contrato no qual o titular dos dados é parte.",
+        "A disponibilização pública do dado numa rede social aberta, independentemente da finalidade comercial subsequente.",
+        "O cumprimento de uma obrigação jurídica a que o responsável pelo tratamento esteja sujeito."
+      ],
+      "resposta_correta": 2,
+      "justificacao": "O artigo 6.º do RGPD estabelece seis fundamentos taxativos de licitude (consentimento, execução contratual, obrigação jurídica, interesses vitais, interesse público/autoridade pública e interesses legítimos). O facto de um dado ser acessível na internet não dispensa um fundamento de licitude."
+    },
+    {
+      "id": 11,
+      "pergunta": "No âmbito dos princípios relativos ao tratamento de dados pessoais (artigo 5.º do RGPD), o que impõe o princípio da 'minimização dos dados'?",
+      "opcoes": [
+        "Que os dados pessoais sejam adequados, pertinentes e limitados ao que é necessário relativamente às finalidades para as quais são tratados.",
+        "Que as bases de dados tenham menos de 1 Gigabyte de armazenamento.",
+        "Que os dados sejam eliminados obrigatoriamente ao fim de 24 horas após a recolha.",
+        "Que o responsável pelo tratamento recolha o máximo de variáveis possíveis para futuros projetos de Big Data não especificados."
+      ],
+      "resposta_correta": 0,
+      "justificacao": "A minimização dos dados (ligada à limitação das finalidades) proíbe a recolha excessiva ou especulativa de atributos pessoais que não sejam estritamente necessários para a finalidade determinada."
+    },
+    {
+      "id": 12,
+      "pergunta": "Em Portugal (Módulo 3.3), qual é a autoridade de controlo nacional independente responsável por fiscalizar a aplicação do RGPD e da Lei n.º 58/2019?",
+      "opcoes": [
+        "O Centro Nacional de Cibersegurança (CNCS).",
+        "A Comissão Nacional de Proteção de Dados (CNPD).",
+        "A Autoridade Nacional de Comunicações (ANACOM).",
+        "O Instituto de Gestão Financeira e Equipamentos da Justiça (IGFEJ)."
+      ],
+      "resposta_correta": 1,
+      "justificacao": "A CNPD é a autoridade de controlo nacional para efeitos do RGPD e da Lei n.º 58/2019 (lei de execução nacional), detendo poderes de investigação, corretivos, sancionatórios e consultivos."
+    },
+    {
+      "id": 13,
+      "pergunta": "O que estabelece o artigo 22.º do RGPD relativamente às decisões individuais automatizadas, incluindo a definição de perfis (profiling)?",
+      "opcoes": [
+        "É sempre permitida sem restrições desde que o algoritmo tenha uma precisão superior a 90%.",
+        "O titular dos dados tem o direito de não ficar sujeito a nenhuma decisão tomada exclusivamente com base no tratamento automatizado que produza efeitos na sua esfera jurídica ou que o afete significativamente, salvo exceções legais.",
+        "É proibida a utilização de algoritmos em qualquer setor económico europeu.",
+        "Dispensa qualquer direito de intervenção humana ou de contestação da decisão."
+      ],
+      "resposta_correta": 1,
+      "justificacao": "O artigo 22.º protege o cidadão contra a sujeição passiva a decisões puramente algorítmicas com impacto jurídico ou equivalente, exigindo garantias como o direito de obter intervenção humana, manifestar o seu ponto de vista e contestar a decisão."
+    },
+    {
+      "id": 14,
+      "pergunta": "Em caso de violação de dados pessoais ('data breach') suscetível de resultar num risco para os direitos e liberdades das pessoas singulares, qual o prazo regra para o responsável pelo tratamento notificar a autoridade de controlo (art. 33.º RGPD)?",
+      "opcoes": [
+        "Sem demora injustificada e, sempre que possível, até 72 horas após ter tido conhecimento da mesma.",
+        "No prazo máximo de 30 dias úteis após o encerramento do ano fiscal.",
+        "Apenas quando o número de titulares afetados ultrapassar 100.000 cidadãos.",
+        "Num prazo de 6 meses após a auditoria forense externa."
+      ],
+      "resposta_correta": 0,
+      "justificacao": "O artigo 33.º do RGPD impõe o dever de notificação à autoridade de controlo (CNPD) até 72 horas após a tomada de conhecimento da violação de segurança, devendo qualquer atraso ser devidamente justificado."
+    },
+    {
+      "id": 15,
+      "pergunta": "No âmbito da Contratação Eletrónica em Portugal (Módulo 4.1 — Decreto-Lei n.º 7/2004), qual o valor jurídico das declarações negociais emitidas por via eletrónica?",
+      "opcoes": [
+        "São nulas se não forem confirmadas por carta registada no prazo de 5 dias.",
+        "Satisfazem a exigência legal de forma escrita quando contidas em suporte que ofereça as mesmas garantias de fidedignidade, inteligibilidade e conservação.",
+        "Apenas vinculam comerciantes, sendo ineficazes perante consumidores.",
+        "Dependem sempre de reconhecimento presencial em cartório notarial."
+      ],
+      "resposta_correta": 1,
+      "justificacao": "O DL n.º 7/2004 consagra o princípio da equivalência funcional e da liberdade de celebração de contratos por via eletrónica, equiparando o documento eletrónico à forma escrita quando asseguradas a integridade e conservação."
+    },
+    {
+      "id": 16,
+      "pergunta": "Nos contratos celebrados à distância e por via eletrónica com consumidores (DL n.º 24/2014), qual é o prazo regra para o exercício do direito de livre resolução (arrependimento) sem necessidade de indicar motivo?",
+      "opcoes": [
+        "24 horas após o clique no botão de encomenda.",
+        "14 dias de calendário.",
+        "3 dias úteis.",
+        "90 dias após a receção da fatura."
+      ],
+      "resposta_correta": 1,
+      "justificacao": "Para proteção do consumidor na contratação eletrónica (B2C), a lei confere um prazo regra de 14 dias para resolver o contrato sem custos adicionais e sem necessidade de justificação."
+    },
+    {
+      "id": 17,
+      "pergunta": "Na problemática da Inteligência Artificial e Big Data (Módulo 4.2), a que se refere a doutrina jurídica quando aborda o fenómeno da 'opacidade algorítmica' (efeito Black Box)?",
+      "opcoes": [
+        "À cor física dos servidores utilizados nos centros de dados.",
+        "À dificuldade ou impossibilidade técnica e jurídica de compreender, auditar e explicar a lógica causal através da qual um modelo complexo (ex: redes neuronais profundas) chegou a uma determinada decisão.",
+        "À encriptação obrigatória das palavras-passe dos administradores de sistemas.",
+        "Ao sigilo profissional dos advogados que redigem termos e condições."
+      ],
+      "resposta_correta": 1,
+      "justificacao": "A opacidade algorítmica (analisada na bibliografia da UC por Inês da Silva Costa e Barreto Menezes Cordeiro) colide diretamente com os deveres jurídicos de transparência, fundamentação e explicabilidade das decisões automatizadas."
+    },
+    {
+      "id": 18,
+      "pergunta": "De acordo com a Lei do Cibercrime portuguesa (Lei n.º 109/2009 — Módulo 4.3), qual o crime praticado por quem, sem permissão legal ou sem para tanto estar autorizado pelo proprietário, acede a um sistema informático?",
+      "opcoes": [
+        "Burla informática e nas comunicações.",
+        "Acesso ilegítimo (Artigo 6.º).",
+        "Falsidade informática (Artigo 3.º).",
+        "Sabotagem informática (Artigo 5.º)."
+      ],
+      "resposta_correta": 1,
+      "justificacao": "O acesso não autorizado a um sistema informático (no todo ou em parte) preenche o tipo legal de Acesso Ilegítimo previsto no artigo 6.º da Lei n.º 109/2009, sendo agravado se for conseguido através da violação de regras de segurança."
+    },
+    {
+      "id": 19,
+      "pergunta": "Na Lei do Cibercrime (Lei n.º 109/2009), que ilícito penal comete quem introduzir, alterar, apagar ou suprimir dados informáticos com intenção de produzir dados ou documentos não genuínos, para que sejam considerados ou utilizados para finalidades juridicamente relevantes como se o fossem?",
+      "opcoes": [
+        "Falsidade informática (Artigo 3.º).",
+        "Interceção ilegítima (Artigo 7.º).",
+        "Reprodução ilegítima de programa protegido (Artigo 8.º).",
+        "Dano relativo a programas ou outros dados informáticos (Artigo 4.º)."
+      ],
+      "resposta_correta": 0,
+      "justificacao": "O artigo 3.º da Lei n.º 109/2009 tipifica a Falsidade Informática, tutelando a integridade, autenticidade e força probatória dos dados e documentos eletrónicos no tráfego jurídico."
+    },
+    {
+      "id": 20,
+      "pergunta": "Qual o tipo criminal da Lei n.º 109/2009 aplicável a um ataque informático (como um ataque DDoS ou ransomware que paralise servidores) que entrave, impeça, interrompa ou perturbe gravemente o funcionamento de um sistema informático?",
+      "opcoes": [
+        "Acesso ilegítimo simples.",
+        "Sabotagem informática (Artigo 5.º).",
+        "Contrafação de software comercial.",
+        "Violação de correspondência física."
+      ],
+      "resposta_correta": 1,
+      "justificacao": "O artigo 5.º da Lei do Cibercrime pune a Sabotagem Informática, cujo bem jurídico central é a operacionalidade, disponibilidade e fiabilidade do funcionamento dos sistemas informáticos e de comunicações."
+    }
+  ],
+  "desenvolvimento": [
+    {
+      "id": 1,
+      "pergunta": "Módulo 2 — Explique de que forma uma infraestrutura analítica de dados empresariais e os respetivos scripts de processamento encontram tutela jurídica cumulativa ou distinta através do Direito de Autor e do Direito Sui Generis sobre Bases de Dados.",
+      "palavras_chave": [
+        "direito de autor",
+        "programas de computador",
+        "bases de dados",
+        "sui generis",
+        "investimento substancial",
+        "criação intelectual",
+        "extração",
+        "reutilização"
+      ]
+    },
+    {
+      "id": 2,
+      "pergunta": "Módulo 3 — Analise os requisitos de conformidade impostos pelo RGPD e pela legislação nacional (Lei n.º 58/2019) na implementação de um projeto de Business Intelligence que trate dados de clientes, identificando os princípios aplicáveis, os fundamentos de licitude e o papel da CNPD.",
+      "palavras_chave": [
+        "dados pessoais",
+        "licitude",
+        "consentimento",
+        "minimização",
+        "finalidade",
+        "responsável pelo tratamento",
+        "CNPD",
+        "direitos dos titulares"
+      ]
+    },
+    {
+      "id": 3,
+      "pergunta": "Módulo 4.1 e 4.2 — Reflita criticamente sobre a tensão jurídica entre a utilização de modelos preditivos de Inteligência Artificial (Big Data) na contratação eletrónica e a proteção da pessoa face à opacidade do algoritmo e às decisões individuais automatizadas (Artigo 22.º do RGPD).",
+      "palavras_chave": [
+        "opacidade",
+        "decisões automatizadas",
+        "definição de perfis",
+        "transparência",
+        "intervenção humana",
+        "contratação eletrónica",
+        "algoritmo",
+        "explicabilidade"
+      ]
+    },
+    {
+      "id": 4,
+      "pergunta": "Módulo 4.3 — Distinga os bens jurídicos protegidos e os elementos típicos dos crimes de Acesso Ilegítimo, Dano relativo a dados informáticos, Falsidade Informática e Sabotagem Informática previstos na Lei do Cibercrime (Lei n.º 109/2009).",
+      "palavras_chave": [
+        "acesso ilegítimo",
+        "falsidade informática",
+        "sabotagem informática",
+        "sistema informático",
+        "dados informáticos",
+        "integridade",
+        "disponibilidade",
+        "confidencialidade"
+      ]
+    }
+  ]
+}

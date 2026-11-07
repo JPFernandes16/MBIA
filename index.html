@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Plataforma LMS de Estudo - Direito no Ciberespaço (MBIA)">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>BIA_DC | Direito no Ciberespaço — Moodle MBIA</title>
+    <!-- Biblioteca de ícones académicos leves para interface LMS -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CABEÇALHO INSTITUCIONAL (Moodle Top Navbar) -->
+    <header class="lms-navbar">
+        <div class="navbar-left">
+            <button id="btn-toggle-sidebar" class="icon-btn" aria-label="Alternar Menu Lateral">
+                <i class="ri-menu-line"></i>
+            </button>
+            <div class="brand">
+                <span class="brand-acronym">FCEP</span>
+                <span class="brand-divider">|</span>
+                <span class="brand-course">Mestrado em BI &amp; Analytics</span>
+            </div>
+        </div>
+
+        <div class="navbar-right">
+            <span class="semester-badge">2026/2027 • 1.º Semestre</span>
+            <div class="user-profile" title="Estudante Matriculado">
+                <div class="avatar">JF</div>
+                <span class="user-name">João Fernandes</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENTOR PRINCIPAL DO LMS -->
+    <div class="lms-layout">
+
+        <!-- MENU LATERAL DE NAVEGAÇÃO (Course Index / Drawer) -->
+        <aside id="lms-sidebar" class="lms-sidebar">
+            <div class="sidebar-header">
+                <h3>Índice da UC</h3>
+                <span class="uc-code">BIA_DC • 6 ECTS</span>
+            </div>
+
+            <nav class="sidebar-nav" aria-label="Navegação Principal">
+                <button class="nav-item ativo" data-target="view-dashboard">
+                    <i class="ri-dashboard-line"></i>
+                    <span>Painel da Disciplina</span>
+                </button>
+                <button class="nav-item" data-target="view-recursos">
+                    <i class="ri-folder-video-line"></i>
+                    <span>Aulas (PDF &amp; Vídeo)</span>
+                </button>
+                <button class="nav-item" data-target="view-teste-em">
+                    <i class="ri-checkbox-multiple-line"></i>
+                    <span>Exame: Escolha Múltipla (20)</span>
+                </button>
+                <button class="nav-item" data-target="view-teste-aberto">
+                    <i class="ri-File-edit-line"></i>
+                    <span>Exame: Desenvolvimento (4)</span>
+                </button>
+                <button class="nav-item" data-target="view-fuc">
+                    <i class="ri-book-read-line"></i>
+                    <span>Ficha da UC &amp; Bibliografia</span>
+                </button>
+            </nav>
+
+            <div class="sidebar-modules">
+                <h4>Conteúdos Programáticos</h4>
+                <ul class="module-tree">
+                    <li>
+                        <a href="#" onclick="abrirAulaDireta(1); return false;">
+                            <i class="ri-file-pdf-2-line"></i> 1. Direito e TIC
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="abrirAulaDireta(2); return false;">
+                            <i class="ri-file-pdf-2-line"></i> 2. Propriedade Intelectual Digital
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="abrirAulaDireta(3); return false;">
+                            <i class="ri-file-pdf-2-line"></i> 3. Proteção de Dados (RGPD)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="abrirAulaDireta(4); return false;">
+                            <i class="ri-file-pdf-2-line"></i> 4. Desafios Emergentes (IA e Crime)
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- FUNDO ESCURO PARA MENU MOBILE (Overlay) -->
+        <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+        <!-- ÁREA CENTRAL DE TRABALHO -->
+        <main class="lms-main">
+
+            <!-- CABEÇALHO DA UNIDADE CURRICULAR & BREADCRUMBS -->
+            <div class="course-banner">
+                <nav class="breadcrumbs" aria-label="Localização">
+                    <span>Mestrado (4943/1)</span>
+                    <i class="ri-arrow-right-s-line"></i>
+                    <span>1.º Semestre</span>
+                    <i class="ri-arrow-right-s-line"></i>
+                    <strong id="breadcrumb-atual">Painel da Disciplina</strong>
+                </nav>
+                <div class="course-title-row">
+                    <div>
+                        <h1>Direito no Ciberespaço</h1>
+                        <p class="course-subtitle">
+                            Docentes: Prof. Doutor Paulo Vasconcelos (PSV) &amp; Prof.ª Doutora Fernanda Magalhães (FAMM)
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- =========================================================
+                 VISTA 1: DASHBOARD ACADÉMICO (Painel Inicial)
+                 ========================================================= -->
+            <section id="view-dashboard" class="lms-view ativo">
+
+                <!-- Métricas de Desempenho (KPIs de Estudo) -->
+                <div class="kpi-grid">
+                    <div class="kpi-card">
+                        <div class="kpi-icon"><i class="ri-book-open-line"></i></div>
+                        <div class="kpi-info">
+                            <span class="kpi-label">Módulos Programáticos</span>
+                            <strong class="kpi-value" id="kpi-aulas">4 Unidades</strong>
+                            <span class="kpi-sub">42h Contacto | 60h Autónomo</span>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-icon"><i class="ri-list-check-2"></i></div>
+                        <div class="kpi-info">
+                            <span class="kpi-label">Última Simulação (20 EM)</span>
+                            <strong class="kpi-value" id="kpi-score-em">Sem registo</strong>
+                            <span class="kpi-sub">Meta de aprovação: 50%</span>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-icon"><i class="ri-key-2-line"></i></div>
+                        <div class="kpi-info">
+                            <span class="kpi-label">Domínio Lexical (4 Abertas)</span>
+                            <strong class="kpi-value" id="kpi-score-dev">0 / 4 validadas</strong>
+                            <span class="kpi-sub">Validação por palavras-chave</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Atalhos Rápidos de Ação -->
+                <div class="moodle-block">
+                    <div class="block-header">
+                        <h2><i class="ri-flashlight-line"></i> Acesso Rápido ao Estudo</h2>
+                    </div>
+                    <div class="quick-actions-grid">
+                        <button class="action-card" onclick="mudarVista('view-recursos')">
+                            <i class="ri-play-circle-line"></i>
+                            <div>
+                                <strong>Abrir Sala de Estudo</strong>
+                                <p>Consultar PDFs de resumo e vídeos das aulas lado a lado</p>
+                            </div>
+                        </button>
+                        <button class="action-card" onclick="mudarVista('view-teste-em')">
+                            <i class="ri-Task-line"></i>
+                            <div>
+                                <strong>Simular 20 Escolhas Múltiplas</strong>
+                                <p>Treinar questões fechadas com correção automática</p>
+                            </div>
+                        </button>
+                        <button class="action-card" onclick="mudarVista('view-teste-aberto')">
+                            <i class="ri-edit-box-line"></i>
+                            <div>
+                                <strong>Resolver 4 Questões de Desenvolvimento</strong>
+                                <p>Praticar escrita jurídica com verificação de conceitos-chave</p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tópicos da Disciplina (Estilo Secções do Moodle) -->
+                <div class="moodle-block">
+                    <div class="block-header">
+                        <h2><i class="ri-folder-open-line"></i> Estrutura de Aulas e Recursos</h2>
+                    </div>
+                    <div class="topics-list">
+                        <!-- Tópico 1 -->
+                        <article class="topic-item">
+                            <div class="topic-info">
+                                <h3>Módulo 1: O Direito e as Tecnologias de Informação e Comunicação</h3>
+                                <p>Enquadramento jurídico do fenómeno da comunicação em rede e ciberespaço.</p>
+                            </div>
+                            <div class="topic-actions">
+                                <button class="btn-outline" onclick="abrirAulaDireta(1, 'pdf')">
+                                    <i class="ri-file-pdf-line"></i> Resumo PDF
+                                </button>
+                                <button class="btn-outline" onclick="abrirAulaDireta(1, 'video')">
+                                    <i class="ri-video-line"></i> Vídeo Aula
+                                </button>
+                            </div>
+                        </article>
+
+                        <!-- Tópico 2 -->
+                        <article class="topic-item">
+                            <div class="topic-info">
+                                <h3>Módulo 2: Proteção da Propriedade Intelectual na Era Digital</h3>
+                                <p>Programas de computador, bases de dados, nomes de domínio, direitos de autor (2.1) e propriedade industrial (2.2).</p>
+                            </div>
+                            <div class="topic-actions">
+                                <button class="btn-outline" onclick="abrirAulaDireta(2, 'pdf')">
+                                    <i class="ri-file-pdf-line"></i> Resumo PDF
+                                </button>
+                                <button class="btn-outline" onclick="abrirAulaDireta(2, 'video')">
+                                    <i class="ri-video-line"></i> Vídeo Aula
+                                </button>
+                            </div>
+                        </article>
+
+                        <!-- Tópico 3 -->
+                        <article class="topic-item">
+                            <div class="topic-info">
+                                <h3>Módulo 3: Proteção de Dados Pessoais</h3>
+                                <p>RGPD da UE (3.1), sistemas de privacidade na Internet (3.2), direito português e o papel da CNPD (3.3).</p>
+                            </div>
+                            <div class="topic-actions">
+                                <button class="btn-outline" onclick="abrirAulaDireta(3, 'pdf')">
+                                    <i class="ri-file-pdf-line"></i> Resumo PDF
+                                </button>
+                                <button class="btn-outline" onclick="abrirAulaDireta(3, 'video')">
+                                    <i class="ri-video-line"></i> Vídeo Aula
+                                </button>
+                            </div>
+                        </article>
+
+                        <!-- Tópico 4 -->
+                        <article class="topic-item">
+                            <div class="topic-info">
+                                <h3>Módulo 4: Desafios Emergentes no Ciberespaço</h3>
+                                <p>Contratação eletrónica (4.1), Inteligência Artificial e opacidade algorítmica (4.2) e Cibercrime (4.3).</p>
+                            </div>
+                            <div class="topic-actions">
+                                <button class="btn-outline" onclick="abrirAulaDireta(4, 'pdf')">
+                                    <i class="ri-file-pdf-line"></i> Resumo PDF
+                                </button>
+                                <button class="btn-outline" onclick="abrirAulaDireta(4, 'video')">
+                                    <i class="ri-video-line"></i> Vídeo Aula
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =========================================================
+                 VISTA 2: SALA DE AULA (Visualizador PDF e Vídeo por Aula)
+                 ========================================================= -->
+            <section id="view-recursos" class="lms-view oculto">
+                <div class="moodle-block">
+                    <div class="resource-toolbar">
+                        <div class="toolbar-group">
+                            <label for="seletor-aula">Selecionar Unidade Programática:</label>
+                            <select id="seletor-aula" onchange="carregarMaterialAula()">
+                                <option value="1">Aula 1 — O Direito e as TIC</option>
+                                <option value="2">Aula 2 — Propriedade Intelectual (Software, BD, Domínios)</option>
+                                <option value="3">Aula 3 — Proteção de Dados Pessoais (RGPD e CNPD)</option>
+                                <option value="4">Aula 4 — Contratação Eletrónica, IA e Cibercrime</option>
+                            </select>
+                        </div>
+
+                        <!-- Alternador de modo de visualização para ecrãs móveis -->
+                        <div class="view-mode-tabs">
+                            <button type="button" class="mode-btn ativo" onclick="alternarModoMedia('ambos')">Ambos</button>
+                            <button type="button" class="mode-btn" onclick="alternarModoMedia('pdf')">Apenas PDF</button>
+                            <button type="button" class="mode-btn" onclick="alternarModoMedia('video')">Apenas Vídeo</button>
+                        </div>
+                    </div>
+
+                    <div id="media-workspace" class="media-workspace">
+                        <!-- Painel do Documento PDF -->
+                        <div id="painel-pdf" class="media-panel">
+                            <div class="panel-header">
+                                <span><i class="ri-file-pdf-2-line"></i> Resumo em PDF (<span id="nome-ficheiro-pdf">aulas/aula1.pdf</span>)</span>
+                                <a id="link-abrir-pdf" href="aulas/aula1.pdf" target="_blank" class="btn-sm">
+                                    Abrir em Ecrã Inteiro <i class="ri-external-link-line"></i>
+                                </a>
+                            </div>
+                            <iframe id="frame-pdf" src="aulas/aula1.pdf" title="Leitor de Resumo PDF"></iframe>
+                        </div>
+
+                        <!-- Painel do Vídeo da Aula -->
+                        <div id="painel-video" class="media-panel">
+                            <div class="panel-header">
+                                <span><i class="ri-vidicon-line"></i> Explicação em Vídeo (<span id="nome-ficheiro-video">aulas/aula1.mp4</span>)</span>
+                            </div>
+                            <video id="frame-video" controls playsinline preload="metadata">
+                                <source id="source-video" src="aulas/aula1.mp4" type="video/mp4">
+                                O seu navegador não suporta a reprodução nativa de vídeo MP4.
+                            </video>
+
+                            <!-- Bloco de Apontamentos Rápidos da Aula (Persistido no Dispositivo) -->
+                            <div class="lesson-notes">
+                                <label for="notas-aula"><i class="ri-sticky-note-line"></i> Apontamentos Pessoais desta Aula:</label>
+                                <textarea id="notas-aula" placeholder="Escreva aqui notas importantes enquanto assiste ao vídeo ou lê o PDF..."></textarea>
+                                <span id="status-notas" class="save-indicator">Guardado automaticamente no dispositivo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =========================================================
+                 VISTA 3: SIMULADOR DE EXAME — 20 ESCOLHAS MÚLTIPLAS
+                 ========================================================= -->
+            <section id="view-teste-em" class="lms-view oculto">
+                <div class="quiz-layout">
+
+                    <!-- Coluna Principal das 20 Perguntas -->
+                    <div class="quiz-main moodle-block">
+                        <div class="block-header">
+                            <h2>Prova Escrita: Módulo de Escolha Múltipla (20 Questões)</h2>
+                            <p>Selecione apenas uma opção por questão. Ao submeter, o sistema calcula a nota e destaca as respostas corretas.</p>
+                        </div>
+
+                        <form id="form-em">
+                            <div id="contentor-escolha-multipla" class="questions-stream">
+                                <!-- As 20 perguntas do testes.json são injetadas aqui pelo script.js -->
+                            </div>
+
+                            <div class="quiz-actions">
+                                <button type="submit" class="btn-primary">
+                                    <i class="ri-check-double-line"></i> Submeter e Corrigir Prova (20 Questões)
+                                </button>
+                                <button type="button" class="btn-secondary" onclick="reiniciarTesteEM()">
+                                    <i class="ri-refresh-line"></i> Limpar Tentativa
+                                </button>
+                            </div>
+                        </form>
+
+                        <div id="resultados-em" class="quiz-results oculto"></div>
+                    </div>
+
+                    <!-- Grelha Lateral de Navegação do Teste (Estilo Moodle Quiz Navigation) -->
+                    <aside class="quiz-sidebar moodle-block">
+                        <h3>Navegação do Teste</h3>
+                        <p class="quiz-progress-text">Respondidas: <strong id="contador-respondidas-em">0 / 20</strong></p>
+                        <div id="grelha-navegacao-em" class="question-palette">
+                            <!-- Botões numerados de 1 a 20 gerados via JS -->
+                        </div>
+                    </aside>
+
+                </div>
+            </section>
+
+            <!-- =========================================================
+                 VISTA 4: SIMULADOR DE EXAME — 4 PERGUNTAS DE DESENVOLVIMENTO
+                 ========================================================= -->
+            <section id="view-teste-aberto" class="lms-view oculto">
+                <div class="moodle-block">
+                    <div class="block-header">
+                        <h2>Prova Escrita: Questões de Desenvolvimento (4 Questões)</h2>
+                        <p>Elabore a sua resposta jurídica para cada caso. O motor de avaliação analisa o seu texto e valida a inclusão dos conceitos e termos técnicos obrigatórios definidos no ficheiro JSON.</p>
+                    </div>
+
+                    <form id="form-dev">
+                        <div id="contentor-desenvolvimento" class="questions-stream">
+                            <!-- As 4 questões abertas e validadores de palavras-chave são injetados via JS -->
+                        </div>
+
+                        <div class="quiz-actions">
+                            <button type="submit" class="btn-primary">
+                                <i class="ri-search-eye-line"></i> Validar Termos Jurídicos e Palavras-Chave
+                            </button>
+                            <button type="button" class="btn-secondary" onclick="mostrarDicasPalavrasChave()">
+                                <i class="ri-lightbulb-line"></i> Mostrar/Ocultar Palavras-Chave Esperadas
+                            </button>
+                        </div>
+                    </form>
+
+                    <div id="resultados-dev" class="quiz-results oculto"></div>
+                </div>
+            </section>
+
+            <!-- =========================================================
+                 VISTA 5: FICHA DE UNIDADE CURRICULAR & BIBLIOGRAFIA
+                 ========================================================= -->
+            <section id="view-fuc" class="lms-view oculto">
+                <div class="moodle-block">
+                    <div class="block-header">
+                        <h2>Informação Institucional e Regras de Avaliação</h2>
+                    </div>
+
+                    <div class="fuc-grid">
+                        <div class="fuc-box">
+                            <h3>Objetivos da Unidade Curricular</h3>
+                            <p>Analisar e refletir sobre as consequências no mundo jurídico do fenómeno da comunicação em rede, nomeadamente quanto ao comércio eletrónico, proteção de dados, direitos de autor e propriedade industrial, cibercriminalidade e inteligência artificial.</p>
+                        </div>
+
+                        <div class="fuc-box">
+                            <h3>Fórmula de Cálculo da Classificação Final</h3>
+                            <ul class="fuc-list">
+                                <li><strong>Avaliação Contínua:</strong> CF = M1 × 0,5 + M2 × 0,5 (Mini-teste + Caso prático / Trabalho em aula)</li>
+                                <li><strong>Exame Global (Época Normal / Recurso):</strong> CF = EG (100%)</li>
+                                <li><strong>Carga Horária:</strong> 42h Teórico-Práticas (TP) | 60h Trabalho Autónomo | 6 ECTS</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bibliography-section">
+                        <h3>Bibliografia Principal Recomendada</h3>
+                        <ul class="biblio-list">
+                            <li><strong>Cordeiro, A. Barreto Menezes [et al.]</strong> (2021). <em>Direito Digital e Inteligência Artificial: diálogos entre Brasil e Europa</em>. São Paulo: Editora Foco.</li>
+                            <li><strong>Cordeiro, A. Barreto Menezes</strong> (2020). <em>Direito da Proteção de Dados</em>. Coimbra: Almedina.</li>
+                            <li><strong>Magalhães, Filipa Matias &amp; Pereira, Maria Leitão</strong> (2018). <em>Regulamento Geral de Proteção de Dados</em>, 2.ª ed. Porto: Vida Económica.</li>
+                            <li><strong>Costa, Inês da Silva</strong> (2021). <em>A proteção da pessoa na era dos big data: a opacidade do algoritmo e as decisões automatizadas</em>. RED, n.º 1 (Vol. 24), p. 34.</li>
+                            <li><strong>Gonçalves, Maria Eduarda</strong> (2024). <em>Ciberdireito</em>. Coimbra: Almedina.</li>
+                            <li><strong>Saldanha, Nuno</strong> (2019). <em>RGPD - Guia para uma auditoria de conformidade</em>. Lisboa: FCA.</li>
+                            <li><strong>Silva, Nuno Sousa e</strong> (2026). <em>Lições de Direito Digital</em>. Coimbra: Almedina.</li>
+                            <li><strong>Akester, Patrícia</strong> (2004). <em>O Direito de Autor e os Desafios da Tecnologia Digital</em>. Cascais: Principia.</li>
+                            <li><strong>Silva, Pedro Sousa e</strong> (2025). <em>Direito Industrial</em>, 3.ª ed. Coimbra: Almedina.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- BARRA DE NAVEGAÇÃO INFERIOR EXCLUSIVA PARA TELEMÓVEL (iPhone 11) -->
+    <nav class="mobile-bottom-nav" aria-label="Navegação Rápida Mobile">
+        <button class="mob-nav-btn ativo" data-target="view-dashboard">
+            <i class="ri-dashboard-line"></i>
+            <span>Painel</span>
+        </button>
+        <button class="mob-nav-btn" data-target="view-recursos">
+            <i class="ri-folder-video-line"></i>
+            <span>Aulas</span>
+        </button>
+        <button class="mob-nav-btn" data-target="view-teste-em">
+            <i class="ri-checkbox-multiple-line"></i>
+            <span>20 EM</span>
+        </button>
+        <button class="mob-nav-btn" data-target="view-teste-aberto">
+            <i class="ri-file-edit-line"></i>
+            <span>4 Abertas</span>
+        </button>
+        <button class="mob-nav-btn" data-target="view-fuc">
+            <i class="ri-book-read-line"></i>
+            <span>FUC</span>
+        </button>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>

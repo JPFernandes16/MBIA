@@ -1,0 +1,1133 @@
+/* ==========================================================================
+   1. VARIÁVEIS DE SISTEMA E PALETA ACADÉMICA (LMS MOODLE 4.x)
+   ========================================================================== */
+:root {
+    /* Cores Institucionais */
+    --lms-navy: #0f172a;
+    --lms-primary: #1d4ed8;
+    --lms-primary-hover: #1e40af;
+    --lms-primary-light: #eff6ff;
+    --lms-accent: #0284c7;
+
+    /* Superfícies de Leitura (Baixa Fadiga Visual) */
+    --bg-body: #f1f5f9;
+    --bg-surface: #ffffff;
+    --bg-muted: #f8fafc;
+    --border-color: #cbd5e1;
+    --border-subtle: #e2e8f0;
+
+    /* Tipografia */
+    --text-main: #1e293b;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+
+    /* Semântica de Avaliação */
+    --status-success: #15803d;
+    --status-success-bg: #dcfce7;
+    --status-success-border: #86efac;
+    --status-warning: #b45309;
+    --status-warning-bg: #fef3c7;
+    --status-danger: #b91c1c;
+    --status-danger-bg: #fee2e2;
+    --status-danger-border: #fca5a5;
+
+    /* Dimensões Estruturais */
+    --navbar-height: 60px;
+    --sidebar-width: 280px;
+    --bottom-nav-height: 64px;
+    --radius-sm: 6px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
+    --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08);
+}
+
+/* ==========================================================================
+   2. RESET E NORMALIZAÇÃO BASE (MOBILE-FIRST: iPHONE 11)
+   ========================================================================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+    /* Espaço inferior para a barra de navegação no iPhone 11 */
+    padding-bottom: calc(var(--bottom-nav-height) + env(safe-area-inset-bottom, 0px));
+}
+
+.oculto {
+    display: none !important;
+}
+
+/* ==========================================================================
+   3. CABEÇALHO INSTITUCIONAL (TOP NAVBAR)
+   ========================================================================== */
+.lms-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: var(--navbar-height);
+    background-color: var(--lms-navy);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.icon-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    width: 38px;
+    height: 38px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.icon-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.brand-acronym {
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    background: var(--lms-primary);
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+.brand-divider {
+    opacity: 0.4;
+    display: none;
+}
+
+.brand-course {
+    font-weight: 500;
+    color: #e2e8f0;
+    display: none;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.semester-badge {
+    display: none;
+    font-size: 0.78rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.25rem 0.65rem;
+    border-radius: 999px;
+    color: #cbd5e1;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--lms-accent);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-name {
+    display: none;
+    font-size: 0.88rem;
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   4. MENU LATERAL (SIDEBAR DRAWER) E LAYOUT PRINCIPAL
+   ========================================================================== */
+.lms-layout {
+    display: flex;
+    min-height: calc(100vh - var(--navbar-height));
+}
+
+.lms-sidebar {
+    position: fixed;
+    top: var(--navbar-height);
+    left: 0;
+    bottom: 0;
+    width: var(--sidebar-width);
+    background: var(--bg-surface);
+    border-right: 1px solid var(--border-subtle);
+    z-index: 950;
+    padding: 1.25rem 1rem;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lms-sidebar.aberto {
+    transform: translateX(0);
+}
+
+.sidebar-overlay {
+    position: fixed;
+    inset: var(--navbar-height) 0 0 0;
+    background: rgba(15, 23, 42, 0.5);
+    z-index: 900;
+    display: none;
+    backdrop-filter: blur(2px);
+}
+
+.sidebar-overlay.ativo {
+    display: block;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.sidebar-header h3 {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-secondary);
+}
+
+.uc-code {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--lms-primary);
+    background: var(--lms-primary-light);
+    padding: 0.15rem 0.45rem;
+    border-radius: 4px;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin-bottom: 1.75rem;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 0.7rem 0.85rem;
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+    font-weight: 500;
+    text-align: left;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.nav-item i {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+}
+
+.nav-item:hover {
+    background: var(--bg-muted);
+    color: var(--text-main);
+}
+
+.nav-item.ativo {
+    background: var(--lms-primary-light);
+    color: var(--lms-primary);
+    font-weight: 600;
+    border-left: 3px solid var(--lms-primary);
+}
+
+.nav-item.ativo i {
+    color: var(--lms-primary);
+}
+
+.sidebar-modules h4 {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+}
+
+.module-tree {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.module-tree a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-size: 0.86rem;
+    padding: 0.45rem 0.6rem;
+    border-radius: var(--radius-sm);
+    transition: background 0.15s;
+}
+
+.module-tree a:hover {
+    background: var(--bg-muted);
+    color: var(--lms-primary);
+}
+
+.module-tree i {
+    color: #dc2626;
+    font-size: 1rem;
+}
+
+/* ==========================================================================
+   5. ÁREA CENTRAL DE TRABALHO E BANNER DA UNIDADE CURRICULAR
+   ========================================================================== */
+.lms-main {
+    flex: 1;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.course-banner {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.breadcrumbs strong {
+    color: var(--lms-primary);
+}
+
+.course-title-row h1 {
+    font-size: 1.45rem;
+    color: var(--lms-navy);
+    line-height: 1.25;
+    margin-bottom: 0.25rem;
+}
+
+.course-subtitle {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   6. COMPONENTES DO DASHBOARD (KPIs, ATALHOS E TÓPICOS MOODLE)
+   ========================================================================== */
+.kpi-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+    margin-bottom: 1.25rem;
+}
+
+.kpi-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.kpi-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    background: var(--lms-primary-light);
+    color: var(--lms-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.kpi-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.kpi-label {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--text-muted);
+}
+
+.kpi-value {
+    font-size: 1.25rem;
+    color: var(--lms-navy);
+    line-height: 1.3;
+}
+
+.kpi-sub {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+}
+
+.moodle-block {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.block-header {
+    border-bottom: 1px solid var(--border-subtle);
+    padding-bottom: 0.85rem;
+    margin-bottom: 1.15rem;
+}
+
+.block-header h2 {
+    font-size: 1.1rem;
+    color: var(--lms-navy);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.block-header h2 i {
+    color: var(--lms-primary);
+}
+
+.block-header p {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    margin-top: 0.35rem;
+}
+
+.quick-actions-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+}
+
+.action-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.9rem;
+    padding: 1rem;
+    background: var(--bg-muted);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.action-card:hover {
+    border-color: var(--lms-primary);
+    background: var(--lms-primary-light);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.action-card i {
+    font-size: 1.65rem;
+    color: var(--lms-primary);
+    margin-top: 0.1rem;
+}
+
+.action-card strong {
+    display: block;
+    font-size: 0.95rem;
+    color: var(--lms-navy);
+    margin-bottom: 0.2rem;
+}
+
+.action-card p {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+/* Lista de Módulos estilo Secções Moodle */
+.topics-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.topic-item {
+    border: 1px solid var(--border-subtle);
+    border-left: 4px solid var(--lms-primary);
+    border-radius: var(--radius-sm);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    background: var(--bg-muted);
+}
+
+.topic-info h3 {
+    font-size: 0.98rem;
+    color: var(--lms-navy);
+    margin-bottom: 0.25rem;
+}
+
+.topic-info p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.topic-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* ==========================================================================
+   7. BOTÕES E CONTROLOS DE FORMULÁRIO
+   ========================================================================== */
+.btn-primary, .btn-secondary, .btn-outline, .btn-sm {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    font-weight: 600;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.15s ease;
+    text-decoration: none;
+    font-family: inherit;
+}
+
+.btn-primary {
+    background: var(--lms-primary);
+    color: #ffffff;
+    border: none;
+    padding: 0.8rem 1.25rem;
+    font-size: 0.95rem;
+}
+
+.btn-primary:hover {
+    background: var(--lms-primary-hover);
+}
+
+.btn-secondary {
+    background: var(--bg-muted);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    padding: 0.8rem 1.25rem;
+    font-size: 0.95rem;
+}
+
+.btn-secondary:hover {
+    background: #e2e8f0;
+}
+
+.btn-outline {
+    background: var(--bg-surface);
+    color: var(--lms-primary);
+    border: 1px solid var(--border-color);
+    padding: 0.5rem 0.85rem;
+    font-size: 0.84rem;
+}
+
+.btn-outline:hover {
+    border-color: var(--lms-primary);
+    background: var(--lms-primary-light);
+}
+
+.btn-sm {
+    font-size: 0.78rem;
+    padding: 0.3rem 0.65rem;
+    background: var(--lms-primary-light);
+    color: var(--lms-primary);
+}
+
+/* Font-size 16px previne o zoom automático do Safari no iPhone 11 */
+select, textarea, input[type="text"] {
+    width: 100%;
+    font-size: 16px;
+    font-family: inherit;
+    color: var(--text-main);
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 0.65rem 0.85rem;
+    transition: border-color 0.15s;
+}
+
+select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--lms-primary);
+    box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.12);
+}
+
+/* ==========================================================================
+   8. SALA DE AULA (VISUALIZADOR PDF, VÍDEO E APONTAMENTOS)
+   ========================================================================== */
+.resource-toolbar {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.toolbar-group label {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 0.35rem;
+}
+
+.view-mode-tabs {
+    display: flex;
+    background: var(--bg-muted);
+    padding: 0.25rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-subtle);
+}
+
+.mode-btn {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 0.45rem 0.75rem;
+    font-size: 0.84rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.mode-btn.ativo {
+    background: var(--bg-surface);
+    color: var(--lms-primary);
+    box-shadow: var(--shadow-sm);
+}
+
+.media-workspace {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+}
+
+.media-panel {
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    background: var(--bg-muted);
+    display: flex;
+    flex-direction: column;
+}
+
+.panel-header {
+    background: #e2e8f0;
+    padding: 0.6rem 0.9rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--lms-navy);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#frame-pdf {
+    width: 100%;
+    height: 420px;
+    border: none;
+    background: #525659;
+}
+
+#frame-video {
+    width: 100%;
+    max-height: 360px;
+    background: #000000;
+}
+
+.lesson-notes {
+    padding: 1rem;
+    background: var(--bg-surface);
+    border-top: 1px solid var(--border-subtle);
+}
+
+.lesson-notes label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--lms-navy);
+    margin-bottom: 0.4rem;
+}
+
+#notas-aula {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.save-indicator {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 0.35rem;
+    text-align: right;
+}
+
+/* ==========================================================================
+   9. SIMULADOR DE EXAMES (20 ESCOLHAS MÚLTIPLAS E 4 DESENVOLVIMENTO)
+   ========================================================================== */
+.quiz-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+}
+
+.questions-stream {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+/* Cartão Individual de Questão (Gerado pelo script.js) */
+.pergunta-bloco {
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    background: var(--bg-muted);
+    padding: 1.15rem;
+    scroll-margin-top: calc(var(--navbar-height) + 1rem);
+    transition: border-color 0.2s;
+}
+
+.pergunta-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.65rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.pergunta-numero {
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--lms-primary);
+    background: var(--lms-primary-light);
+    padding: 0.2rem 0.55rem;
+    border-radius: 4px;
+}
+
+.pergunta-cotacao {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+
+.pergunta-enunciado {
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: var(--lms-navy);
+    margin-bottom: 0.9rem;
+}
+
+/* Opções de Escolha Múltipla */
+.opcoes-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+}
+
+.opcao-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    padding: 0.7rem 0.85rem;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-size: 0.92rem;
+    transition: all 0.15s ease;
+}
+
+.opcao-item:hover {
+    border-color: var(--lms-primary);
+    background: var(--lms-primary-light);
+}
+
+.opcao-item input[type="radio"] {
+    margin-top: 0.25rem;
+    transform: scale(1.15);
+    accent-color: var(--lms-primary);
+}
+
+/* Estados de Correção Automática */
+.opcao-item.correta {
+    background: var(--status-success-bg);
+    border-color: var(--status-success-border);
+    color: var(--status-success);
+    font-weight: 600;
+}
+
+.opcao-item.incorreta {
+    background: var(--status-danger-bg);
+    border-color: var(--status-danger-border);
+    color: var(--status-danger);
+}
+
+/* Paleta de Navegação 1-20 do Moodle */
+.quiz-sidebar h3 {
+    font-size: 0.95rem;
+    color: var(--lms-navy);
+    margin-bottom: 0.35rem;
+}
+
+.quiz-progress-text {
+    font-size: 0.84rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.85rem;
+}
+
+.question-palette {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.45rem;
+}
+
+.palette-btn {
+    height: 38px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-surface);
+    color: var(--text-main);
+    font-weight: 600;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.palette-btn:hover {
+    border-color: var(--lms-primary);
+}
+
+.palette-btn.respondida {
+    background: var(--lms-primary);
+    color: #ffffff;
+    border-color: var(--lms-primary);
+}
+
+.palette-btn.correta {
+    background: var(--status-success);
+    color: #ffffff;
+    border-color: var(--status-success);
+}
+
+.palette-btn.incorreta {
+    background: var(--status-danger);
+    color: #ffffff;
+    border-color: var(--status-danger);
+}
+
+.quiz-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.quiz-results {
+    margin-top: 1.25rem;
+    padding: 1.15rem;
+    border-radius: var(--radius-md);
+    background: var(--lms-primary-light);
+    border-left: 4px solid var(--lms-primary);
+}
+
+/* Validador de Palavras-Chave nas 4 Questões Abertas */
+.dica-palavras-chave {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    background: #e2e8f0;
+    padding: 0.45rem 0.75rem;
+    border-radius: 4px;
+    margin-bottom: 0.65rem;
+}
+
+.textarea-desenvolvimento {
+    min-height: 150px;
+    line-height: 1.55;
+    resize: vertical;
+}
+
+.feedback-palavra-chave {
+    margin-top: 0.75rem;
+    padding: 0.75rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.88rem;
+    background: var(--status-success-bg);
+    border-left: 4px solid var(--status-success);
+    color: var(--status-success);
+}
+
+.feedback-palavra-chave.falha {
+    background: var(--status-warning-bg);
+    border-left-color: var(--status-warning);
+    color: var(--status-warning);
+}
+
+.kw-badges-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.5rem;
+}
+
+.kw-badge {
+    font-size: 0.76rem;
+    font-weight: 600;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+}
+
+.kw-badge.encontrada {
+    background: var(--status-success);
+    color: #ffffff;
+}
+
+.kw-badge.falta {
+    background: var(--status-danger-bg);
+    color: var(--status-danger);
+    border: 1px solid var(--status-danger-border);
+}
+
+/* ==========================================================================
+   10. FICHA DE UNIDADE CURRICULAR (FUC) E BIBLIOGRAFIA
+   ========================================================================== */
+.fuc-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.fuc-box {
+    background: var(--bg-muted);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    padding: 1rem;
+}
+
+.fuc-box h3, .bibliography-section h3 {
+    font-size: 0.98rem;
+    color: var(--lms-navy);
+    margin-bottom: 0.5rem;
+}
+
+.fuc-box p, .fuc-list, .biblio-list {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+}
+
+.fuc-list, .biblio-list {
+    padding-left: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+/* ==========================================================================
+   11. BARRA DE NAVEGAÇÃO INFERIOR (EXCLUSIVA TELEMÓVEL / iPHONE 11)
+   ========================================================================== */
+.mobile-bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: calc(var(--bottom-nav-height) + env(safe-area-inset-bottom, 0px));
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    background: var(--bg-surface);
+    border-top: 1px solid var(--border-color);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    z-index: 980;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.mob-nav-btn {
+    border: none;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.mob-nav-btn i {
+    font-size: 1.25rem;
+}
+
+.mob-nav-btn.ativo {
+    color: var(--lms-primary);
+}
+
+/* ==========================================================================
+   12. MEDIA QUERIES: TABLET SAMSUNG (>= 768px)
+   ========================================================================== */
+@media (min-width: 768px) {
+    body {
+        padding-bottom: 0;
+    }
+
+    .mobile-bottom-nav {
+        display: none;
+    }
+
+    .brand-divider, .brand-course, .semester-badge, .user-name {
+        display: inline-block;
+    }
+
+    .lms-main {
+        padding: 1.5rem 2rem;
+    }
+
+    .kpi-grid, .quick-actions-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .topic-item {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .resource-toolbar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .toolbar-group {
+        min-width: 340px;
+    }
+
+    #frame-pdf {
+        height: 600px;
+    }
+
+    #frame-video {
+        max-height: 480px;
+    }
+
+    .quiz-actions {
+        flex-direction: row;
+    }
+
+    .fuc-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ==========================================================================
+   13. MEDIA QUERIES: PORTÁTIL E DESKTOP (>= 1024px)
+   ========================================================================== */
+@media (min-width: 1024px) {
+    #btn-toggle-sidebar, .sidebar-overlay {
+        display: none !important;
+    }
+
+    .lms-sidebar {
+        position: sticky;
+        transform: translateX(0);
+        height: calc(100vh - var(--navbar-height));
+        flex-shrink: 0;
+    }
+
+    /* Vista Lado a Lado: PDF à esquerda, Vídeo + Notas à direita */
+    .media-workspace.modo-ambos {
+        grid-template-columns: 1.15fr 0.85fr;
+        align-items: start;
+    }
+
+    #frame-pdf {
+        height: 740px;
+    }
+
+    /* Exame com Grelha Lateral Fixa ao estilo Moodle */
+    .quiz-layout {
+        grid-template-columns: 1fr 290px;
+        align-items: start;
+    }
+
+    .quiz-sidebar {
+        position: sticky;
+        top: calc(var(--navbar-height) + 1.5rem);
+    }
+}
