@@ -2,158 +2,402 @@
   "escolha_multipla": [
     {
       "id": 1,
-      "pergunta": "Em que momento nasce a proteção jurídica por Direito de Autor sobre um programa de computador segundo o regime legal português (Decreto-Lei n.º 252/94)?",
+      "pergunta": "Proteção Jurídica de Programas de Computador — Sobre a natureza jurídica e os requisitos de proteção de um programa de computador (software), assinale a(s) opção(ões) correta(s):",
       "opcoes": [
-        "Apenas quando o programa de computador é comercializado com sucesso no mercado de software.",
-        "Quando é concedida uma patente de invenção que atesta a sua novidade e utilidade técnica.",
-        "No momento da atribuição do registo formal junto do organismo competente, sendo este constitutivo do direito.",
-        "No momento da criação da obra, tendo o registo posterior uma eficácia meramente declarativa."
+        "A proteção jurídica recai sobre as ideias, lógicas e funcionalidades subjacentes ao programa.",
+        "O direito de autor sobre o software nasce no momento da sua criação, sendo a proteção conferida de forma análoga à das obras literárias.",
+        "O registo do software é constitutivo, ou seja, o direito não existe até que seja formalmente registado.",
+        "A reprodução do comportamento ou funcionalidade de um software, desde que feita com código independente e distinto, é uma prática legal."
       ],
-      "resposta_correta": 3,
-      "justificacao": "A proteção pelo Direito de Autor nasce com a criação da obra, não dependendo de registo. Um eventual registo tem natureza declarativa, e não constitutiva."
+      "resposta_correta": [1, 3],
+      "justificacao": "A proteção do software nasce no momento da criação da obra e é análoga à das obras literárias, sendo o registo meramente declarativo e não constitutivo. Além disso, a proteção recai estritamente sobre a expressão (código-fonte e código-objeto), excluindo ideias, lógicas ou funcionalidades. Como demonstrado no caso SAS Institute, recriar uma funcionalidade com código independente é perfeitamente legal."
     },
     {
       "id": 2,
-      "pergunta": "Uma empresa analisa a documentação técnica de um software concorrente para compreender as suas funcionalidades e, posteriormente, reescreve essas mesmas funções num código-fonte próprio e distinto. À luz da jurisprudência (nomeadamente o Caso SAS Institute), como se qualifica esta conduta?",
+      "pergunta": "Autoria e Titularidade no Contexto Laboral — Quando um programa de computador é desenvolvido por um trabalhador no exercício das suas funções ou sob as instruções da sua entidade patronal:",
       "opcoes": [
-        "É uma conduta legal, uma vez que a proteção do Direito de Autor recai estritamente sobre a expressão (código) e não sobre as funcionalidades.",
-        "Constitui uma infração por plágio de funcionalidades, devendo existir autorização prévia e escrita do titular originário.",
-        "É uma conduta ilegal, pois a leitura de documentação técnica para recriar o comportamento de software de terceiros é expressamente proibida.",
-        "É legal, mas apenas se o software resultante for disponibilizado de forma gratuita sob uma licença aberta."
+        "Os direitos morais sobre o software são automaticamente transferidos para a entidade patronal.",
+        "Presume-se que os direitos patrimoniais (de exploração económica) pertencem ao empregador, salvo acordo em contrário.",
+        "O trabalhador mantém todos os direitos exclusivos de reprodução, transformação e distribuição da obra.",
+        "A obra é considerada de domínio público devido à sua natureza coletiva."
       ],
-      "resposta_correta": 0,
-      "justificacao": "No entendimento associado ao Caso SAS Institute, a funcionalidade de um programa, a linguagem de programação e o formato dos ficheiros de dados não constituem, por si só, formas de expressão protegidas pelo Direito de Autor. A proteção incide sobre a expressão do programa."
+      "resposta_correta": 1,
+      "justificacao": "Pela regra de exceção laboral, se o programa for criado por um trabalhador no exercício das suas funções, os direitos patrimoniais pertencem ao empregador, a menos que exista um acordo em contrário. Os direitos morais (menção do nome e reivindicação da autoria) são inalienáveis e pertencem sempre ao autor/criador."
     },
     {
       "id": 3,
-      "pergunta": "Quando um programa de computador é concebido por um trabalhador no exercício das suas funções ou sob instruções, a quem pertencem os direitos de exploração económica (patrimoniais), salvo acordo em contrário?",
+      "pergunta": "Direitos do Utente Legítimo e Interoperabilidade — No que diz respeito às limitações e exceções aos direitos exclusivos do titular de um software, quais das seguintes ações podem ser praticadas pelo utente legítimo sem necessidade de autorização?",
       "opcoes": [
-        "Em regime de compropriedade de 50% entre o trabalhador e o empregador.",
-        "Ao trabalhador criador, dado que os direitos patrimoniais são inseparáveis da figura do autor intelectual.",
-        "Ao empregador, por força da presunção de atribuição dos direitos patrimoniais nas obras laborais.",
-        "Ao Estado, que assume a tutela provisória dos direitos até ser celebrado um contrato de licenciamento."
+        "A realização de uma cópia de segurança (backup).",
+        "A partilha comercial do código-fonte com terceiros, desde que referencie o autor original.",
+        "A prática de atos para a correção de erros do software (bugs).",
+        "A descompilação do código, como regra geral e irrestrita, para criar um programa substancialmente semelhante."
       ],
-      "resposta_correta": 2,
-      "justificacao": "No regime aplicável aos programas de computador criados no âmbito de uma relação laboral ou por encomenda, os direitos relativos ao programa pertencem, em regra, à entidade empregadora ou à entidade por conta de quem o programa foi elaborado, salvo convenção em contrário."
+      "resposta_correta": [0, 2],
+      "justificacao": "O utente legítimo tem o direito inalienável de utilizar o software conforme a sua finalidade, incluindo a correção de erros e a realização de cópias de segurança (backup). A descompilação é uma exceção altamente restrita (não é uma regra geral) que só opera se for absolutamente necessária para a interoperabilidade, sendo estritamente proibida a sua utilização para criar um programa semelhante ou para comunicação a terceiros."
     },
     {
       "id": 4,
-      "pergunta": "Um contrato de licença de software prevê uma cláusula que proíbe expressamente o utilizador legítimo de efetuar cópias de segurança (backup) ou de proceder à correção de erros. Qual é a validade jurídica desta cláusula?",
+      "pergunta": "Proteção Jurídica de Bases de Dados — As bases de dados beneficiam de um sistema de dupla proteção jurídica. Indique a(s) afirmação(ões) correta(s) sobre este regime:",
       "opcoes": [
-        "É expressamente nula, não produzindo qualquer efeito por violar faculdades imperativas do utente legítimo.",
-        "É válida e eficaz, dado que o princípio da liberdade contratual prevalece sobre as normas do Direito de Autor.",
-        "É anulável apenas se o licenciando demonstrar em tribunal que a cláusula provocou prejuízo patrimonial direto.",
-        "É válida no que respeita à proibição de cópia de segurança, mas nula quanto à limitação de correção de erros."
+        "O Direito de Autor protege o investimento financeiro e humano na recolha dos dados.",
+        "O Direito Sui Generis protege a criação intelectual original manifestada na estrutura (seleção ou disposição) da base de dados.",
+        "O prazo de proteção do Direito Sui Generis é de 15 anos, protegendo o \"fabricante\" contra a extração ou reutilização da totalidade ou de parte substancial da base.",
+        "A extração de partes não substanciais da base de dados pode tornar-se ilegal se for feita de forma repetida e sistemática, lesando o fabricante (ex: web scraping automatizado)."
       ],
-      "resposta_correta": 0,
-      "justificacao": "O regime especial dos programas de computador reconhece ao utente legítimo determinadas faculdades, incluindo a realização de uma cópia de apoio e a correção de erros. As cláusulas que afastem os atos legalmente permitidos nos termos imperativos do regime são nulas."
+      "resposta_correta": [2, 3],
+      "justificacao": "O sistema é bifronte: o Direito de Autor protege a criatividade da arquitetura/estrutura (seleção ou disposição metódica), enquanto o Direito Sui Generis protege o risco e investimento substancial do fabricante (prazo de 15 anos). Além disso, a exceção à regra da substancialidade dita que extrair partes não substanciais de forma repetida e sistemática é ilegal."
     },
     {
       "id": 5,
-      "pergunta": "Para que a operação de descompilação de um programa de computador seja considerada legal com o objetivo de garantir a interoperabilidade, quais dos seguintes requisitos cumulativos devem verificar-se?",
+      "pergunta": "Conflitos entre Nomes de Domínio e Marcas — No contexto do ecossistema digital e dos conflitos entre nomes de domínio e marcas registadas:",
       "opcoes": [
-        "O ato tem de ser praticado por um titular de licença ou por uma pessoa devidamente autorizada.",
-        "A operação deve ser estritamente limitada às partes do código indispensáveis para alcançar a interoperabilidade.",
-        "A informação obtida pode ser partilhada com terceiros para acelerar a criação de um software concorrente substancialmente semelhante.",
-        "A informação necessária à interoperabilidade não pode estar prévia e facilmente disponível noutro local."
+        "O registo de um nome de domínio confere um direito real de propriedade idêntico ao de uma marca registada.",
+        "A atribuição de nomes de domínio baseia-se num critério meramente técnico e temporal (first come, first served), o que significa que a disponibilidade técnica não garante a licitude jurídica.",
+        "Na análise de confundibilidade com uma marca, os sufixos genéricos como \".pt\" ou \".com\" são o elemento dominante para distinguir as entidades.",
+        "Os conflitos de cybersquatting podem ser resolvidos por via extrajudicial (como o ARBITRARE para domínios .pt), garantindo maior celeridade."
       ],
-      "resposta_correta": [
-        0,
-        1,
-        3
-      ],
-      "justificacao": "A descompilação para interoperabilidade está sujeita a requisitos cumulativos: deve ser realizada por pessoa autorizada a utilizar o programa ou por pessoa habilitada em seu nome; limitar-se às partes necessárias; e a informação necessária não pode estar previamente e facilmente acessível. A informação obtida não pode ser usada para desenvolver ou comercializar um programa substancialmente semelhante, nem comunicada a terceiros fora do que seja necessário à interoperabilidade."
+      "resposta_correta": [1, 3],
+      "justificacao": "Os domínios têm natureza contratual (não conferem direito de propriedade) e são registados com base no princípio temporal (first come, first served), mas o sucesso técnico desse registo não assegura que o uso seja lícito perante direitos de propriedade industrial preexistentes. Na análise de risco de confusão, os sufixos (\".pt\", \".com\") são expressamente ignorados para efeitos de distintividade, não sendo o elemento dominante. O recurso a vias extrajudiciais como centros de arbitragem (ARBITRARE ou regras UDRP) é uma alternativa vantajosa para resolver litígios como o cybersquatting."
     },
     {
       "id": 6,
-      "pergunta": "Uma entidade investe recursos financeiros e técnicos significativos na recolha, verificação e apresentação de dados brutos e factuais. Que regime jurídico protege este investimento contra a extração e reutilização não autorizadas?",
+      "pergunta": "Proteção de Software e Fronteiras Técnicas — No contexto da proteção da propriedade intelectual na era digital, considere as diferentes formas de proteção aplicáveis a um sistema informático. Quais das seguintes afirmações estão corretas?",
       "opcoes": [
-        "O Direito Sui Generis, que visa tutelar o investimento substancial do fabricante independentemente da originalidade da estrutura.",
-        "A lei das Marcas Registadas, exigindo a aprovação prévia da arquitetura da base pelo organismo europeu.",
-        "O Direito de Autor Estrutural, que atribui monopólio automático sobre a factualidade dos dados brutos recolhidos.",
-        "O regime de Segredo Industrial, que concede proteção vitalícia desde que a base seja registada no INPI."
+        "Os programas de computador \"como tais\" podem ser registados como patentes universais que garantem um monopólio à escala mundial.",
+        "O código-fonte de um programa de computador fica automaticamente protegido por Direito de Autor assim que é escrito.",
+        "Se um programador escrever de forma totalmente independente um código que replica a lógica de outro programa protegido por Direito de Autor, estará a cometer um ato ilícito.",
+        "A proteção por patente de engenharia de software é estritamente territorial, ao passo que a proteção do código por Direito de Autor tem alcance universal."
       ],
-      "resposta_correta": 0,
-      "justificacao": "O direito sui generis protege o investimento substancial, qualitativo ou quantitativo, efetuado pelo fabricante na obtenção, verificação ou apresentação do conteúdo da base de dados, independentemente de a seleção ou disposição dos dados constituir uma criação intelectual."
+      "resposta_correta": [1, 3],
+      "justificacao": "Os programas de computador \"como tais\" não são invenções patenteáveis, estando o seu código protegido pelo Direito de Autor. A proteção por Direito de Autor nasce automaticamente no momento da escrita da obra e tem alcance universal através de convenções internacionais. Em oposição, a proteção por patente depende de registo oficial e tem um alcance estritamente territorial, não existindo uma patente mundial única. No âmbito do Direito de Autor (que protege contra o plágio de expressão), uma implementação de código totalmente escrita de forma independente é lícita."
     },
     {
       "id": 7,
-      "pergunta": "Uma base de dados encontra-se acessível online e pode ser consultada gratuitamente pelo público. De que forma esta disponibilidade afeta o Direito Sui Generis do fabricante?",
+      "pergunta": "Natureza e Limites do Direito de Autor — Relativamente ao regime jurídico do Direito de Autor e aos Direitos Conexos, assinale a(s) opção(ões) correta(s):",
       "opcoes": [
-        "Transforma a proteção do Direito Sui Generis num direito exclusivo de autor sobre os dados factuais brutos.",
-        "A acessibilidade pública e gratuita não elimina nem enfraquece a proteção do Direito Sui Generis.",
-        "Reduz o prazo de proteção legal do investimento de 15 anos para apenas 2 anos a contar da publicação.",
-        "Elimina imediatamente o Direito Sui Generis, convertendo a base de dados em domínio público."
+        "A proteção do Direito de Autor depende do registo obrigatório da obra numa entidade competente.",
+        "O Direito de Autor protege exclusivamente a forma concreta e original (a expressão), estando as ideias e conceitos teóricos excluídos da proteção.",
+        "Os direitos morais do autor, que incluem o direito de reivindicar a autoria e opor-se a modificações da obra, são plenamente disponíveis e transmissíveis por via contratual.",
+        "Os Direitos Conexos atribuídos a produtores e emissoras não eliminam o direito de autor originário e englobam apenas direitos de natureza patrimonial."
       ],
-      "resposta_correta": 1,
-      "justificacao": "A disponibilização pública e gratuita da base de dados não implica, por si só, a renúncia ou a extinção do direito sui generis. A proteção mantém-se nos termos legais, sem prejuízo dos direitos e utilizações permitidos por lei."
+      "resposta_correta": [1, 3],
+      "justificacao": "A proteção do Direito de Autor nasce de forma automática sem qualquer dependência de registo ou depósito, vigorando a ausência total de formalidades. Apenas a forma concreta e original da obra é protegida, estando as ideias abstratas expressamente excluídas da proteção. Os direitos morais são indisponíveis e irrenunciáveis, contrariamente aos direitos patrimoniais, que são os únicos transmissíveis. Os Direitos Conexos não substituem os direitos do criador original e, no caso de produtores ou emissoras, restringem-se apenas a direitos patrimoniais motivados pelo investimento financeiro ou técnico."
     },
     {
       "id": 8,
-      "pergunta": "Um software automatizado realiza a extração diária e sistemática de pequenas partes (não substanciais) da base de dados de um concorrente, originando desvio de tráfego e prejuízos comerciais ao fabricante originário. Como se qualifica juridicamente este ato?",
+      "pergunta": "Requisitos e Exclusões de Patenteabilidade — Uma empresa tecnológica desenvolveu uma nova solução para a indústria agrícola e pretende registar uma patente. Tendo em conta os princípios da Propriedade Industrial, qual ou quais das seguintes premissas são aplicáveis?",
       "opcoes": [
-        "É uma conduta ilícita, pois a extração repetida e sistemática de partes não substanciais equivale à extração substancial quando afeta a exploração normal.",
-        "É um ato abrangido pela licença implícita de navegação na internet, sendo insuscetível de limitação legal.",
-        "Constitui unicamente violação do Direito de Autor sobre o código-fonte do website onde a base está alocada.",
-        "É um ato totalmente livre e legal, já que a lei apenas veda a extração de uma parte substancial da base de dados de uma só vez."
+        "A solução técnica desenvolvida será patenteável se preencher os requisitos cumulativos de novidade, atividade inventiva e aplicação industrial.",
+        "Se a solução envolver uma mera descoberta científica teórica sem inovação prática, poderá ser patenteada desde que traga lucros à indústria.",
+        "O monopólio da patente concedida vigorará pelo prazo de 20 anos contados a partir da data do pedido.",
+        "Caso o inventor tenha desenvolvido a solução ao abrigo de um contrato de trabalho onde a atividade inventiva estava expressamente prevista, o direito à patente continuará a pertencer obrigatoriamente ao inventor."
       ],
-      "resposta_correta": 0,
-      "justificacao": "O fabricante pode impedir a extração ou reutilização repetida e sistemática de partes não substanciais quando esses atos sejam contrários à exploração normal da base ou prejudiquem injustificadamente os seus interesses legítimos."
+      "resposta_correta": [0, 2],
+      "justificacao": "Para que uma solução técnica seja patenteável, tem de cumprir obrigatoriamente três requisitos cumulativos: novidade, atividade inventiva e aplicação industrial. As meras descobertas científicas excluem-se da patenteabilidade por falta de caráter técnico, pois conhecimento teórico não consubstancia inovação prática. A duração máxima do monopólio de uma patente é de 20 anos, sempre contados a partir da data em que o pedido é efetuado. A regra geral atribui o direito ao inventor, mas sob a \"exceção laboral\", se a invenção ocorrer no cumprimento de um contrato de trabalho que preveja a atividade inventiva, o direito passa a pertencer à empresa."
     },
     {
       "id": 9,
-      "pergunta": "Uma empresa regista um nome de domínio no DNS (.pt) que integra o elemento verbal dominante de uma marca registada preexistente de um concorrente no mesmo setor. A empresa alega que a disponibilidade técnica do domínio legitima o seu uso. Esta alegação é sustentável?",
+      "pergunta": "Obrigações e Registo na Propriedade Industrial — Sobre os deveres dos titulares e o processo de aquisição de direitos na Propriedade Industrial, indique a(s) afirmação(ões) correta(s):",
       "opcoes": [
-        "Sim, desde que a empresa titular do domínio adicione uma palavra descritiva genérica ao nome da marca.",
-        "Não, porque o registo do domínio confere apenas um direito contratual de utilização temporária, não se sobrepondo a marcas preexistentes.",
-        "Sim, pois a regra first come, first served do DNS prevalece sobre o registo de marcas efetuado no INPI.",
-        "Não, mas apenas se a marca preexistente tiver sido registada há mais de 10 anos junto do INPI."
+        "Ao contrário do Direito de Autor, o registo na Propriedade Industrial é obrigatório e constitui o direito.",
+        "A proteção jurídica da invenção inicia-se apenas no momento exato em que a entidade competente (ex: INPI) concede definitivamente a patente.",
+        "O titular da patente não tem qualquer obrigação de explorar a invenção no mercado.",
+        "A lei impõe um dever de exploração, que deve ser iniciado no prazo de 4 anos após o pedido da patente ou 3 anos após a sua concessão, aplicando-se o prazo mais longo."
       ],
-      "resposta_correta": 1,
-      "justificacao": "A atribuição técnica de um nome de domínio não legitima, por si só, a violação de direitos anteriores. O registo do domínio confere um direito de utilização nos termos aplicáveis, que não prevalece automaticamente sobre uma marca anteriormente protegida."
+      "resposta_correta": [0, 3],
+      "justificacao": "Na Propriedade Industrial, o registo assume caráter obrigatório e constitutivo do direito, existindo apenas os direitos privativos expressamente previstos na lei (princípio da tipicidade). O titular adquire proteção provisória assim que ocorre a publicação do pedido, não sendo necessário aguardar pela concessão final da patente. Por fim, recai sobre o titular o ónus (dever) de explorar a sua invenção para satisfazer o mercado nacional, existindo prazos concretos para esse início: 4 anos após o pedido ou 3 anos após a concessão, devendo aplicar-se o que for mais longo."
     },
     {
       "id": 10,
-      "pergunta": "Na avaliação do risco de confusão entre um nome de domínio e uma marca registada preexistente, quais dos seguintes fatores orientam a análise jurídica de confundibilidade?",
+      "pergunta": "Infrações e Engenharias de Método — Uma empresa concorre diretamente com outra no fornecimento de sistemas digitais (focados no comércio eletrónico). A Empresa A detém uma patente sobre um método de processamento. A Empresa B constrói um novo software, gerando o seu próprio código de raiz, sem nunca ter tido acesso ao código-fonte da Empresa A, mas cuja execução aplica os mesmos passos técnicos e método reivindicados pela Empresa A. À luz dos limites da Propriedade Intelectual, o que ocorre nesta situação?",
       "opcoes": [
-        "A coincidência ou afinidade do setor de atividade e o risco de o público associar ambas as plataformas à mesma origem comercial.",
-        "A avaliação centrada no elemento verbal dominante, ignorando-se sufixos genéricos (como '.pt' ou '.com') ou adições descritivas.",
-        "A impressão global produzida pelos sinais nos planos visual, fonético e conceptual.",
-        "A verificação formal automatizada promovida pelo sistema de registo no ato de atribuição do domínio pelo DNS."
+        "A Empresa B não comete qualquer infração, visto que não copiou o código da Empresa A, não havendo plágio de expressão.",
+        "A Empresa B incorre num ilícito, pois uma patente protege a execução de um método, tornando ilegal uma implementação independente se esta reproduzir os elementos reivindicados.",
+        "A Empresa B está isenta de responsabilidade civil porque beneficia da proteção automática do seu próprio Direito de Autor sobre o código que escreveu de raiz.",
+        "A Empresa A poderá impedir a Empresa B de explorar o sistema no país em causa, visto que na patente o critério é a reprodução do método técnico e não a proteção contra a simples cópia textual."
       ],
-      "resposta_correta": [
-        0,
-        1,
-        2
-      ],
-      "justificacao": "A análise de confundibilidade considera, entre outros elementos, a afinidade dos setores de atividade, a possibilidade de associação pelo público e a impressão global dos sinais nos planos visual, fonético e conceptual. Os sufixos técnicos dos domínios tendem a não ser determinantes para a comparação do elemento distintivo."
+      "resposta_correta": [1, 3],
+      "justificacao": "Enquanto o Direito de Autor (aplicado ao código-fonte) exige plágio da expressão para que exista infração, a patente de engenharia de software protege diretamente contra a execução do método. Assim, mesmo que o código seja desenvolvido de forma totalmente independente pela Empresa B, a implementação é ilícita se reproduzir todos os elementos reivindicados (claims) que definem a solução técnica patenteada pela Empresa A. Deste modo, o titular da patente (Empresa A) detém o monopólio e o direito exclusivo territorial de impedir que terceiros executem o seu sistema."
     },
     {
       "id": 11,
-      "pergunta": "Que mecanismos e vias de reação estão disponíveis para o titular de uma marca registada responder ao registo abusivo de um nome de domínio colidente (ex: cybersquatting)?",
+      "pergunta": "Âmbito de Aplicação e Jurisdição do RGPD — Qual ou quais das seguintes afirmações sobre o âmbito territorial e material do RGPD são verdadeiras?",
       "opcoes": [
-        "Resolução extrajudicial através de centros de arbitragem especializados (como o ARBITRARE para domínios .pt).",
-        "Aplicação da política UDRP da ICANN caso o conflito incida sobre domínios genéricos de topo como '.com'.",
-        "Cancelamento automático e sem direito de contraditório realizado de imediato pelo organismo que gere o INPI."
+        "O RGPD aplica-se a todos os cidadãos da União Europeia, independentemente da sua localização física no momento do tratamento dos dados.",
+        "O tratamento de dados por entidades sem estabelecimento na UE está sujeito ao RGPD se envolver a oferta de bens ou serviços a titulares na UE.",
+        "O RGPD não se aplica ao tratamento de dados feito por autoridades competentes para fins estritamente penais ou de segurança pública.",
+        "A nacionalidade e a residência legal do titular são as variáveis críticas que determinam a aplicação do RGPD."
       ],
-      "resposta_correta": [
-        0,
-        1
-      ],
-      "justificacao": "Entre as vias possíveis encontram-se os mecanismos extrajudiciais de resolução de conflitos aplicáveis a domínios .pt, como os disponibilizados pelo ARBITRARE, e a política UDRP da ICANN para determinados domínios genéricos de topo. Não existe um cancelamento automático e sem contraditório pelo INPI."
+      "resposta_correta": [1, 2],
+      "justificacao": "O critério de direcionamento determina que entidades fora da UE estão abrangidas pelo RGPD se o tratamento estiver relacionado com a oferta de bens/serviços a titulares na UE. As autoridades competentes para fins penais ou de segurança pública estão excluídas de forma absoluta do seu âmbito de aplicação. As opções A e D são incorretas porque a variável crítica para a aplicação legal é a localização física do titular no momento do tratamento, sendo a sua nacionalidade ou residência legal irrelevantes."
     },
     {
       "id": 12,
-      "pergunta": "No contexto da resolução proporcional de um litígio entre o titular de uma marca anterior e o detentor de um nome de domínio, qual das seguintes soluções representa um acordo de coexistência equilibrado?",
+      "pergunta": "Delimitação de Conceitos e Categorias de Dados — No que diz respeito aos diferentes níveis de identificabilidade e sensibilidade da informação, assinale a(s) opção(ões) correta(s):",
       "opcoes": [
-        "Celebração de acordo de coexistência com diferenciação visual clara, ressalva de responsabilidade (disclaimer) e período transitório de reencaminhamento.",
-        "Transferência imediata dos direitos morais da marca para o titular do nome de domínio em troca de compensação pecuniária.",
-        "Proibição definitiva de a empresa titular da marca aceder ou utilizar a internet para promover os seus serviços.",
-        "Manutenção integral do nome de domínio sem qualquer alteração visual ou indicação esclarecedora ao público."
+        "Os dados pseudonimizados deixam de estar abrangidos pelo RGPD, visto que o titular perde a sua capacidade de identificação imediata.",
+        "A anonimização impede totalmente a identificação da pessoa, colocando esses dados fora do âmbito de aplicação do RGPD.",
+        "Uma fotografia de uma pessoa é sempre considerada, por defeito, um dado biométrico enquadrado nas \"categorias especiais\" de dados.",
+        "O tratamento de dados de categorias especiais (como dados de saúde ou origem étnica) exige cumulativamente um fundamento geral de licitude e uma exceção legal expressa."
       ],
-      "resposta_correta": 0,
-      "justificacao": "Um acordo de coexistência pode prever medidas proporcionais para reduzir a confusão, como diferenciação visual, disclaimers e um período transitório de reencaminhamento."
+      "resposta_correta": [1, 3],
+      "justificacao": "A anonimização efetiva coloca os dados fora do âmbito do RGPD, pois impede a identificação. O tratamento de categorias especiais obedece a um princípio de proibição que apenas pode ser ultrapassado com uma \"dupla camada\" (fundamento de licitude + exceção expressa). A opção A é incorreta porque os dados pseudonimizados continuam abrangidos pelo RGPD, já que a pessoa pode continuar identificável por cruzamento de informação. A opção C é incorreta porque o processamento de fotografias não é biometria por defeito, exigindo tratamento técnico específico para confirmação de identificação inequívoca."
+    },
+    {
+      "id": 13,
+      "pergunta": "Sujeitos do Tratamento — Relativamente aos papéis e responsabilidades das entidades que processam dados pessoais, selecione a(s) verdadeira(s):",
+      "opcoes": [
+        "O \"Responsável pelo Tratamento\" é a entidade que determina as finalidades e os meios de tratamento dos dados.",
+        "O \"Subcontratante\" determina autonomamente o rumo dos dados, independentemente das instruções do responsável.",
+        "Se um subcontratante decidir, por si mesmo, as finalidades e os meios de um tratamento, passa a ser legalmente considerado responsável pelo tratamento, assumindo essas obrigações.",
+        "A lei não permite a existência de corresponsáveis pela determinação das finalidades de tratamento."
+      ],
+      "resposta_correta": [0, 2],
+      "justificacao": "O Responsável pelo Tratamento é aquele que define finalidades e meios. Ocorre a \"inversão de papel\" (opção C) se o subcontratante passar a determinar independentemente as finalidades e meios, assumindo as obrigações de responsável. A opção B é falsa porque o subcontratante trata os dados por conta do responsável, estritamente vinculado a instruções e contrato. A opção D é falsa, dado que pode haver determinação conjunta (corresponsáveis), exigindo-se um acordo transparente."
+    },
+    {
+      "id": 14,
+      "pergunta": "Fundamentos de Licitude e Consentimento — Sobre as regras de consentimento e as comunicações de marketing direto, indique a(s) afirmação(ões) correta(s):",
+      "opcoes": [
+        "A aceitação passiva ou a navegação num website, bem como caixas pré-assinaladas, são formas válidas de recolher consentimento inequívoco.",
+        "A retirada do consentimento por parte do titular torna ilícito todo o tratamento de dados realizado até a essa data (efeito retroativo).",
+        "Em Portugal, a idade mínima exigida para um menor consentir validamente no acesso a serviços da sociedade da informação é de 13 anos.",
+        "Pode ser enviada publicidade (marketing direto) a clientes preexistentes sem o seu consentimento prévio, desde que recaia sobre produtos análogos aos já adquiridos e se garanta o direito de recusa."
+      ],
+      "resposta_correta": [2, 3],
+      "justificacao": "Em Portugal, a idade mínima legal para o consentimento de menores no espaço digital é de 13 anos. A \"exceção de clientela\" permite o marketing a clientes preexistentes para produtos análogos sem consentimento prévio, havendo mecanismo de recusa fácil. A opção A é falsa, pois o consentimento tem de ser um ato positivo claro (caixas pré-assinaladas não servem). A opção B é falsa porque a retirada de consentimento não tem efeitos retroativos sobre a licitude do tratamento anterior."
+    },
+    {
+      "id": 15,
+      "pergunta": "Direitos dos Titulares — No contexto dos direitos concedidos pelo RGPD aos titulares dos dados, qual ou quais opções estão corretas?",
+      "opcoes": [
+        "O direito ao apagamento (\"direito ao esquecimento\") é absoluto e deve ser sempre concretizado a pedido do titular.",
+        "O direito de oposição ao tratamento de dados visando o marketing direto é absoluto, não podendo ser recusado pelo responsável.",
+        "O titular tem o direito de não ser sujeito a decisões exclusivamente automatizadas, incluindo a definição de perfis, que produzam efeitos na sua esfera jurídica, salvo exceções legais.",
+        "O direito à portabilidade abrange todos os dados do titular, mesmo que o seu tratamento não seja automatizado e se fundamente apenas num interesse legítimo da empresa."
+      ],
+      "resposta_correta": [1, 2],
+      "justificacao": "O direito de oposição para marketing direto é absoluto. O titular também tem proteção contra decisões exclusivamente automatizadas que gerem efeitos jurídicos, exceto nos casos permitidos por lei. A opção A está errada porque o apagamento não opera perante conservação necessária para obrigações legais, processos judiciais, entre outros. A opção D está errada porque a portabilidade tem requisitos rigorosos: dados fornecidos pelo titular, tratamento automatizado e fundamentado exclusivamente em consentimento ou contrato."
+    },
+    {
+      "id": 16,
+      "pergunta": "Deveres Corporativos e Regimes Sancionatórios — No tocante às obrigações das organizações e possíveis coimas, assinale a(s) afirmação(ões) correta(s):",
+      "opcoes": [
+        "A mera existência de dados de recursos humanos numa empresa obriga imediatamente à nomeação de um Encarregado de Proteção de Dados (EPD).",
+        "Se houver uma violação de dados (Data Breach) com risco, o responsável tem o dever de notificar a CNPD, se possível, no prazo máximo de 72 horas.",
+        "A Avaliação de Impacto (AIPD) é obrigatória antes de se iniciar qualquer tratamento de dados suscetível de implicar um elevado risco para o titular.",
+        "A ocorrência de uma simples infração às regras do RGPD confere automaticamente o direito a indemnização civil por parte do titular dos dados."
+      ],
+      "resposta_correta": [1, 2],
+      "justificacao": "O responsável deve notificar a violação de dados à CNPD em 72h caso exista risco. A Avaliação de Impacto (AIPD) é um requisito prévio obrigatório em tratamentos de alto risco. A opção A é falsa porque o EPD apenas é exigido para controlo em larga escala, dados especiais ou autoridades públicas, e não meramente por dados de recursos humanos. A opção D é incorreta porque a indemnização exige cumulativamente a violação, a ocorrência de um dano provado e o nexo causal, não gerando compensação de forma automática."
+    },
+    {
+      "id": 17,
+      "pergunta": "Fundamentos de Licitude no Tratamento de Dados (RGPD) — Sobre os requisitos dos fundamentos de licitude previstos no RGPD, quais das seguintes afirmações estão corretas?",
+      "opcoes": [
+        "No contexto laboral, o consentimento do trabalhador é considerado a base legal mais segura devido à facilidade na sua obtenção.",
+        "O condicionamento da prestação de um serviço (como o uso de uma aplicação) à aceitação obrigatória de envio de publicidade compromete a liberdade do titular, tornando o consentimento inválido.",
+        "O interesse legítimo exige a verificação de três requisitos cumulativos, mas pode ser invocado de forma genérica pelas autoridades públicas no exercício das suas funções.",
+        "A responsabilidade final perante o titular e a autoridade de controlo pela execução de um sistema de tratamento de dados pertence ao Encarregado de Proteção de Dados (EPD)."
+      ],
+      "resposta_correta": 1,
+      "justificacao": "A opção B está correta porque condicionar um serviço à aceitação obrigatória de publicidade compromete a liberdade, invalidando o consentimento. A opção A é falsa, pois devido ao desequilíbrio de poderes no contexto laboral, o consentimento é por norma inválido. A opção C é falsa porque o interesse legítimo não se aplica a autoridades públicas no exercício das suas funções oficiais. A opção D é falsa porque a responsabilidade legal final pertence à administração da organização (o Responsável pelo Tratamento), cabendo ao EPD apenas funções de aconselhamento e auditoria."
+    },
+    {
+      "id": 18,
+      "pergunta": "Fronteiras Técnicas, Dados Públicos e Inteligência Artificial — No que diz respeito à recolha de dados na internet e à utilização de Inteligência Artificial, selecione a(s) afirmação(ões) correta(s):",
+      "opcoes": [
+        "A acessibilidade técnica de uma informação na internet (como um perfil visível) funciona como uma autorização geral para a extração automatizada (scraping).",
+        "Uma inferência ou etiqueta gerada por Machine Learning (ex: padrão de consumo) constitui um dado pessoal, conferindo ao titular o direito à retificação caso a dedução esteja errada.",
+        "O tratamento de dados sensíveis recolhidos publicamente só é lícito se a referida informação tiver sido manifestamente tornada pública pelo próprio titular, não se aplicando se a publicação for feita por terceiros.",
+        "Um modelo de IA treinado com dados sujeitos a pseudonimização é considerado juridicamente anónimo."
+      ],
+      "resposta_correta": [1, 2],
+      "justificacao": "A opção B está correta porque as inferências geradas por Machine Learning são consideradas dados pessoais e o titular tem o direito de retificar deduções erradas. A opção C está correta, visto que a exceção para o tratamento de categorias especiais de dados (sensíveis) exige que tenham sido tornados públicos pelo titular. A opção A é falsa porque a acessibilidade pública de um perfil não constitui autorização geral de recolha, continuando a exigir base legal e minimização. A opção D é falsa, pois a pseudonimização é apenas uma medida de segurança (a chave de identificação subsiste) e não torna os dados automaticamente anónimos."
+    },
+    {
+      "id": 19,
+      "pergunta": "Direitos dos Titulares e Obrigações dos Responsáveis — Quando um titular de dados exerce os seus direitos, como o acesso ou apagamento, quais as regras aplicáveis ao responsável pelo tratamento?",
+      "opcoes": [
+        "A resposta ao titular deve ocorrer no prazo de um mês, prazo este que pode ser prorrogável por mais dois meses mediante justificação.",
+        "O exercício do direito pode estar sempre sujeito a uma taxa administrativa máxima de 25 euros para cobrir custos de operação.",
+        "O responsável tem a obrigação legal de comunicar as retificações ou apagamentos aos destinatários a quem transmitiu os dados, dispensando-se tal dever apenas se for impossível ou exigir esforço desproporcionado.",
+        "Concluída a finalidade do tratamento, os dados devem ser apagados, mas também podem ser mantidos se forem efetivamente anonimizados."
+      ],
+      "resposta_correta": [0, 2, 3],
+      "justificacao": "A opção A está correta quanto ao prazo legal de resposta estipulado de um mês, prorrogável por mais dois. A opção C está correta por espelhar o dever de comunicação em cadeia e as suas exceções válidas (impossibilidade ou esforço desproporcionado). A opção D está correta porque a anonimização efetiva é uma alternativa lícita ao apagamento para remover os dados da alçada do RGPD. A opção B é falsa porque o princípio geral é a gratuitidade; as taxas só podem ser cobradas perante prova de que o pedido é manifestamente infundado ou excessivo."
+    },
+    {
+      "id": 20,
+      "pergunta": "Articulação entre o Data Act (Regulamento dos Dados) e o RGPD — Atendendo ao confronto e à aplicação harmonizada entre o Regulamento dos Dados (Data Act) e o RGPD, assinale a(s) afirmação(ões) verdadeira(s):",
+      "opcoes": [
+        "Em caso de conflito de aplicação, prevalece o RGPD, que atua como lei especial de direitos fundamentais.",
+        "O Data Act incide exclusivamente sobre o acesso a dados não pessoais de equipamentos conectados.",
+        "O utilizador protegido pelo Data Act pode ser uma pessoa singular ou coletiva, ao passo que o RGPD protege exclusivamente o titular enquanto pessoa singular.",
+        "Os \"Gatekeepers\" (Controladores de Acesso) são considerados terceiros prioritários na elegibilidade para receber dados a pedido dos utilizadores."
+      ],
+      "resposta_correta": [0, 2],
+      "justificacao": "A opção A está correta, pois em cenário de conflito prevalece o RGPD sobre o Data Act. A opção C está correta, uma vez que o sujeito no Data Act pode ser pessoa singular ou coletiva, mas o titular no RGPD é unicamente pessoa singular. A opção B é falsa, pois o Data Act tem por objeto o acesso a dados pessoais e não pessoais. A opção D é falsa, dado que os Controladores de Acesso não são terceiros elegíveis para receber dados a pedido."
+    },
+    {
+      "id": 21,
+      "pergunta": "Prazos e Execução Prática do Data Act — De acordo com o calendário de aplicação do Regulamento (UE) 2023/2854 (Data Act), a partir de que data se torna obrigatório o acesso aos dados \"por conceção\" (fácil, gratuito e por defeito) em novos produtos conectados colocados no mercado?",
+      "opcoes": [
+        "12 de setembro de 2025",
+        "12 de janeiro de 2027",
+        "12 de setembro de 2026",
+        "Imediatamente, uma vez que a lei já se encontra plenamente em vigor."
+      ],
+      "resposta_correta": 2,
+      "justificacao": "A opção C está correta, visto que o prazo legal imposto para a obrigatoriedade de acesso aos dados por conceção em novos produtos é o dia 12 de setembro de 2026. (A opção A remete para o início da aplicação geral e a opção B remete para o fim das taxas de mudança de prestador cloud)."
+    },
+    {
+      "id": 22,
+      "pergunta": "Contratos Eletrónicos e Contratos à Distância — Relativamente à qualificação e âmbito dos contratos eletrónicos e dos contratos celebrados à distância, selecione a(s) opção(ões) correta(s):",
+      "opcoes": [
+        "O contrato eletrónico define-se exclusivamente pelo modo de celebração, caracterizado pela ausência física das partes.",
+        "O contrato eletrónico define-se pelo meio técnico utilizado, seja ele um suporte digital ou informático.",
+        "O contrato à distância consubstancia-se na ausência de presença física simultânea das partes.",
+        "Os contratos eletrónicos são aplicáveis apenas a negócios estritamente comerciais."
+      ],
+      "resposta_correta": [1, 2],
+      "justificacao": "O contrato eletrónico define-se pelo meio técnico utilizado na sua celebração e aplica-se a negócios comerciais e não comerciais. O contrato à distância define-se pelo modo de celebração, consubstanciando-se na ausência de presença física simultânea das partes."
+    },
+    {
+      "id": 23,
+      "pergunta": "Validade e Exceções na Contratação Eletrónica — Sobre o regime de validade, exclusões legais e vinculação na contratação eletrónica, assinale a(s) opção(ões) correta(s):",
+      "opcoes": [
+        "Os negócios familiares e sucessórios estão expressamente excluídos da celebração por via eletrónica.",
+        "Todos os negócios reais imobiliários, sem exceção, estão proibidos de ser celebrados eletronicamente.",
+        "A lei permite a inclusão de cláusulas contratuais gerais que imponham unilateralmente a via eletrónica aos consumidores.",
+        "Nos contratos à distância, o envio do \"aviso de receção\" determina sempre o momento da conclusão e vinculação do contrato.",
+        "Nos contratos à distância, o botão de finalização de compra tem de ser inequívoco, sendo que termos ambíguos como \"Continuar\" invalidam a obrigação de informação."
+      ],
+      "resposta_correta": [0, 4],
+      "justificacao": "Estão legalmente excluídos da via eletrónica os negócios familiares e sucessórios, bem como os negócios reais imobiliários (com exceção do contrato de arrendamento). É proibido o uso de cláusulas contratuais gerais que imponham unilateralmente a celebração eletrónica aos consumidores. O momento de vinculação ocorre com a ação final que confirma a vontade das partes (e não com o mero envio do aviso de receção), sendo que o botão de finalização de encomenda tem de ser inequívoco quanto à obrigação de pagar."
+    },
+    {
+      "id": 24,
+      "pergunta": "Documento Eletrónico e Tipologias de Assinaturas — No que respeita ao valor probatório do documento eletrónico e às modalidades de assinatura eletrónica, assinale a(s) opção(ões) correta(s):",
+      "opcoes": [
+        "O documento eletrónico apenas satisfaz a exigência de forma escrita se possuir uma assinatura eletrónica qualificada.",
+        "A assinatura eletrónica qualificada aplicada num documento particular converte-o automaticamente num documento autêntico.",
+        "A assinatura eletrónica simples não pode ser recusada como meio de prova pelo mero facto de se apresentar em formato eletrónico.",
+        "A assinatura eletrónica avançada possui maior fiabilidade técnica que a simples, mas não é automaticamente equiparada à assinatura manuscrita.",
+        "A Chave Móvel Digital (CMD) permite produzir uma assinatura eletrónica qualificada com a mesma validade que uma assinatura manuscrita."
+      ],
+      "resposta_correta": [2, 3, 4],
+      "justificacao": "O documento eletrónico satisfaz a exigência legal de forma escrita sempre que o seu conteúdo seja representável como declaração escrita, independentemente da assinatura. A aposição de assinatura qualificada não transforma um documento particular em autêntico. A assinatura simples não pode ser recusada como prova apenas por ser eletrónica; a avançada não é automaticamente equiparada à manuscrita; e a assinatura qualificada (gerada via Chave Móvel Digital com certificado ativo) equivale juridicamente à assinatura manuscrita."
+    },
+    {
+      "id": 25,
+      "pergunta": "Automatização da Vontade na Contratação — Relativamente ao regime dos erros e da formação da vontade na contratação eletrónica automatizada, selecione a(s) opção(ões) correta(s):",
+      "opcoes": [
+        "Um erro de programação num sistema automatizado de contratação configura, para a lei civil, um erro na declaração.",
+        "Um defeito da máquina num processo contratual automatizado configura um erro na declaração.",
+        "Uma mensagem deformada pelo sistema de transmissão enquadra-se legalmente como um erro na transmissão.",
+        "A legislação proíbe a contratação integralmente conduzida por computadores sem qualquer intervenção humana."
+      ],
+      "resposta_correta": [1, 2],
+      "justificacao": "O erro de programação é tratado pela legislação como um erro na formação da vontade. Por sua vez, o defeito da máquina num sistema informático configura um erro na declaração, e a mensagem deformada durante o processo tecnológico configura um erro na transmissão. A legislação civil admite expressamente a contratação integralmente conduzida por computadores sem intervenção humana."
+    },
+    {
+      "id": 26,
+      "pergunta": "Faturação Eletrónica e Documentos Fiscais — Sobre os requisitos legais e prazos de emissão da faturação eletrónica, assinale a(s) opção(ões) correta(s):",
+      "opcoes": [
+        "A validade legal da fatura eletrónica depende exclusivamente da sua emissão num formato de dados estruturados como o XML.",
+        "O comprovativo bancário de pagamento é documento suficiente para substituir a fatura para efeitos de justificação fiscal.",
+        "Em regra, a fatura deve ser emitida até ao 5.º dia útil seguinte ao facto gerador da transação.",
+        "Em situações pontuais de pagamento antecipado, a fatura tem de ser emitida na data exata em que ocorre o recebimento.",
+        "A validade legal da fatura eletrónica perante o destinatário exige sempre a sua aceitação expressa ou tácita."
+      ],
+      "resposta_correta": [2, 3, 4],
+      "justificacao": "A fatura eletrónica pode ser validamente apresentada em PDF ou em dados estruturados, e o comprovativo bancário não substitui a fatura. A fatura deve ser emitida até ao 5.º dia útil seguinte ao facto gerador, ou na data exata do recebimento em casos de pagamentos antecipados. A validade legal da fatura eletrónica depende sempre da aceitação (expressa ou por comportamento concludente) do destinatário."
+    },
+    {
+      "id": 27,
+      "pergunta": "Segurança em Pagamentos Digitais (SCA) e Responsabilidade — No âmbito dos serviços de pagamento eletrónicos, autenticação forte e reversão de operações, assinale a(s) opção(ões) correta(s):",
+      "opcoes": [
+        "A Autenticação Forte do Cliente (SCA) exige, em cenário de pagamento online, a combinação de pelo menos dois elementos independentes entre conhecimento, posse e inerência.",
+        "O prestador de serviços de pagamento pode decidir isentar certas operações da regra SCA, mas ao optar por fazê-lo assume integralmente o risco operacional associado a fraudes.",
+        "Em caso de suspeita de fraude, o mero registo informático do banco é prova suficiente e absoluta de que o utilizador autorizou licitamente a operação.",
+        "O mecanismo de chargeback baseia-se diretamente na lei imperativa de defesa do consumidor para a devolução de bens.",
+        "O estorno bancário caracteriza-se por ser uma correção técnica de uma operação provocada por mero erro ou por duplicação indevida de débito."
+      ],
+      "resposta_correta": [0, 1, 4],
+      "justificacao": "A Autenticação Forte (SCA) exige a combinação de, no mínimo, dois fatores independentes (Conhecimento, Posse ou Inerência). O prestador que isenta uma operação da SCA assume integralmente o risco operacional em caso de fraude, e o mero registo informático não é prova suficiente de autorização lícita. O chargeback obedece a regras da rede privada de cartões (não correspondendo diretamente ao direito legal do consumidor), enquanto o estorno consiste numa correção técnica motivada por erro interno ou duplicação indevida de débito."
     }
   ],
-  "desenvolvimento": []
+  "desenvolvimento": [
+    {
+      "id": 1,
+      "pergunta": "CASO PRÁTICO (Questão 1 — Software, Patentes e Bases de Dados): Um trabalhador da AgroSmart criou um software no exercício das suas funções. A concorrente BetaTech consultou os manuais, reescreveu as mesmas funcionalidades com código próprio, mas executou um método técnico patenteado pela AgroSmart e extraiu diariamente partes não substanciais da base de dados da AgroSmart causando prejuízo. Avalie a titularidade do software e a licitude das três condutas da BetaTech.",
+      "palavras_chave": [
+        "empregador",
+        "direitos patrimoniais",
+        "direitos morais",
+        "expressão",
+        "funcionalidades",
+        "patente",
+        "método",
+        "sui generis",
+        "investimento substancial",
+        "repetida e sistemática",
+        "15 anos",
+        "20 anos"
+      ]
+    },
+    {
+      "id": 2,
+      "pergunta": "CASO PRÁTICO (Questão 2 — RGPD e Data Act): Em novembro de 2026, a AgroSmart condicionou o uso da app AgroCloud à aceitação obrigatória (com caixa pré-assinalada) de publicidade e de decisões automatizadas de crédito sem intervenção humana. Além disso, recusou o acesso gratuito do cliente aos dados do sensor IoT e recusou partilhá-los com uma empresa de manutenção e com um Gatekeeper, invocando o Direito Sui Generis. Analise a legalidade destas atuações.",
+      "palavras_chave": [
+        "consentimento",
+        "livre",
+        "ato positivo",
+        "decisões automatizadas",
+        "intervenção humana",
+        "12 de setembro de 2026",
+        "conceção",
+        "gratuito",
+        "controlador de acesso",
+        "sui generis",
+        "prevalece o RGPD"
+      ]
+    },
+    {
+      "id": 3,
+      "pergunta": "CASO PRÁTICO (Questão 3 — Contratação Eletrónica, Assinaturas e Faturação): Devido a um defeito da máquina, um sensor de 1.000 € surgiu a 10 € no site da AgroSmart. O consumidor clicou num botão que dizia apenas 'Continuar', recebeu um aviso automático de receção, um contrato PDF com assinatura eletrónica avançada e uma fatura eletrónica não aceite previamente. Qualifique o erro informático, a vinculação contratual do consumidor, o valor da assinatura face à Chave Móvel Digital e a validade da fatura.",
+      "palavras_chave": [
+        "erro na declaração",
+        "erro na formação da vontade",
+        "erro na transmissão",
+        "aviso de receção",
+        "obrigação de pagar",
+        "assinatura eletrónica avançada",
+        "assinatura eletrónica qualificada",
+        "assinatura manuscrita",
+        "chave móvel digital",
+        "aceitação",
+        "5.º dia útil"
+      ]
+    },
+    {
+      "id": 4,
+      "pergunta": "CASO PRÁTICO (Questão 4 — Serviços de Pagamento e Autenticação Forte): Numa compra online de 1.000 €, o banco isentou a operação de Autenticação Forte do Cliente (SCA). O cliente negou ter autorizado a operação, mas o banco recusou o reembolso invocando que o registo informático prova a autorização e exigiu que o cliente suportasse os primeiros 50 € de perda. Avalie os argumentos do banco à luz do RJSPME.",
+      "palavras_chave": [
+        "autenticação forte",
+        "conhecimento",
+        "posse",
+        "inerência",
+        "registo informático",
+        "ónus da prova",
+        "negligência grosseira",
+        "50 euros",
+        "risco",
+        "reembolso",
+        "primeiro dia útil"
+      ]
+    }
+  ]
 }
