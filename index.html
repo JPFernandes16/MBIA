@@ -71,7 +71,7 @@
             </nav>
 
             <div class="sidebar-modules">
-                <h4>Ficheiros de Aula (.md / .mp4)</h4>
+                <h4>Ficheiros de Aula</h4>
                 <ul class="module-tree">
                     <li>
                         <a href="#" onclick="abrirAulaDireta(1); return false;">
@@ -98,6 +98,11 @@
                             <i class="ri-markdown-line"></i> Aula 05 — Contratação, IA e Crime
                         </a>
                     </li>
+                    <li>
+                        <a href="#" onclick="abrirAulaDireta(6); return false;">
+                            <i class="ri-markdown-line"></i> Aula 06 — Contratação Eletrónica
+                        </a>
+                    </li>
                 </ul>
             </div>
         </aside>
@@ -121,7 +126,7 @@
                     <div>
                         <h1>Direito no Ciberespaço</h1>
                         <p class="course-subtitle">
-                            Docentes: Prof. Doutor Paulo Vasconcelos (PSV) &amp; Prof.ª Doutora Fernanda Magalhães (FAMM)
+                            Docente: Prof.ª Doutora Fernanda Magalhães (FAMM)
                         </p>
                     </div>
                 </div>
@@ -137,8 +142,8 @@
                     <div class="kpi-card">
                         <div class="kpi-icon"><i class="ri-book-open-line"></i></div>
                         <div class="kpi-info">
-                            <span class="kpi-label">Aulas Sincronizadas</span>
-                            <strong class="kpi-value" id="kpi-aulas">5 Aulas (.md / .mp4)</strong>
+                            <span class="kpi-label">Aulas</span>
+                            <strong class="kpi-value" id="kpi-aulas">6 Aulas</strong>
                             <span class="kpi-sub">42h Contacto | 60h Autónomo</span>
                         </div>
                     </div>
@@ -170,21 +175,18 @@
                             <i class="ri-play-circle-line"></i>
                             <div>
                                 <strong>Abrir Sala de Estudo</strong>
-                                <p>Ler resumos em Markdown e assistir aos vídeos das aulas lado a lado</p>
                             </div>
                         </button>
                         <button class="action-card" onclick="mudarVista('view-teste-em')">
                             <i class="ri-task-line"></i>
                             <div>
-                                <strong>Simular Exame de Escolha Múltipla</strong>
-                                <p>Questões de escolha simples e múltipla com correção automática</p>
+                                <strong>Exame de Escolha Múltipla</strong>
                             </div>
                         </button>
                         <button class="action-card" onclick="mudarVista('view-teste-aberto')">
                             <i class="ri-edit-box-line"></i>
                             <div>
                                 <strong>Resolver Questões de Desenvolvimento</strong>
-                                <p>Praticar escrita jurídica com verificação de conceitos-chave</p>
                             </div>
                         </button>
                     </div>
@@ -193,7 +195,7 @@
                 <!-- Lista das 5 Aulas (Mapeadas para Aula01 a Aula05) -->
                 <div class="moodle-block">
                     <div class="block-header">
-                        <h2><i class="ri-folder-open-line"></i> Repositório de Aulas (Markdown &amp; Vídeo)</h2>
+                        <h2><i class="ri-folder-open-line"></i> Repositório de Aulas</h2>
                     </div>
                     <div class="topics-list">
                         <!-- Aula 01 -->
@@ -275,6 +277,22 @@
                                 </button>
                             </div>
                         </article>
+
+                        <!-- Aula 06 -->
+                        <article class="topic-item">
+                            <div class="topic-info">
+                                <h3>Aula 06: Contratação Eletrónica</h3>
+                                <p>Ficheiros: <code>aulas/Aula06.md</code> e <code>aulas/Aula06.mp4</code></p>
+                            </div>
+                            <div class="topic-actions">
+                                <button class="btn-outline" onclick="abrirAulaDireta(6, 'md')">
+                                    <i class="ri-markdown-line"></i> Ler Resumo (.md)
+                                </button>
+                                <button class="btn-outline" onclick="abrirAulaDireta(6, 'video')">
+                                    <i class="ri-video-line"></i> Vídeo Aula
+                                </button>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </section>
@@ -293,7 +311,7 @@
                                 <option value="3">Aula 03 — Propriedade Intelectual na Era Digital II</option>
                                 <option value="4">Aula 04 — Proteção de Dados Pessoais (RGPD e CNPD)</option>
                                 <option value="5">Aula 05 — Contratação Eletrónica, IA e Cibercrime</option>
-                                <option value="5">Aula 06 — Contratação Eletrónica</option>
+                                <option value="6">Aula 06 — Contratação Eletrónica</option>
                             </select>
                         </div>
 
@@ -390,7 +408,6 @@
                 <div class="moodle-block">
                     <div class="block-header">
                         <h2>Prova Escrita: Questões de Desenvolvimento</h2>
-                        <p>Elabore a sua resposta jurídica para cada caso. O motor de avaliação analisa o seu texto e valida a inclusão dos conceitos e termos técnicos obrigatórios definidos no ficheiro JSON.</p>
                     </div>
 
                     <form id="form-dev">
