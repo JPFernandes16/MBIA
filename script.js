@@ -1,6 +1,6 @@
 /**
  * PLATAFORMA LMS — DIREITO NO CIBERESPAÇO (MBIA)
- * Motor Lógico SPA, Renderizador Markdown (Aula01..06), Sorteio Estratificado (10+8+2) e Persistência Local
+ * Motor Lógico SPA, Renderizador Markdown (Aula01..07), Sorteio Invisível (10+8+2) e Avaliação Cega
  */
 
 document.addEventListener('DOMContentLoaded', inicializarAplicacao);
@@ -20,9 +20,9 @@ const estadoApp = {
 // Mapa de Títulos para os Breadcrumbs Institucionais
 const mapaBreadcrumbs = {
     'view-dashboard': 'Painel da Disciplina',
-    'view-recursos': 'Sala de Estudo (Markdown & Vídeo)',
-    'view-teste-em': 'Exame: Escolha Múltipla (Sorteio 10+8+2)',
-    'view-teste-aberto': 'Exame: Desenvolvimento (Caso Prático BI)',
+    'view-recursos': 'Sala de Estudo',
+    'view-teste-em': 'Exame: Escolha Múltipla',
+    'view-teste-aberto': 'Exame: Desenvolvimento',
     'view-fuc': 'Ficha da UC & Bibliografia'
 };
 
@@ -38,17 +38,13 @@ async function inicializarAplicacao() {
     configurarBlocoApontamentos();
     configurarFormulariosAvaliacao();
 
-    // Definir grelha lado a lado por defeito em ecrãs de computador
     const workspace = document.getElementById('media-workspace');
     if (workspace) {
         workspace.classList.add('modo-ambos');
     }
 
-    // Carregar material inicial (Aula01.md e Aula01.mp4) e métricas guardadas
     await carregarMaterialAula();
     atualizarKPIsDashboard();
-
-    // Carregar base de dados de perguntas (testes.json)
     await carregarDadosJSON();
 }
 
@@ -65,7 +61,6 @@ function configurarNavegacaoSPA() {
 }
 
 function mudarVista(idVista) {
-    // 1. Ocultar todas as secções e ativar apenas a vista selecionada
     document.querySelectorAll('.lms-view').forEach(vista => {
         vista.classList.add('oculto');
         vista.classList.remove('ativo');
@@ -77,7 +72,6 @@ function mudarVista(idVista) {
         secAlvo.classList.add('ativo');
     }
 
-    // 2. Sincronizar estado ativo nos botões laterais (Desktop/Tablet) e inferiores (iPhone)
     document.querySelectorAll('.nav-item, .mob-nav-btn').forEach(btn => {
         if (btn.getAttribute('data-target') === idVista) {
             btn.classList.add('ativo');
@@ -86,16 +80,13 @@ function mudarVista(idVista) {
         }
     });
 
-    // 3. Atualizar Breadcrumb institucional
     const elBreadcrumb = document.getElementById('breadcrumb-atual');
     if (elBreadcrumb && mapaBreadcrumbs[idVista]) {
         elBreadcrumb.textContent = mapaBreadcrumbs[idVista];
     }
 
-    // 4. Fechar menu gaveta se estiver aberto em modo mobile/tablet
     fecharMenuMobile();
 
-    // 5. Pausar o vídeo automaticamente se o estudante sair da sala de aula
     if (idVista !== 'view-recursos') {
         const videoElement = document.getElementById('frame-video');
         if (videoElement && !videoElement.paused) {
@@ -103,7 +94,6 @@ function mudarVista(idVista) {
         }
     }
 
-    // 6. Repor scroll no topo da página
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -132,10 +122,9 @@ function fecharMenuMobile() {
 }
 
 /* ==========================================================================
-   2. GESTÃO DA SALA DE AULA (MARKDOWN Aula01..06, VÍDEO E APONTAMENTOS)
+   2. GESTÃO DA SALA DE AULA (MARKDOWN Aula01..07, VÍDEO E APONTAMENTOS)
    ========================================================================== */
 function formatarCodigoAula(numero) {
-    // Converte 1 -> "01", 2 -> "02" para coincidir exatamente com "Aula01.md"
     return String(numero).padStart(2, '0');
 }
 
@@ -168,13 +157,11 @@ async function carregarMaterialAula() {
     const caminhoMD = `aulas/Aula${codigo}.md`;
     const caminhoVideo = `aulas/Aula${codigo}.mp4`;
 
-    // 1. Atualizar cabeçalhos e links do Markdown
     const labelMD = document.getElementById('nome-ficheiro-md');
     const linkMD = document.getElementById('link-abrir-md');
     if (labelMD) labelMD.textContent = caminhoMD;
     if (linkMD) linkMD.href = caminhoMD;
 
-    // 2. Atualizar componente Vídeo
     const frameVideo = document.getElementById('frame-video');
     const sourceVideo = document.getElementById('source-video');
     const labelVideo = document.getElementById('nome-ficheiro-video');
@@ -183,10 +170,7 @@ async function carregarMaterialAula() {
     if (labelVideo) labelVideo.textContent = caminhoVideo;
     if (frameVideo) frameVideo.load();
 
-    // 3. Carregar apontamentos pessoais guardados desta aula
     carregarApontamentosAula(numAula);
-
-    // 4. Descarregar e converter o ficheiro Markdown (.md) em HTML
     await renderizarFicheiroMarkdown(caminhoMD);
 }
 
@@ -203,7 +187,6 @@ async function renderizarFicheiroMarkdown(caminhoMD) {
         }
         const textoMarkdown = await resposta.text();
 
-        // Utilizar a biblioteca Marked.js se disponível, ou fallback seguro
         if (typeof marked !== 'undefined') {
             contentorMD.innerHTML = marked.parse(textoMarkdown);
         } else {
@@ -216,7 +199,7 @@ async function renderizarFicheiroMarkdown(caminhoMD) {
             <div style="padding: 1rem; background: var(--status-warning-bg); border-left: 4px solid var(--status-warning); border-radius: 4px;">
                 <strong>Não foi possível carregar <code>${caminhoMD}</code>.</strong>
                 <p style="margin-top: 0.4rem; font-size: 0.88rem;">
-                    Verifique se o ficheiro existe na pasta <code>aulas/</code> com o nome exato <strong>${caminhoMD.split('/').pop()}</strong> e se está a abrir a aplicação através do <em>Live Server</em> ou do <em>GitHub Pages</em>.
+                    Verifique se o ficheiro existe na pasta <code>aulas/</code> com o nome exato <strong>${caminhoMD.split('/').pop()}</strong>.
                 </p>
             </div>
         `;
@@ -224,7 +207,6 @@ async function renderizarFicheiroMarkdown(caminhoMD) {
 }
 
 function alternarModoMedia(modo) {
-    // Compatibilidade caso algum botão antigo invoque 'pdf'
     const modoNormalizado = modo === 'pdf' ? 'md' : modo;
     estadoApp.modoMedia = modoNormalizado;
 
@@ -285,7 +267,7 @@ function carregarApontamentosAula(numAula) {
 }
 
 /* ==========================================================================
-   3. CARREGAMENTO DO REPERTÓRIO E SORTEIO ESTRATIFICADO (10 + 8 + 2)
+   3. CARREGAMENTO E SORTEIO INVISÍVEL (10 FÁCEIS + 8 INTERMÉDIAS + 2 DIFÍCEIS)
    ========================================================================== */
 async function carregarDadosJSON() {
     try {
@@ -295,11 +277,9 @@ async function carregarDadosJSON() {
         }
         const dados = await resposta.json();
 
-        // Guardar o repertório completo em memória
         estadoApp.repertorioEM = dados.escolha_multipla || [];
         estadoApp.dadosTestes.desenvolvimento = dados.desenvolvimento || [];
 
-        // Gerar a primeira prova sorteada (10 fáceis, 8 intermédias, 2 difíceis)
         gerarNovoExameSorteado();
         renderizarDesenvolvimento(estadoApp.dadosTestes.desenvolvimento);
     } catch (erro) {
@@ -324,10 +304,12 @@ function gerarNovoExameSorteado() {
     const intermedias = baralharArray(repertorio.filter(q => q.dificuldade === 'intermedia')).slice(0, 8);
     const dificeis = baralharArray(repertorio.filter(q => q.dificuldade === 'dificil')).slice(0, 2);
 
-    // Se o repertório tiver as categorias, compõe 10 + 8 + 2; caso contrário, sorteia 20 gerais
     let exameSorteado = [...faceis, ...intermedias, ...dificeis];
     if (exameSorteado.length === 0 && repertorio.length > 0) {
         exameSorteado = baralharArray(repertorio).slice(0, 20);
+    } else {
+        // Baralha a ordem das 20 questões sorteadas para não ficarem agrupadas por dificuldade
+        exameSorteado = baralharArray(exameSorteado);
     }
 
     estadoApp.dadosTestes.escolha_multipla = exameSorteado;
@@ -350,7 +332,7 @@ function apresentarAvisoCarregamento() {
 }
 
 /* ==========================================================================
-   4. MÓDULO DE EXAME: ESCOLHA MÚLTIPLA (SUPORTE HÍBRIDO RADIO + CHECKBOX)
+   4. MÓDULO DE EXAME: ESCOLHA MÚLTIPLA (INTERFACE LIMPA E CEGA)
    ========================================================================== */
 function obterArrayRespostasCorretas(respostaCorreta) {
     return Array.isArray(respostaCorreta) ? respostaCorreta : [respostaCorreta];
@@ -366,51 +348,39 @@ function renderizarEscolhaMultipla(listaQuestoes) {
     grelhaNav.innerHTML = '';
 
     const total = listaQuestoes.length;
-    const totalRepertorio = (estadoApp.repertorioEM || []).length;
     if (spanTotal) {
-        spanTotal.textContent = `${total} sorteadas de ${totalRepertorio}`;
+        spanTotal.textContent = total;
     }
     const cotacaoUnitaria = total > 0 ? (20 / total).toFixed(2) : '1.00';
-
-    const mapaNivel = {
-        'facil': '🟢 Fácil',
-        'intermedia': '🟡 Intermédia',
-        'dificil': '🔴 Difícil'
-    };
 
     listaQuestoes.forEach((questao, idx) => {
         const numero = idx + 1;
         const idBloco = `questao-em-${questao.id}`;
-        const ehMultipla = Array.isArray(questao.resposta_correta);
-        const tipoInput = ehMultipla ? 'checkbox' : 'radio';
-        const etiquetaNivel = mapaNivel[questao.dificuldade] || 'Questão';
-        const textoBadge = ehMultipla
-            ? `${etiquetaNivel} • Escolha Múltipla (${questao.resposta_correta.length} corretas)`
-            : `${etiquetaNivel} • Escolha Única (1 correta)`;
 
-        // 1. Construir opções de resposta (Radio para resposta única, Checkbox para várias)
+        // Remove qualquer eventual etiqueta entre parênteses retos [Aula X...] caso exista
+        const enunciadoLimpo = questao.pergunta.replace(/^\[.*?\]\s*/, '');
+
+        // Todas as opções usam checkbox uniforme para não denunciar quantas estão corretas
         let opcoesHTML = '';
         questao.opcoes.forEach((textoOpcao, opcaoIdx) => {
-            const letra = String.fromCharCode(65 + opcaoIdx); // A, B, C, D...
+            const letra = String.fromCharCode(65 + opcaoIdx);
             opcoesHTML += `
                 <label class="opcao-item" id="label-em-${questao.id}-${opcaoIdx}">
-                    <input type="${tipoInput}" name="em_${questao.id}" value="${opcaoIdx}" data-qid="${questao.id}">
+                    <input type="checkbox" name="em_${questao.id}" value="${opcaoIdx}" data-qid="${questao.id}">
                     <span><strong>${letra})</strong> ${textoOpcao}</span>
                 </label>
             `;
         });
 
-        // 2. Inserir Cartão da Questão
         const artigo = document.createElement('article');
         artigo.className = 'pergunta-bloco';
         artigo.id = idBloco;
         artigo.innerHTML = `
             <div class="pergunta-cabecalho">
-                <span class="pergunta-numero">Questão ${numero} <small style="opacity:0.75;">(ID #${questao.id})</small></span>
-                <span class="badge-tipo-questao ${ehMultipla ? 'multipla' : ''}">${textoBadge}</span>
+                <span class="pergunta-numero">Questão ${numero}</span>
                 <span class="pergunta-cotacao">Cotação: ${cotacaoUnitaria} val.</span>
             </div>
-            <p class="pergunta-enunciado">${questao.pergunta}</p>
+            <p class="pergunta-enunciado">${enunciadoLimpo}</p>
             <div class="opcoes-lista">
                 ${opcoesHTML}
             </div>
@@ -418,7 +388,6 @@ function renderizarEscolhaMultipla(listaQuestoes) {
         `;
         containerEM.appendChild(artigo);
 
-        // 3. Criar botão correspondente na Paleta Lateral do Moodle
         const btnPaleta = document.createElement('button');
         btnPaleta.type = 'button';
         btnPaleta.className = 'palette-btn';
@@ -430,8 +399,7 @@ function renderizarEscolhaMultipla(listaQuestoes) {
         grelhaNav.appendChild(btnPaleta);
     });
 
-    // Monitorizar seleção em tempo real (funciona para radio e checkbox)
-    containerEM.querySelectorAll('input[type="radio"], input[type="checkbox"]').forEach(input => {
+    containerEM.querySelectorAll('input[type="checkbox"]').forEach(input => {
         input.addEventListener('change', (e) => {
             const qid = e.target.getAttribute('data-qid');
             const selecionados = document.querySelectorAll(`input[name="em_${qid}"]:checked`);
@@ -477,20 +445,17 @@ function corrigirEscolhaMultipla(evento) {
 
         const btnPaleta = document.getElementById(`paleta-btn-${q.id}`);
 
-        // Limpar classes de correção anteriores
         q.opcoes.forEach((_, idx) => {
             const label = document.getElementById(`label-em-${q.id}-${idx}`);
             if (label) label.classList.remove('correta', 'incorreta');
         });
         if (btnPaleta) btnPaleta.classList.remove('correta', 'incorreta');
 
-        // Destacar todas as opções corretas a verde
         valoresCorretos.forEach(idxCorreto => {
             const labelCorreta = document.getElementById(`label-em-${q.id}-${idxCorreto}`);
             if (labelCorreta) labelCorreta.classList.add('correta');
         });
 
-        // Destacar a vermelho quaisquer opções incorretas que o estudante tenha selecionado
         valoresSelecionados.forEach(idxSel => {
             if (!valoresCorretos.includes(idxSel)) {
                 const labelErrada = document.getElementById(`label-em-${q.id}-${idxSel}`);
@@ -498,7 +463,6 @@ function corrigirEscolhaMultipla(evento) {
             }
         });
 
-        // A questão é considerada certa se o conjunto selecionado coincidir exatamente com o conjunto correto
         const acertouTotalmente =
             valoresSelecionados.length === valoresCorretos.length &&
             valoresSelecionados.every((val, index) => val === valoresCorretos[index]);
@@ -510,7 +474,6 @@ function corrigirEscolhaMultipla(evento) {
             if (btnPaleta) btnPaleta.classList.add('incorreta');
         }
 
-        // Mostrar fundamentação jurídica
         const divExplicacao = document.getElementById(`explicacao-em-${q.id}`);
         if (divExplicacao && q.justificacao) {
             divExplicacao.classList.remove('oculto');
@@ -529,8 +492,8 @@ function corrigirEscolhaMultipla(evento) {
     if (painelResultados) {
         painelResultados.classList.remove('oculto');
         painelResultados.innerHTML = `
-            <h3>Resultado da Simulação: ${notaEscala20} / 20 valores (${percentagem}%)</h3>
-            <p>Acertou integralmente em <strong>${certas}</strong> de <strong>${total}</strong> questões sorteadas (10 Fáceis, 8 Intermédias, 2 Difíceis). Clique em <em>Limpar Tentativa</em> para sortear um novo exame diferente a partir do repertório.</p>
+            <h3>Classificação Final: ${notaEscala20} / 20 valores (${percentagem}%)</h3>
+            <p>Respostas corretas: <strong>${certas}</strong> em <strong>${total}</strong>.</p>
         `;
         painelResultados.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
@@ -543,7 +506,6 @@ function reiniciarTesteEM() {
         painelResultados.innerHTML = '';
     }
 
-    // Sorteia uma nova combinação aleatória de 10 fáceis + 8 intermédias + 2 difíceis
     gerarNovoExameSorteado();
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
@@ -558,14 +520,10 @@ function renderizarDesenvolvimento(listaQuestoes) {
 
     containerDev.innerHTML = '';
 
-    // Caso o array "desenvolvimento" esteja vazio no testes.json ([]), apresentar aviso limpo
     if (listaQuestoes.length === 0) {
         containerDev.innerHTML = `
             <div class="pergunta-bloco">
-                <p class="pergunta-enunciado">Ainda não existem questões de desenvolvimento configuradas no <code>testes.json</code>.</p>
-                <p style="font-size: 0.88rem; color: var(--text-secondary);">
-                    Quando pretender treinar a escrita jurídica, adicione as 4 questões ao array <code>"desenvolvimento"</code> com os respetivos arrays <code>"palavras_chave"</code>.
-                </p>
+                <p class="pergunta-enunciado">Ainda não existem questões de desenvolvimento configuradas.</p>
             </div>
         `;
         if (acoesDev) acoesDev.classList.add('oculto');
@@ -585,18 +543,18 @@ function renderizarDesenvolvimento(listaQuestoes) {
         artigo.className = 'pergunta-bloco';
         artigo.innerHTML = `
             <div class="pergunta-cabecalho">
-                <span class="pergunta-numero">Questão de Desenvolvimento ${numero}</span>
-                <span class="pergunta-cotacao">Validação por Conceitos-Chave</span>
+                <span class="pergunta-numero">Questão ${numero}</span>
+                <span class="pergunta-cotacao">Resposta Aberta</span>
             </div>
             <p class="pergunta-enunciado">${questao.pergunta}</p>
             <div class="dica-palavras-chave oculto" id="dica-dev-${questao.id}">
-                <strong>Termos jurídicos esperados (${palavras.length}):</strong> ${listaPalavras}
+                <strong>Conceitos-chave esperados (${palavras.length}):</strong> ${listaPalavras}
             </div>
             <textarea
                 id="dev_${questao.id}"
                 class="textarea-desenvolvimento"
                 data-qid="${questao.id}"
-                placeholder="Redija aqui a sua resposta fundamentada (Sim/Não + Justificação)..."
+                placeholder="Redija aqui a sua resposta fundamentada..."
             >${textoGuardado}</textarea>
             <div id="feedback_dev_${questao.id}" class="oculto"></div>
         `;
@@ -656,14 +614,13 @@ function validarQuestoesDesenvolvimento(evento) {
             questoesDominadas++;
             divFeedback.className = 'feedback-palavra-chave';
             divFeedback.innerHTML = `
-                <strong>Excelente rigor conceptual (${encontradas.length}/${palavrasChave.length} termos integrados).</strong>
+                <strong>Rigor conceptual completo (${encontradas.length}/${palavrasChave.length} conceitos integrados).</strong>
                 <div class="kw-badges-container">${badgesHTML}</div>
             `;
         } else {
             divFeedback.className = 'feedback-palavra-chave falha';
             divFeedback.innerHTML = `
                 <strong>Cobertura parcial: incluiu ${encontradas.length} de ${palavrasChave.length} conceitos-chave.</strong>
-                <p style="margin-top: 0.25rem;">Reveja a sua resposta para incorporar os termos a vermelho:</p>
                 <div class="kw-badges-container">${badgesHTML}</div>
             `;
         }
@@ -676,8 +633,7 @@ function validarQuestoesDesenvolvimento(evento) {
     if (painelResultadosDev) {
         painelResultadosDev.classList.remove('oculto');
         painelResultadosDev.innerHTML = `
-            <h3>Análise Lexical Concluída: ${questoesDominadas} de ${lista.length} questões com 100% dos conceitos-chave</h3>
-            <p>As suas respostas estão guardadas localmente neste dispositivo. Pode ajustar o texto acima e voltar a validar até integrar todos os termos técnicos.</p>
+            <h3>Avaliação Concluída: ${questoesDominadas} de ${lista.length} questões com todos os conceitos-chave</h3>
         `;
     }
 }
