@@ -1,6 +1,6 @@
 /**
  * PLATAFORMA LMS — DIREITO NO CIBERESPAÇO (MBIA)
- * Motor Lógico SPA, Renderizador Markdown (Aula01..05), Multi-Select Quiz e Persistência Local
+ * Motor Lógico SPA, Renderizador Markdown (Aula01..06), Sorteio Estratificado (10+8+2) e Persistência Local
  */
 
 document.addEventListener('DOMContentLoaded', inicializarAplicacao);
@@ -10,6 +10,7 @@ const estadoApp = {
     aulaAtual: '1',
     modoMedia: 'ambos',
     mostrarDicas: false,
+    repertorioEM: [],
     dadosTestes: {
         escolha_multipla: [],
         desenvolvimento: []
@@ -20,8 +21,8 @@ const estadoApp = {
 const mapaBreadcrumbs = {
     'view-dashboard': 'Painel da Disciplina',
     'view-recursos': 'Sala de Estudo (Markdown & Vídeo)',
-    'view-teste-em': 'Exame: Escolha Múltipla',
-    'view-teste-aberto': 'Exame: Desenvolvimento',
+    'view-teste-em': 'Exame: Escolha Múltipla (Sorteio 10+8+2)',
+    'view-teste-aberto': 'Exame: Desenvolvimento (Caso Prático BI)',
     'view-fuc': 'Ficha da UC & Bibliografia'
 };
 
@@ -131,7 +132,7 @@ function fecharMenuMobile() {
 }
 
 /* ==========================================================================
-   2. GESTÃO DA SALA DE AULA (MARKDOWN Aula01..05, VÍDEO E APONTAMENTOS)
+   2. GESTÃO DA SALA DE AULA (MARKDOWN Aula01..06, VÍDEO E APONTAMENTOS)
    ========================================================================== */
 function formatarCodigoAula(numero) {
     // Converte 1 -> "01", 2 -> "02" para coincidir exatamente com "Aula01.md"
@@ -279,12 +280,12 @@ function carregarApontamentosAula(numAula) {
     campoNotas.value = localStorage.getItem(chave) || '';
 
     if (indicador) {
-        indicador.textContent = `Apontamentos da Aula 0${numAula} sincronizados localmente`;
+        indicador.textContent = `Apontamentos da Aula ${formatarCodigoAula(numAula)} sincronizados localmente`;
     }
 }
 
 /* ==========================================================================
-   3. CARREGAMENTO E RENDERIZAÇÃO DO MODELO DE DADOS (testes.json)
+   3. CARREGAMENTO DO REPERTÓRIO E SORTEIO ESTRATIFICADO (10 + 8 + 2)
    ========================================================================== */
 async function carregarDadosJSON() {
     try {
@@ -293,14 +294,44 @@ async function carregarDadosJSON() {
             throw new Error(`Erro HTTP: ${resposta.status}`);
         }
         const dados = await resposta.json();
-        estadoApp.dadosTestes = dados;
 
-        renderizarEscolhaMultipla(dados.escolha_multipla || []);
-        renderizarDesenvolvimento(dados.desenvolvimento || []);
+        // Guardar o repertório completo em memória
+        estadoApp.repertorioEM = dados.escolha_multipla || [];
+        estadoApp.dadosTestes.desenvolvimento = dados.desenvolvimento || [];
+
+        // Gerar a primeira prova sorteada (10 fáceis, 8 intermédias, 2 difíceis)
+        gerarNovoExameSorteado();
+        renderizarDesenvolvimento(estadoApp.dadosTestes.desenvolvimento);
     } catch (erro) {
         console.error('Erro ao carregar testes.json:', erro);
         apresentarAvisoCarregamento();
     }
+}
+
+function baralharArray(lista) {
+    const copia = lista.slice();
+    for (let i = copia.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copia[i], copia[j]] = [copia[j], copia[i]];
+    }
+    return copia;
+}
+
+function gerarNovoExameSorteado() {
+    const repertorio = estadoApp.repertorioEM || [];
+
+    const faceis = baralharArray(repertorio.filter(q => q.dificuldade === 'facil')).slice(0, 10);
+    const intermedias = baralharArray(repertorio.filter(q => q.dificuldade === 'intermedia')).slice(0, 8);
+    const dificeis = baralharArray(repertorio.filter(q => q.dificuldade === 'dificil')).slice(0, 2);
+
+    // Se o repertório tiver as categorias, compõe 10 + 8 + 2; caso contrário, sorteia 20 gerais
+    let exameSorteado = [...faceis, ...intermedias, ...dificeis];
+    if (exameSorteado.length === 0 && repertorio.length > 0) {
+        exameSorteado = baralharArray(repertorio).slice(0, 20);
+    }
+
+    estadoApp.dadosTestes.escolha_multipla = exameSorteado;
+    renderizarEscolhaMultipla(exameSorteado);
 }
 
 function apresentarAvisoCarregamento() {
@@ -335,17 +366,27 @@ function renderizarEscolhaMultipla(listaQuestoes) {
     grelhaNav.innerHTML = '';
 
     const total = listaQuestoes.length;
-    if (spanTotal) spanTotal.textContent = total;
+    const totalRepertorio = (estadoApp.repertorioEM || []).length;
+    if (spanTotal) {
+        spanTotal.textContent = `${total} sorteadas de ${totalRepertorio}`;
+    }
     const cotacaoUnitaria = total > 0 ? (20 / total).toFixed(2) : '1.00';
+
+    const mapaNivel = {
+        'facil': '🟢 Fácil',
+        'intermedia': '🟡 Intermédia',
+        'dificil': '🔴 Difícil'
+    };
 
     listaQuestoes.forEach((questao, idx) => {
         const numero = idx + 1;
         const idBloco = `questao-em-${questao.id}`;
         const ehMultipla = Array.isArray(questao.resposta_correta);
         const tipoInput = ehMultipla ? 'checkbox' : 'radio';
+        const etiquetaNivel = mapaNivel[questao.dificuldade] || 'Questão';
         const textoBadge = ehMultipla
-            ? `Escolha Múltipla (${questao.resposta_correta.length} corretas)`
-            : 'Escolha Única (1 correta)';
+            ? `${etiquetaNivel} • Escolha Múltipla (${questao.resposta_correta.length} corretas)`
+            : `${etiquetaNivel} • Escolha Única (1 correta)`;
 
         // 1. Construir opções de resposta (Radio para resposta única, Checkbox para várias)
         let opcoesHTML = '';
@@ -365,7 +406,7 @@ function renderizarEscolhaMultipla(listaQuestoes) {
         artigo.id = idBloco;
         artigo.innerHTML = `
             <div class="pergunta-cabecalho">
-                <span class="pergunta-numero">Questão ${numero}</span>
+                <span class="pergunta-numero">Questão ${numero} <small style="opacity:0.75;">(ID #${questao.id})</small></span>
                 <span class="badge-tipo-questao ${ehMultipla ? 'multipla' : ''}">${textoBadge}</span>
                 <span class="pergunta-cotacao">Cotação: ${cotacaoUnitaria} val.</span>
             </div>
@@ -489,35 +530,21 @@ function corrigirEscolhaMultipla(evento) {
         painelResultados.classList.remove('oculto');
         painelResultados.innerHTML = `
             <h3>Resultado da Simulação: ${notaEscala20} / 20 valores (${percentagem}%)</h3>
-            <p>Acertou integralmente em <strong>${certas}</strong> de <strong>${total}</strong> questões. Reveja acima as opções corretas (a verde), eventuais seleções incorretas (a vermelho) e a respetiva fundamentação jurídica.</p>
+            <p>Acertou integralmente em <strong>${certas}</strong> de <strong>${total}</strong> questões sorteadas (10 Fáceis, 8 Intermédias, 2 Difíceis). Clique em <em>Limpar Tentativa</em> para sortear um novo exame diferente a partir do repertório.</p>
         `;
         painelResultados.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
 }
 
 function reiniciarTesteEM() {
-    const form = document.getElementById('form-em');
-    if (form) form.reset();
-
-    document.querySelectorAll('.opcao-item').forEach(el => {
-        el.classList.remove('correta', 'incorreta');
-    });
-
-    document.querySelectorAll('.palette-btn').forEach(btn => {
-        btn.classList.remove('respondida', 'correta', 'incorreta');
-    });
-
-    document.querySelectorAll('[id^="explicacao-em-"]').forEach(div => {
-        div.classList.add('oculto');
-    });
-
     const painelResultados = document.getElementById('resultados-em');
     if (painelResultados) {
         painelResultados.classList.add('oculto');
         painelResultados.innerHTML = '';
     }
 
-    atualizarProgressoEM();
+    // Sorteia uma nova combinação aleatória de 10 fáceis + 8 intermédias + 2 difíceis
+    gerarNovoExameSorteado();
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -569,7 +596,7 @@ function renderizarDesenvolvimento(listaQuestoes) {
                 id="dev_${questao.id}"
                 class="textarea-desenvolvimento"
                 data-qid="${questao.id}"
-                placeholder="Redija aqui a sua resposta fundamentada..."
+                placeholder="Redija aqui a sua resposta fundamentada (Sim/Não + Justificação)..."
             >${textoGuardado}</textarea>
             <div id="feedback_dev_${questao.id}" class="oculto"></div>
         `;

@@ -2,400 +2,745 @@
   "escolha_multipla": [
     {
       "id": 1,
-      "pergunta": "Proteção Jurídica de Programas de Computador — Sobre a natureza jurídica e os requisitos de proteção de um programa de computador (software), assinale a(s) opção(ões) correta(s):",
+      "dificuldade": "facil",
+      "pergunta": "[Aula 2 — Software] Quanto à proteção jurídica de um programa de computador pelo Direito de Autor (DL n.º 252/94 e caso SAS Institute), assinale a(s) opção(ões) correta(s):",
       "opcoes": [
-        "A proteção jurídica recai sobre as ideias, lógicas e funcionalidades subjacentes ao programa.",
-        "O direito de autor sobre o software nasce no momento da sua criação, sendo a proteção conferida de forma análoga à das obras literárias.",
-        "O registo do software é constitutivo, ou seja, o direito não existe até que seja formalmente registado.",
-        "A reprodução do comportamento ou funcionalidade de um software, desde que feita com código independente e distinto, é uma prática legal."
+        "A proteção nasce no momento da criação da obra (tendo o registo função meramente declarativa) e incide sobre a expressão do programa (código-fonte, código-objeto e material de conceção preliminar).",
+        "A funcionalidade de um programa, a linguagem de programação e o formato de ficheiros de dados são formas de expressão protegidas em exclusivo pelo Direito de Autor.",
+        "Observar, estudar o funcionamento ou ler o manual técnico para compreender as funcionalidades e reescrevê-las num código-fonte próprio e independente é uma prática lícita.",
+        "Uma cláusula contratual que proíba o utilizador legítimo de fazer uma cópia de apoio (backup) ou de corrigir erros para usar o programa é plenamente válida."
       ],
-      "resposta_correta": [1, 3],
-      "justificacao": "A proteção do software nasce no momento da criação da obra e é análoga à das obras literárias, sendo o registo meramente declarativo e não constitutivo. Além disso, a proteção recai estritamente sobre a expressão (código-fonte e código-objeto), excluindo ideias, lógicas ou funcionalidades. Como demonstrado no caso SAS Institute, recriar uma funcionalidade com código independente é perfeitamente legal."
+      "resposta_correta": [0, 2],
+      "justificacao": "Nos termos dos artigos 1.º, 2.º e 6.º do DL n.º 252/94 e do acórdão SAS Institute (C-406/10), o Direito de Autor protege apenas a expressão original, nascendo com a criação sem depender de registo. Ideias, algoritmos, linguagens e funcionalidades não são protegidos, sendo lícito recriar o comportamento com código independente. É nula qualquer cláusula que proíba a cópia de apoio."
     },
     {
       "id": 2,
-      "pergunta": "Autoria e Titularidade no Contexto Laboral — Quando um programa de computador é desenvolvido por um trabalhador no exercício das suas funções ou sob as instruções da sua entidade patronal:",
+      "dificuldade": "facil",
+      "pergunta": "[Aula 2 — Software no Contexto Laboral] Quando um programa de computador é desenvolvido por um trabalhador no exercício das suas funções ou sob instruções do empregador (art. 3.º DL n.º 252/94):",
       "opcoes": [
-        "Os direitos morais sobre o software são automaticamente transferidos para a entidade patronal.",
-        "Presume-se que os direitos patrimoniais (de exploração económica) pertencem ao empregador, salvo acordo em contrário.",
-        "O trabalhador mantém todos os direitos exclusivos de reprodução, transformação e distribuição da obra.",
-        "A obra é considerada de domínio público devido à sua natureza coletiva."
+        "Os direitos morais de paternidade sobre o software são automaticamente transferidos para a entidade empregadora.",
+        "Pertencem ao empregador (destinatário do programa) os direitos patrimoniais de exploração económica, salvo acordo em contrário ou se outra coisa resultar das finalidades do contrato.",
+        "O programa realizado no âmbito de uma empresa presume-se obra coletiva.",
+        "O criador intelectual individualizável perde o direito de ter o seu nome mencionado no programa."
       ],
-      "resposta_correta": 1,
-      "justificacao": "Pela regra de exceção laboral, se o programa for criado por um trabalhador no exercício das suas funções, os direitos patrimoniais pertencem ao empregador, a menos que exista um acordo em contrário. Os direitos morais (menção do nome e reivindicação da autoria) são inalienáveis e pertencem sempre ao autor/criador."
+      "resposta_correta": [1, 2],
+      "justificacao": "Segundo os artigos 3.º, n.ºs 2 e 3, e 9.º, n.º 2 do DL n.º 252/94, o programa realizado numa empresa presume-se obra coletiva e, se criado por trabalhador no exercício das funções, os direitos patrimoniais pertencem ao empregador (salvo estipulação em contrário), mantendo o criador intelectual o direito moral inalienável de ser reconhecido e ter o seu nome mencionado."
     },
     {
       "id": 3,
-      "pergunta": "Direitos do Utente Legítimo e Interoperabilidade — No que diz respeito às limitações e exceções aos direitos exclusivos do titular de um software, quais das seguintes ações podem ser praticadas pelo utente legítimo sem necessidade de autorização?",
+      "dificuldade": "facil",
+      "pergunta": "[Aula 2 — Bases de Dados] Relativamente ao regime de dupla proteção das bases de dados (DL n.º 122/2000), selecione a(s) opção(ões) correta(s):",
       "opcoes": [
-        "A realização de uma cópia de segurança (backup).",
-        "A partilha comercial do código-fonte com terceiros, desde que referencie o autor original.",
-        "A prática de atos para a correção de erros do software (bugs).",
-        "A descompilação do código, como regra geral e irrestrita, para criar um programa substancialmente semelhante."
+        "O Direito de Autor protege a estrutura da base de dados quando a seleção ou disposição dos conteúdos constitua uma criação intelectual original.",
+        "O Direito Sui Generis protege o investimento substancial (qualitativo ou quantitativo) realizado pelo fabricante na obtenção, verificação ou apresentação do conteúdo, vigorando pelo prazo de 15 anos.",
+        "O facto de uma base de dados estar acessível gratuitamente online elimina o Direito Sui Generis do fabricante.",
+        "Na proteção pelo Direito de Autor da estrutura da base de dados, o direito apropria-se também dos factos ou dados brutos nela contidos."
       ],
-      "resposta_correta": [0, 2],
-      "justificacao": "O utente legítimo tem o direito inalienável de utilizar o software conforme a sua finalidade, incluindo a correção de erros e a realização de cópias de segurança (backup). A descompilação é uma exceção altamente restrita (não é uma regra geral) que só opera se for absolutamente necessária para a interoperabilidade, sendo estritamente proibida a sua utilização para criar um programa semelhante ou para comunicação a terceiros."
+      "resposta_correta": [0, 1],
+      "justificacao": "As bases de dados têm dupla proteção: Direito de Autor sobre a originalidade da estrutura/seleção (art. 4.º, sem incidir sobre os dados em si) e Direito Sui Generis sobre o investimento substancial do fabricante pelo prazo de 15 anos (arts. 12.º e 16.º). A acessibilidade pública online não elimina o direito sui generis."
     },
     {
       "id": 4,
-      "pergunta": "Proteção Jurídica de Bases de Dados — As bases de dados beneficiam de um sistema de dupla proteção jurídica. Indique a(s) afirmação(ões) correta(s) sobre este regime:",
+      "dificuldade": "facil",
+      "pergunta": "[Aula 2 — Nomes de Domínio] Qual é a natureza jurídica do registo de um nome de domínio sob o sufixo '.pt' junto da Associação DNS.PT?",
       "opcoes": [
-        "O Direito de Autor protege o investimento financeiro e humano na recolha dos dados.",
-        "O Direito Sui Generis protege a criação intelectual original manifestada na estrutura (seleção ou disposição) da base de dados.",
-        "O prazo de proteção do Direito Sui Generis é de 15 anos, protegendo o \"fabricante\" contra a extração ou reutilização da totalidade ou de parte substancial da base.",
-        "A extração de partes não substanciais da base de dados pode tornar-se ilegal se for feita de forma repetida e sistemática, lesando o fabricante (ex: web scraping automatizado)."
+        "Confere um direito real de propriedade industrial idêntico ao registo de uma marca no INPI.",
+        "Atribui apenas uma posição contratual (um direito de utilização temporária) baseada na regra técnica 'first come, first served', não garantindo por si só a licitude jurídica perante marcas anteriores.",
+        "Na análise de confundibilidade com uma marca registada, os sufixos genéricos (como '.pt' ou '.com') são ignorados pelo consumidor, que foca a atenção no elemento dominante.",
+        "Impede qualquer titular de marca preexistente de recorrer a arbitragem ou aos tribunais."
       ],
-      "resposta_correta": [2, 3],
-      "justificacao": "O sistema é bifronte: o Direito de Autor protege a criatividade da arquitetura/estrutura (seleção ou disposição metódica), enquanto o Direito Sui Generis protege o risco e investimento substancial do fabricante (prazo de 15 anos). Além disso, a exceção à regra da substancialidade dita que extrair partes não substanciais de forma repetida e sistemática é ilegal."
+      "resposta_correta": [1, 2],
+      "justificacao": "Quem regista um domínio no sistema DNS adquire apenas uma posição contratual de utilização temporária segundo o princípio temporal ('first come, first served'). A disponibilidade técnica não sobrepõe direitos de propriedade industrial anteriores, e os sufixos '.pt' ou '.com' não afastam a confundibilidade quanto ao elemento verbal dominante."
     },
     {
       "id": 5,
-      "pergunta": "Conflitos entre Nomes de Domínio e Marcas — No contexto do ecossistema digital e dos conflitos entre nomes de domínio e marcas registadas:",
+      "dificuldade": "facil",
+      "pergunta": "[Aula 3 — Direito de Autor: Slido] Sobre o início da proteção, a duração regra dos direitos patrimoniais e as características dos direitos morais no Código do Direito de Autor (CDADC), assinale a(s) opção(ões) correta(s):",
       "opcoes": [
-        "O registo de um nome de domínio confere um direito real de propriedade idêntico ao de uma marca registada.",
-        "A atribuição de nomes de domínio baseia-se num critério meramente técnico e temporal (first come, first served), o que significa que a disponibilidade técnica não garante a licitude jurídica.",
-        "Na análise de confundibilidade com uma marca, os sufixos genéricos como \".pt\" ou \".com\" são o elemento dominante para distinguir as entidades.",
-        "Os conflitos de cybersquatting podem ser resolvidos por via extrajudicial (como o ARBITRARE para domínios .pt), garantindo maior celeridade."
+        "A proteção do Direito de Autor nasce pelo simples facto da criação exteriorizada da obra, não dependendo de registo, depósito ou qualquer outra formalidade.",
+        "Em regra, os direitos patrimoniais de autor caducam 70 anos após a morte do criador intelectual.",
+        "Os direitos morais do autor (como reivindicar a paternidade e opor-se a deformações ou mutilações da obra) são inalienáveis, irrenunciáveis e imprescritíveis.",
+        "O Direito de Autor protege ideias, conceitos teóricos ou métodos matemáticos abstratos, mesmo antes de serem exteriorizados."
       ],
-      "resposta_correta": [1, 3],
-      "justificacao": "Os domínios têm natureza contratual (não conferem direito de propriedade) e são registados com base no princípio temporal (first come, first served), mas o sucesso técnico desse registo não assegura que o uso seja lícito perante direitos de propriedade industrial preexistentes. Na análise de risco de confusão, os sufixos (\".pt\", \".com\") são expressamente ignorados para efeitos de distintividade, não sendo o elemento dominante. O recurso a vias extrajudiciais como centros de arbitragem (ARBITRARE ou regras UDRP) é uma alternativa vantajosa para resolver litígios como o cybersquatting."
+      "resposta_correta": [0, 1, 2],
+      "justificacao": "Nos termos dos artigos 1.º, 12.º, 31.º e 56.º do CDADC, a proteção nasce automaticamente com a criação exteriorizada (excluindo ideias abstratas), os direitos patrimoniais duram em regra a vida do autor mais 70 anos após a morte, e os direitos morais são indisponíveis, inalienáveis e irrenunciáveis."
     },
     {
       "id": 6,
-      "pergunta": "Proteção de Software e Fronteiras Técnicas — No contexto da proteção da propriedade intelectual na era digital, considere as diferentes formas de proteção aplicáveis a um sistema informático. Quais das seguintes afirmações estão corretas?",
+      "dificuldade": "facil",
+      "pergunta": "[Aula 3 — Direitos Conexos: Slido] Quem é protegido pelos Direitos Conexos e o que protegem principalmente estes direitos em termos jurídicos?",
       "opcoes": [
-        "Os programas de computador \"como tais\" podem ser registados como patentes universais que garantem um monopólio à escala mundial.",
-        "O código-fonte de um programa de computador fica automaticamente protegido por Direito de Autor assim que é escrito.",
-        "Se um programador escrever de forma totalmente independente um código que replica a lógica de outro programa protegido por Direito de Autor, estará a cometer um ato ilícito.",
-        "A proteção por patente de engenharia de software é estritamente territorial, ao passo que a proteção do código por Direito de Autor tem alcance universal."
+        "Protegem os artistas intérpretes ou executantes, os produtores de fonogramas e videogramas, os editores de imprensa e os organismos de radiodifusão.",
+        "Protegem as interpretações ou execuções artísticas e as respetivas fixações (gravações) e emissões/transmissões, sem eliminar nem substituir o direito de autor sobre a obra original.",
+        "Apenas os artistas intérpretes ou executantes (pessoas humanas) possuem direitos morais nos Direitos Conexos; produtores e organismos de radiodifusão têm apenas direitos patrimoniais para proteção do seu investimento.",
+        "Protegem exclusivamente o criador intelectual da letra e da melodia original de uma composição musical."
       ],
-      "resposta_correta": [1, 3],
-      "justificacao": "Os programas de computador \"como tais\" não são invenções patenteáveis, estando o seu código protegido pelo Direito de Autor. A proteção por Direito de Autor nasce automaticamente no momento da escrita da obra e tem alcance universal através de convenções internacionais. Em oposição, a proteção por patente depende de registo oficial e tem um alcance estritamente territorial, não existindo uma patente mundial única. No âmbito do Direito de Autor (que protege contra o plágio de expressão), uma implementação de código totalmente escrita de forma independente é lícita."
+      "resposta_correta": [0, 1, 2],
+      "justificacao": "Segundo os artigos 176.º e 177.º do CDADC (diapositivos 10 a 13 da Aula 3), os Direitos Conexos protegem quem interpreta, grava ou difunde uma obra (artistas, produtores e radiodifusores), coexistindo com o Direito de Autor do criador original. Só os artistas humanos gozam de direitos morais; produtores e emissoras detêm apenas direitos patrimoniais."
     },
     {
       "id": 7,
-      "pergunta": "Natureza e Limites do Direito de Autor — Relativamente ao regime jurídico do Direito de Autor e aos Direitos Conexos, assinale a(s) opção(ões) correta(s):",
+      "dificuldade": "facil",
+      "pergunta": "[Aula 3 — Patentes: Slido] Quais são os três requisitos cumulativos de patenteabilidade de uma invenção e qual é a duração da patente no Código da Propriedade Industrial (CPI)?",
       "opcoes": [
-        "A proteção do Direito de Autor depende do registo obrigatório da obra numa entidade competente.",
-        "O Direito de Autor protege exclusivamente a forma concreta e original (a expressão), estando as ideias e conceitos teóricos excluídos da proteção.",
-        "Os direitos morais do autor, que incluem o direito de reivindicar a autoria e opor-se a modificações da obra, são plenamente disponíveis e transmissíveis por via contratual.",
-        "Os Direitos Conexos atribuídos a produtores e emissoras não eliminam o direito de autor originário e englobam apenas direitos de natureza patrimonial."
+        "Os três requisitos cumulativos são: novidade (não estar compreendida no estado da técnica), atividade inventiva (não resultar de maneira evidente para um perito na especialidade) e aplicação industrial.",
+        "A duração da patente é de 20 anos contados da data da apresentação do respetivo pedido, mediante pagamento de taxas anuais de manutenção.",
+        "Na Propriedade Industrial, o registo ou concessão tem natureza constitutiva do direito, mas a publicação do pedido no Boletim da Propriedade Industrial já confere proteção provisória.",
+        "Existe uma patente mundial única que protege automaticamente a invenção em todos os países do mundo sem necessidade de indicar os Estados pretendidos."
       ],
-      "resposta_correta": [1, 3],
-      "justificacao": "A proteção do Direito de Autor nasce de forma automática sem qualquer dependência de registo ou depósito, vigorando a ausência total de formalidades. Apenas a forma concreta e original da obra é protegida, estando as ideias abstratas expressamente excluídas da proteção. Os direitos morais são indisponíveis e irrenunciáveis, contrariamente aos direitos patrimoniais, que são os únicos transmissíveis. Os Direitos Conexos não substituem os direitos do criador original e, no caso de produtores ou emissoras, restringem-se apenas a direitos patrimoniais motivados pelo investimento financeiro ou técnico."
+      "resposta_correta": [0, 1, 2],
+      "justificacao": "Nos termos dos artigos 5.º, 50.º, 54.º e 100.º do CPI (diapositivos 22 a 38 da Aula 3), a patente exige novidade, atividade inventiva e aplicação industrial, durando 20 anos a contar do pedido. O pedido publicado confere proteção provisória, e as patentes são territoriais (não existindo uma patente mundial única)."
     },
     {
       "id": 8,
-      "pergunta": "Requisitos e Exclusões de Patenteabilidade — Uma empresa tecnológica desenvolveu uma nova solução para a indústria agrícola e pretende registar uma patente. Tendo em conta os princípios da Propriedade Industrial, qual ou quais das seguintes premissas são aplicáveis?",
+      "dificuldade": "facil",
+      "pergunta": "[Aula 4 — RGPD: Âmbito Territorial e Material] Sobre o âmbito de aplicação do Regulamento Geral sobre a Proteção de Dados (arts. 2.º e 3.º do RGPD), assinale a(s) opção(ões) correta(s):",
       "opcoes": [
-        "A solução técnica desenvolvida será patenteável se preencher os requisitos cumulativos de novidade, atividade inventiva e aplicação industrial.",
-        "Se a solução envolver uma mera descoberta científica teórica sem inovação prática, poderá ser patenteada desde que traga lucros à indústria.",
-        "O monopólio da patente concedida vigorará pelo prazo de 20 anos contados a partir da data do pedido.",
-        "Caso o inventor tenha desenvolvido a solução ao abrigo de um contrato de trabalho onde a atividade inventiva estava expressamente prevista, o direito à patente continuará a pertencer obrigatoriamente ao inventor."
+        "O RGPD aplica-se a responsáveis ou subcontratantes não estabelecidos na União Europeia quando o tratamento esteja relacionado com a oferta de bens ou serviços a titulares que se encontrem na União, ou com o controlo do seu comportamento na União.",
+        "O fator determinante para a aplicação territorial do RGPD é a localização física do titular na União no momento do tratamento, sendo irrelevante a sua nacionalidade ou residência legal.",
+        "O RGPD não se aplica ao tratamento efetuado por pessoa singular em atividades exclusivamente pessoais ou domésticas, nem ao tratamento por autoridades competentes para prevenção e investigação de infrações penais ou segurança pública.",
+        "O RGPD aplica-se igualmente a dados de pessoas coletivas (sociedades comerciais), protegendo o seu NIPC e denominação social."
       ],
-      "resposta_correta": [0, 2],
-      "justificacao": "Para que uma solução técnica seja patenteável, tem de cumprir obrigatoriamente três requisitos cumulativos: novidade, atividade inventiva e aplicação industrial. As meras descobertas científicas excluem-se da patenteabilidade por falta de caráter técnico, pois conhecimento teórico não consubstancia inovação prática. A duração máxima do monopólio de uma patente é de 20 anos, sempre contados a partir da data em que o pedido é efetuado. A regra geral atribui o direito ao inventor, mas sob a \"exceção laboral\", se a invenção ocorrer no cumprimento de um contrato de trabalho que preveja a atividade inventiva, o direito passa a pertencer à empresa."
+      "resposta_correta": [0, 1, 2],
+      "justificacao": "Pelos artigos 2.º, 3.º e 4.º, n.º 1 (e Considerando 14) do RGPD, a proteção incide apenas sobre pessoas singulares (excluindo pessoas coletivas), aplica-se extraterritorialmente pela localização física do titular na UE (oferta de bens/serviços ou controlo do comportamento) e exclui atividades puramente domésticas e investigação criminal/segurança pública."
     },
     {
       "id": 9,
-      "pergunta": "Obrigações e Registo na Propriedade Industrial — Sobre os deveres dos titulares e o processo de aquisição de direitos na Propriedade Industrial, indique a(s) afirmação(ões) correta(s):",
+      "dificuldade": "facil",
+      "pergunta": "[Aula 4 e 5 — RGPD: Categorias Especiais de Dados (Slido)] Qual ou quais das seguintes informações pertencem às 'categorias especiais de dados pessoais' (art. 9.º do RGPD) e qual o seu regime?",
       "opcoes": [
-        "Ao contrário do Direito de Autor, o registo na Propriedade Industrial é obrigatório e constitui o direito.",
-        "A proteção jurídica da invenção inicia-se apenas no momento exato em que a entidade competente (ex: INPI) concede definitivamente a patente.",
-        "O titular da patente não tem qualquer obrigação de explorar a invenção no mercado.",
-        "A lei impõe um dever de exploração, que deve ser iniciado no prazo de 4 anos após o pedido da patente ou 3 anos após a sua concessão, aplicando-se o prazo mais longo."
+        "Dados relativos à saúde (como informações sobre doenças ou lesões pedidas na inscrição de um ginásio), dados genéticos, dados biométricos tratados para identificar uma pessoa de forma inequívoca, origem racial ou étnica, opiniões políticas, convicções religiosas, filiação sindical e orientação sexual.",
+        "Uma simples fotografia num crachá de identificação é sempre considerada, por defeito e sem qualquer tratamento técnico específico, um dado biométrico de categoria especial.",
+        "O tratamento de categorias especiais de dados é proibido por princípio, exigindo uma 'dupla camada de licitude': um fundamento geral do artigo 6.º e cumulativamente uma exceção expressa do artigo 9.º, n.º 2 (como o consentimento explícito).",
+        "O endereço de correio eletrónico profissional e o nome próprio constituem categorias especiais de dados nos termos do artigo 9.º."
       ],
-      "resposta_correta": [0, 3],
-      "justificacao": "Na Propriedade Industrial, o registo assume caráter obrigatório e constitutivo do direito, existindo apenas os direitos privativos expressamente previstos na lei (princípio da tipicidade). O titular adquire proteção provisória assim que ocorre a publicação do pedido, não sendo necessário aguardar pela concessão final da patente. Por fim, recai sobre o titular o ónus (dever) de explorar a sua invenção para satisfazer o mercado nacional, existindo prazos concretos para esse início: 4 anos após o pedido ou 3 anos após a concessão, devendo aplicar-se o que for mais longo."
+      "resposta_correta": [0, 2],
+      "justificacao": "Segundo o artigo 9.º, n.ºs 1 e 2 e o Considerando 51 do RGPD (diapositivo 14 da Aula 4 e Caso Prático do Ginásio na Aula 5), dados de saúde, biometria para identificação inequívoca, convicções políticas/religiosas e orientação sexual são categorias especiais que exigem dupla camada (art. 6.º + art. 9.º, n.º 2). Uma fotografia comum não é dado biométrico por si só."
     },
     {
       "id": 10,
-      "pergunta": "Infrações e Engenharias de Método — Uma empresa concorre diretamente com outra no fornecimento de sistemas digitais (focados no comércio eletrónico). A Empresa A detém uma patente sobre um método de processamento. A Empresa B constrói um novo software, gerando o seu próprio código de raiz, sem nunca ter tido acesso ao código-fonte da Empresa A, mas cuja execução aplica os mesmos passos técnicos e método reivindicados pela Empresa A. À luz dos limites da Propriedade Intelectual, o que ocorre nesta situação?",
+      "dificuldade": "facil",
+      "pergunta": "[Aula 4 — RGPD: Menores e Violação de Dados (Slido)] Em Portugal, qual é a idade mínima para o consentimento digital de crianças e qual é o prazo de notificação de uma violação de dados pessoais à CNPD?",
       "opcoes": [
-        "A Empresa B não comete qualquer infração, visto que não copiou o código da Empresa A, não havendo plágio de expressão.",
-        "A Empresa B incorre num ilícito, pois uma patente protege a execução de um método, tornando ilegal uma implementação independente se esta reproduzir os elementos reivindicados.",
-        "A Empresa B está isenta de responsabilidade civil porque beneficia da proteção automática do seu próprio Direito de Autor sobre o código que escreveu de raiz.",
-        "A Empresa A poderá impedir a Empresa B de explorar o sistema no país em causa, visto que na patente o critério é a reprodução do método técnico e não a proteção contra a simples cópia textual."
+        "Na oferta direta de serviços da sociedade da informação baseada no consentimento, Portugal fixa a idade mínima em 13 anos (abaixo dos 13 anos exige autorização dos titulares das responsabilidades parentais).",
+        "Em caso de violação de dados pessoais suscetível de criar risco para os direitos e liberdades das pessoas, o responsável deve notificar a CNPD sem demora injustificada e, sempre que possível, até 72 horas após ter tido conhecimento.",
+        "Se a violação de dados pessoais for suscetível de implicar um elevado risco para os titulares, o responsável deve também comunicá-la aos próprios titulares em linguagem clara, salvo exceções legais (como a cifragem que torne os dados ininteligíveis).",
+        "O prazo legal para notificar a CNPD de uma violação de dados pessoais é de 30 dias úteis."
       ],
-      "resposta_correta": [1, 3],
-      "justificacao": "Enquanto o Direito de Autor (aplicado ao código-fonte) exige plágio da expressão para que exista infração, a patente de engenharia de software protege diretamente contra a execução do método. Assim, mesmo que o código seja desenvolvido de forma totalmente independente pela Empresa B, a implementação é ilícita se reproduzir todos os elementos reivindicados (claims) que definem a solução técnica patenteada pela Empresa A. Deste modo, o titular da patente (Empresa A) detém o monopólio e o direito exclusivo territorial de impedir que terceiros executem o seu sistema."
+      "resposta_correta": [0, 1, 2],
+      "justificacao": "Nos termos do artigo 8.º do RGPD e artigo 16.º da Lei n.º 58/2019, a idade do consentimento digital em Portugal é de 13 anos. Pelos artigos 33.º e 34.º do RGPD, a notificação à CNPD ocorre até 72 horas quando há risco, e a comunicação ao titular é obrigatória quando há elevado risco."
     },
     {
       "id": 11,
-      "pergunta": "Âmbito de Aplicação e Jurisdição do RGPD — Qual ou quais das seguintes afirmações sobre o âmbito territorial e material do RGPD são verdadeiras?",
+      "dificuldade": "facil",
+      "pergunta": "[Aula 4 e 5 — RGPD: Pseudonimização vs. Anonimização (Slido)] Uma empresa substitui os nomes dos clientes por códigos e conserva, separadamente, uma tabela que permite identificá-los. Isto corresponde a:",
       "opcoes": [
-        "O RGPD aplica-se a todos os cidadãos da União Europeia, independentemente da sua localização física no momento do tratamento dos dados.",
-        "O tratamento de dados por entidades sem estabelecimento na UE está sujeito ao RGPD se envolver a oferta de bens ou serviços a titulares na UE.",
-        "O RGPD não se aplica ao tratamento de dados feito por autoridades competentes para fins estritamente penais ou de segurança pública.",
-        "A nacionalidade e a residência legal do titular são as variáveis críticas que determinam a aplicação do RGPD."
+        "Pseudonimização: é uma medida de segurança em que os dados continuam abrangidos pelo RGPD porque a pessoa permanece identificável através de informação adicional.",
+        "Anonimização: os dados deixam de ser considerados dados pessoais e saem totalmente do âmbito do RGPD.",
+        "Apenas os dados efetivamente anónimos — aqueles em que a pessoa deixa de ser identificável considerando todos os meios razoavelmente suscetíveis de serem utilizados — ficam fora do âmbito de aplicação do RGPD.",
+        "Cifragem irreversível dispensada de qualquer fundamento de licitude no artigo 6.º do RGPD."
       ],
-      "resposta_correta": [1, 2],
-      "justificacao": "O critério de direcionamento determina que entidades fora da UE estão abrangidas pelo RGPD se o tratamento estiver relacionado com a oferta de bens/serviços a titulares na UE. As autoridades competentes para fins penais ou de segurança pública estão excluídas de forma absoluta do seu âmbito de aplicação. As opções A e D são incorretas porque a variável crítica para a aplicação legal é a localização física do titular no momento do tratamento, sendo a sua nacionalidade ou residência legal irrelevantes."
+      "resposta_correta": [0, 2],
+      "justificacao": "De acordo com o artigo 4.º, n.º 5 e o Considerando 26 do RGPD (diapositivo 8 da Aula 4 e Slido da Aula 5), manter uma tabela de correspondência separada caracteriza a pseudonimização (continuando o RGPD a aplicar-se). Só a anonimização efetiva afasta o RGPD."
     },
     {
       "id": 12,
-      "pergunta": "Delimitação de Conceitos e Categorias de Dados — No que diz respeito aos diferentes níveis de identificabilidade e sensibilidade da informação, assinale a(s) opção(ões) correta(s):",
+      "dificuldade": "facil",
+      "pergunta": "[Aula 4 — RGPD: Encarregado de Proteção de Dados e Coimas] Sobre a obrigação de designar um Encarregado da Proteção de Dados (EPD/DPO) e os escalões de coimas no RGPD, assinale a(s) opção(ões) correta(s):",
       "opcoes": [
-        "Os dados pseudonimizados deixam de estar abrangidos pelo RGPD, visto que o titular perde a sua capacidade de identificação imediata.",
-        "A anonimização impede totalmente a identificação da pessoa, colocando esses dados fora do âmbito de aplicação do RGPD.",
-        "Uma fotografia de uma pessoa é sempre considerada, por defeito, um dado biométrico enquadrado nas \"categorias especiais\" de dados.",
-        "O tratamento de dados de categorias especiais (como dados de saúde ou origem étnica) exige cumulativamente um fundamento geral de licitude e uma exceção legal expressa."
+        "A designação de EPD é obrigatória para autoridades/organismos públicos (exceto tribunais na função jurisdicional) e para entidades cujas atividades principais exijam controlo regular e sistemático em grande escala ou tratamento em grande escala de categorias especiais ou dados penais.",
+        "A mera existência de dados pessoais de trabalhadores (recursos humanos) numa pequena empresa torna imediatamente obrigatória a nomeação de um EPD.",
+        "O EPD exerce funções com independência e aconselha a organização, mas a responsabilidade legal final pelo cumprimento do RGPD pertence sempre ao Responsável pelo Tratamento (administração).",
+        "Nas infrações mais graves (art. 83.º, n.º 5, como violação de princípios, consentimento ou direitos dos titulares), as coimas podem atingir 20 milhões de euros ou 4% do volume de negócios anual mundial."
       ],
-      "resposta_correta": [1, 3],
-      "justificacao": "A anonimização efetiva coloca os dados fora do âmbito do RGPD, pois impede a identificação. O tratamento de categorias especiais obedece a um princípio de proibição que apenas pode ser ultrapassado com uma \"dupla camada\" (fundamento de licitude + exceção expressa). A opção A é incorreta porque os dados pseudonimizados continuam abrangidos pelo RGPD, já que a pessoa pode continuar identificável por cruzamento de informação. A opção C é incorreta porque o processamento de fotografias não é biometria por defeito, exigindo tratamento técnico específico para confirmação de identificação inequívoca."
+      "resposta_correta": [0, 2, 3],
+      "justificacao": "Pelos artigos 24.º, 37.º a 39.º e 83.º do RGPD (diapositivos 29 e 33 da Aula 4 e diapositivo 7 da Aula 5), ter dados de trabalhadores não obriga por si só a ter EPD; o EPD tem independência mas a responsabilidade final é da administração; e o escalão máximo de coimas atinge 20 milhões € ou 4% do volume de negócios mundial (sendo o escalão do n.º 4 até 10 milhões € ou 2%)."
     },
     {
       "id": 13,
-      "pergunta": "Sujeitos do Tratamento — Relativamente aos papéis e responsabilidades das entidades que processam dados pessoais, selecione a(s) verdadeira(s):",
+      "dificuldade": "facil",
+      "pergunta": "[Aula 6 — Contratação Eletrónica: Conceito e Formação (Slido)] Na contratação eletrónica (DL n.º 7/2004 e DL n.º 24/2014), o que distingue contrato eletrónico de contrato à distância e que ato exprime geralmente a vontade final de contratar?",
       "opcoes": [
-        "O \"Responsável pelo Tratamento\" é a entidade que determina as finalidades e os meios de tratamento dos dados.",
-        "O \"Subcontratante\" determina autonomamente o rumo dos dados, independentemente das instruções do responsável.",
-        "Se um subcontratante decidir, por si mesmo, as finalidades e os meios de um tratamento, passa a ser legalmente considerado responsável pelo tratamento, assumindo essas obrigações.",
-        "A lei não permite a existência de corresponsáveis pela determinação das finalidades de tratamento."
+        "O contrato eletrónico define-se pelo meio técnico utilizado (suporte digital ou informático), enquanto o contrato à distância se define pelo modo de celebração sem presença física simultânea das partes.",
+        "Existe declaração vinculativa no momento em que o utilizador pratica a ação final que, segundo a interface, confirma inequivocamente a sua vontade (ex.: clicar no botão final de confirmação da encomenda).",
+        "O mero envio automático do 'aviso de receção' da encomenda pelo prestador determina sempre o momento da conclusão do contrato.",
+        "A oferta de produtos em linha constitui sempre um mero convite a contratar, mesmo quando já contém todos os elementos necessários para que o contrato fique concluído com a simples aceitação."
       ],
-      "resposta_correta": [0, 2],
-      "justificacao": "O Responsável pelo Tratamento é aquele que define finalidades e meios. Ocorre a \"inversão de papel\" (opção C) se o subcontratante passar a determinar independentemente as finalidades e meios, assumindo as obrigações de responsável. A opção B é falsa porque o subcontratante trata os dados por conta do responsável, estritamente vinculado a instruções e contrato. A opção D é falsa, dado que pode haver determinação conjunta (corresponsáveis), exigindo-se um acordo transparente."
+      "resposta_correta": [0, 1],
+      "justificacao": "Conforme os diapositivos 4, 9, 10 e 13 da Aula 6 (arts. 24.º, 29.º e 32.º do DL 7/2004), o contrato eletrónico define-se pelo meio digital e o contrato à distância pela ausência física simultânea. A oferta online com todos os elementos é uma verdadeira proposta contratual, a vinculação dá-se com o clique final inequívoco, e o mero aviso de receção não determina o momento da conclusão do contrato."
     },
     {
       "id": 14,
-      "pergunta": "Fundamentos de Licitude e Consentimento — Sobre as regras de consentimento e as comunicações de marketing direto, indique a(s) afirmação(ões) correta(s):",
+      "dificuldade": "facil",
+      "pergunta": "[Aula 6 — Contratação Eletrónica: Âmbito e Exclusões] Relativamente ao princípio da liberdade de celebração de contratos por via eletrónica (art. 25.º do DL n.º 7/2004), selecione a(s) opção(ões) correta(s):",
       "opcoes": [
-        "A aceitação passiva ou a navegação num website, bem como caixas pré-assinaladas, são formas válidas de recolher consentimento inequívoco.",
-        "A retirada do consentimento por parte do titular torna ilícito todo o tratamento de dados realizado até a essa data (efeito retroativo).",
-        "Em Portugal, a idade mínima exigida para um menor consentir validamente no acesso a serviços da sociedade da informação é de 13 anos.",
-        "Pode ser enviada publicidade (marketing direto) a clientes preexistentes sem o seu consentimento prévio, desde que recaia sobre produtos análogos aos já adquiridos e se garanta o direito de recusa."
+        "O regime da contratação eletrónica aplica-se a todo o tipo de contratos celebrados por via eletrónica ou informática, sejam ou não qualificáveis como comerciais.",
+        "Estão excluídos do princípio da admissibilidade eletrónica os negócios jurídicos familiares e sucessórios.",
+        "Os negócios reais imobiliários estão excluídos desta via de celebração, com a exceção do contrato de arrendamento.",
+        "São permitidas cláusulas contratuais gerais que imponham unilateralmente aos consumidores a celebração por via eletrónica."
       ],
-      "resposta_correta": [2, 3],
-      "justificacao": "Em Portugal, a idade mínima legal para o consentimento de menores no espaço digital é de 13 anos. A \"exceção de clientela\" permite o marketing a clientes preexistentes para produtos análogos sem consentimento prévio, havendo mecanismo de recusa fácil. A opção A é falsa, pois o consentimento tem de ser um ato positivo claro (caixas pré-assinaladas não servem). A opção B é falsa porque a retirada de consentimento não tem efeitos retroativos sobre a licitude do tratamento anterior."
+      "resposta_correta": [0, 1, 2],
+      "justificacao": "Nos termos dos artigos 24.º e 25.º, n.ºs 1, 2 e 4 do DL n.º 7/2004 (diapositivos 6 a 8 da Aula 6), o regime abrange contratos comerciais e não comerciais, exclui negócios familiares, sucessórios e reais imobiliários (exceto o arrendamento, que é admitido), e proíbe cláusulas contratuais gerais que imponham a via eletrónica a consumidores."
     },
     {
       "id": 15,
-      "pergunta": "Direitos dos Titulares — No contexto dos direitos concedidos pelo RGPD aos titulares dos dados, qual ou quais opções estão corretas?",
+      "dificuldade": "facil",
+      "pergunta": "[Aula 6 — Fatura, Recibo e Comprovativo de Pagamento] Na sequência de uma compra online, como se distinguem juridicamente a fatura, o recibo e o comprovativo de pagamento?",
       "opcoes": [
-        "O direito ao apagamento (\"direito ao esquecimento\") é absoluto e deve ser sempre concretizado a pedido do titular.",
-        "O direito de oposição ao tratamento de dados visando o marketing direto é absoluto, não podendo ser recusado pelo responsável.",
-        "O titular tem o direito de não ser sujeito a decisões exclusivamente automatizadas, incluindo a definição de perfis, que produzam efeitos na sua esfera jurídica, salvo exceções legais.",
-        "O direito à portabilidade abrange todos os dados do titular, mesmo que o seu tratamento não seja automatizado e se fundamente apenas num interesse legítimo da empresa."
+        "A fatura é o documento com função fiscal emitido nos termos do Código do IVA e do DL n.º 28/2019 que identifica a operação, as partes, o preço e o imposto aplicável.",
+        "O recibo é o documento de prova de quitação (prova de que o pagamento foi recebido), podendo coexistir com a fatura ou integrar uma fatura-recibo.",
+        "O comprovativo bancário de pagamento demonstra uma operação no sistema de pagamentos, mas por si só não substitui a fatura exigida pela legislação fiscal.",
+        "O prazo legal obrigatório de conservação e arquivo das faturas e documentos fiscalmente relevantes é, em regra, de 10 anos."
       ],
-      "resposta_correta": [1, 2],
-      "justificacao": "O direito de oposição para marketing direto é absoluto. O titular também tem proteção contra decisões exclusivamente automatizadas que gerem efeitos jurídicos, exceto nos casos permitidos por lei. A opção A está errada porque o apagamento não opera perante conservação necessária para obrigações legais, processos judiciais, entre outros. A opção D está errada porque a portabilidade tem requisitos rigorosos: dados fornecidos pelo titular, tratamento automatizado e fundamentado exclusivamente em consentimento ou contrato."
+      "resposta_correta": [0, 1, 2, 3],
+      "justificacao": "Conforme os diapositivos 34 e 38 da Aula 6 (arts. 29.º e 36.º CIVA e art. 19.º DL n.º 28/2019), fatura (função fiscal), recibo (quitação civil) e comprovativo bancário (prova da operação de pagamento) têm funções distintas, não podendo o comprovativo bancário substituir a fatura. O prazo legal de conservação fiscal é de 10 anos."
     },
     {
       "id": 16,
-      "pergunta": "Deveres Corporativos e Regimes Sancionatórios — No tocante às obrigações das organizações e possíveis coimas, assinale a(s) afirmação(ões) correta(s):",
+      "dificuldade": "facil",
+      "pergunta": "[Aula 6 — Pagamentos: Reembolso, Estorno e Chargeback] Como se distinguem os mecanismos de reembolso, estorno bancário e chargeback nas transações eletrónicas?",
       "opcoes": [
-        "A mera existência de dados de recursos humanos numa empresa obriga imediatamente à nomeação de um Encarregado de Proteção de Dados (EPD).",
-        "Se houver uma violação de dados (Data Breach) com risco, o responsável tem o dever de notificar a CNPD, se possível, no prazo máximo de 72 horas.",
-        "A Avaliação de Impacto (AIPD) é obrigatória antes de se iniciar qualquer tratamento de dados suscetível de implicar um elevado risco para o titular.",
-        "A ocorrência de uma simples infração às regras do RGPD confere automaticamente o direito a indemnização civil por parte do titular dos dados."
+        "O reembolso consiste na devolução do montante pelo comerciante ao consumidor (por exemplo, em virtude do exercício do direito de livre resolução nos 14 dias ou de desconformidade do bem).",
+        "O estorno consiste numa anulação ou correção técnica de uma operação bancária ou de plataforma motivada por erro de processamento, duplicação de débito ou operação incorretamente executada.",
+        "O chargeback é uma contestação bancária submetida às regras contratuais da rede emissora do cartão, não se confundindo nem substituindo os direitos legais do consumidor.",
+        "O chargeback é um direito imperativo previsto no Decreto-Lei n.º 24/2014 aplicável a pagamentos em numerário."
       ],
-      "resposta_correta": [1, 2],
-      "justificacao": "O responsável deve notificar a violação de dados à CNPD em 72h caso exista risco. A Avaliação de Impacto (AIPD) é um requisito prévio obrigatório em tratamentos de alto risco. A opção A é falsa porque o EPD apenas é exigido para controlo em larga escala, dados especiais ou autoridades públicas, e não meramente por dados de recursos humanos. A opção D é incorreta porque a indemnização exige cumulativamente a violação, a ocorrência de um dano provado e o nexo causal, não gerando compensação de forma automática."
+      "resposta_correta": [0, 1, 2],
+      "justificacao": "De acordo com o diapositivo 45 da Aula 6, o reembolso decorre da relação comercial/consumo (DL 24/2014, art. 12.º), o estorno é uma correção técnica no sistema de pagamentos (DL 91/2018, arts. 129.º-131.º) e o chargeback é um mecanismo contratual da rede de cartões."
     },
     {
       "id": 17,
-      "pergunta": "Fundamentos de Licitude no Tratamento de Dados (RGPD) — Sobre os requisitos dos fundamentos de licitude previstos no RGPD, quais das seguintes afirmações estão corretas?",
+      "dificuldade": "facil",
+      "pergunta": "[Aula 7 — Consumidor no DL n.º 24/2014: Slido] Qual dos seguintes compradores beneficia do regime de proteção do consumidor nos contratos celebrados à distância (DL n.º 24/2014)?",
       "opcoes": [
-        "No contexto laboral, o consentimento do trabalhador é considerado a base legal mais segura devido à facilidade na sua obtenção.",
-        "O condicionamento da prestação de um serviço (como o uso de uma aplicação) à aceitação obrigatória de envio de publicidade compromete a liberdade do titular, tornando o consentimento inválido.",
-        "O interesse legítimo exige a verificação de três requisitos cumulativos, mas pode ser invocado de forma genérica pelas autoridades públicas no exercício das suas funções.",
-        "A responsabilidade final perante o titular e a autoridade de controlo pela execução de um sistema de tratamento de dados pertence ao Encarregado de Proteção de Dados (EPD)."
+        "Uma pessoa singular que adquire um equipamento informático numa loja online para uso estritamente pessoal ou familiar (fins não profissionais).",
+        "Uma sociedade por quotas (pessoa coletiva) que compra auscultadores online para os seus trabalhadores utilizarem em teletrabalho.",
+        "Um consumidor pessoa singular que subscreve à distância um serviço ou conteúdo digital sem pagar um preço monetário, mas facultando os seus dados pessoais (para fins que vão além do mero fornecimento do serviço ou cumprimento legal).",
+        "Um profissional liberal que compra servidores online exclusivamente para a sua atividade comercial."
       ],
-      "resposta_correta": 1,
-      "justificacao": "A opção B está correta porque condicionar um serviço à aceitação obrigatória de publicidade compromete a liberdade, invalidando o consentimento. A opção A é falsa, pois devido ao desequilíbrio de poderes no contexto laboral, o consentimento é por norma inválido. A opção C é falsa porque o interesse legítimo não se aplica a autoridades públicas no exercício das suas funções oficiais. A opção D é falsa porque a responsabilidade legal final pertence à administração da organização (o Responsável pelo Tratamento), cabendo ao EPD apenas funções de aconselhamento e auditoria."
+      "resposta_correta": [0, 2],
+      "justificacao": "Nos termos dos artigos 2.º, n.ºs 1 e 2, e 3.º, alínea e) do DL n.º 24/2014 (diapositivo 24 e Slido da Aula 7), o conceito de consumidor abrange apenas pessoas singulares que atuem com fins alheios à sua atividade comercial ou profissional (excluindo pessoas coletivas/sociedades), aplicando-se também a conteúdos/serviços digitais fornecidos em troca de dados pessoais."
     },
     {
       "id": 18,
-      "pergunta": "Fronteiras Técnicas, Dados Públicos e Inteligência Artificial — No que diz respeito à recolha de dados na internet e à utilização de Inteligência Artificial, selecione a(s) afirmação(ões) correta(s):",
+      "dificuldade": "facil",
+      "pergunta": "[Aula 7 — Serviços Intermediários, DSA e ANACOM: Slido] Relativamente à responsabilidade dos prestadores intermediários de serviços em rede e à supervisão em Portugal (DL n.º 7/2004, Regulamento dos Serviços Digitais - DSA e Lei n.º 12-A/2026):",
       "opcoes": [
-        "A acessibilidade técnica de uma informação na internet (como um perfil visível) funciona como uma autorização geral para a extração automatizada (scraping).",
-        "Uma inferência ou etiqueta gerada por Machine Learning (ex: padrão de consumo) constitui um dado pessoal, conferindo ao titular o direito à retificação caso a dedução esteja errada.",
-        "O tratamento de dados sensíveis recolhidos publicamente só é lícito se a referida informação tiver sido manifestamente tornada pública pelo próprio titular, não se aplicando se a publicação for feita por terceiros.",
-        "Um modelo de IA treinado com dados sujeitos a pseudonimização é considerado juridicamente anónimo."
+        "Os prestadores intermediários não estão sujeitos a uma obrigação geral de vigilância ou de investigação ativa sobre todas as informações que transmitem ou armazenam (art. 8.º do DSA).",
+        "Para continuar a beneficiar da isenção condicionada de responsabilidade (Safe Harbour), o prestador de alojamento (hosting) que tome conhecimento efetivo de um conteúdo ilícito deve atuar prontamente para remover ou desabilitar o acesso a esse conteúdo.",
+        "Em Portugal, a ANACOM atua como entidade de supervisão central do comércio eletrónico e como Coordenador dos Serviços Digitais.",
+        "As coimas por violação das regras de moderação de conteúdos do DSA podem atingir até 6% do volume de negócios anual global do prestador."
       ],
-      "resposta_correta": [1, 2],
-      "justificacao": "A opção B está correta porque as inferências geradas por Machine Learning são consideradas dados pessoais e o titular tem o direito de retificar deduções erradas. A opção C está correta, visto que a exceção para o tratamento de categorias especiais de dados (sensíveis) exige que tenham sido tornados públicos pelo titular. A opção A é falsa porque a acessibilidade pública de um perfil não constitui autorização geral de recolha, continuando a exigir base legal e minimização. A opção D é falsa, pois a pseudonimização é apenas uma medida de segurança (a chave de identificação subsiste) e não torna os dados automaticamente anónimos."
+      "resposta_correta": [0, 1, 2, 3],
+      "justificacao": "Conforme os diapositivos 10 a 15 da Aula 7, os intermediários não têm dever geral de vigilância, mas o prestador de hosting tem de agir prontamente perante conhecimento efetivo de ilicitude (Notice and Action) e cumprir ordens de remoção fundamentadas (art. 9.º DSA). A ANACOM é o Coordenador dos Serviços Digitais e as coimas do DSA chegam a 6% do volume de negócios global."
     },
     {
       "id": 19,
-      "pergunta": "Direitos dos Titulares e Obrigações dos Responsáveis — Quando um titular de dados exerce os seus direitos, como o acesso ou apagamento, quais as regras aplicáveis ao responsável pelo tratamento?",
+      "dificuldade": "facil",
+      "pergunta": "[Aula 8 — AI Act: Âmbito Territorial e Exclusões (Slido)] Sobre o âmbito de aplicação do Regulamento da Inteligência Artificial (Regulamento UE 2024/1689), assinale a(s) opção(ões) correta(s):",
       "opcoes": [
-        "A resposta ao titular deve ocorrer no prazo de um mês, prazo este que pode ser prorrogável por mais dois meses mediante justificação.",
-        "O exercício do direito pode estar sempre sujeito a uma taxa administrativa máxima de 25 euros para cobrir custos de operação.",
-        "O responsável tem a obrigação legal de comunicar as retificações ou apagamentos aos destinatários a quem transmitiu os dados, dispensando-se tal dever apenas se for impossível ou exigir esforço desproporcionado.",
-        "Concluída a finalidade do tratamento, os dados devem ser apagados, mas também podem ser mantidos se forem efetivamente anonimizados."
+        "Se um prestador estabelecido fora da União Europeia colocar um sistema de IA ou um modelo de finalidade geral no mercado da União (ou se o resultado do sistema for utilizado na União), fica abrangido pelo Regulamento de IA.",
+        "O AI Act não se aplica a sistemas de IA colocados no mercado ou utilizados exclusivamente para finalidades militares, de defesa ou de segurança nacional.",
+        "O AI Act não se aplica a sistemas ou modelos de IA especificamente desenvolvidos e colocados em serviço exclusivamente para fins de investigação e desenvolvimento científicos.",
+        "A conformidade técnica de um sistema com o AI Act dispensa a empresa de cumprir o RGPD quando o sistema trate dados pessoais."
       ],
-      "resposta_correta": [0, 2, 3],
-      "justificacao": "A opção A está correta quanto ao prazo legal de resposta estipulado de um mês, prorrogável por mais dois. A opção C está correta por espelhar o dever de comunicação em cadeia e as suas exceções válidas (impossibilidade ou esforço desproporcionado). A opção D está correta porque a anonimização efetiva é uma alternativa lícita ao apagamento para remover os dados da alçada do RGPD. A opção B é falsa porque o princípio geral é a gratuitidade; as taxas só podem ser cobradas perante prova de que o pedido é manifestamente infundado ou excessivo."
+      "resposta_correta": [0, 1, 2],
+      "justificacao": "Pelos artigos 2.º, n.ºs 1, 3, 6, 7 e 9 do AI Act (diapositivos 12 a 14 e Slido da Aula 8), o regulamento tem alcance extraterritorial sempre que o sistema é colocado no mercado ou o seu resultado é usado na UE; exclui fins exclusivamente militares/defesa/segurança nacional e I&D científico; e aplica-se sem prejuízo do cumprimento integral do RGPD."
     },
     {
       "id": 20,
-      "pergunta": "Articulação entre o Data Act (Regulamento dos Dados) e o RGPD — Atendendo ao confronto e à aplicação harmonizada entre o Regulamento dos Dados (Data Act) e o RGPD, assinale a(s) afirmação(ões) verdadeira(s):",
+      "dificuldade": "facil",
+      "pergunta": "[Aula 8 — AI Act: Calendário de Aplicação] De acordo com o calendário faseado de aplicação do Regulamento da Inteligência Artificial (art. 113.º, na redação de 2026), quais das seguintes datas estão corretas?",
       "opcoes": [
-        "Em caso de conflito de aplicação, prevalece o RGPD, que atua como lei especial de direitos fundamentais.",
-        "O Data Act incide exclusivamente sobre o acesso a dados não pessoais de equipamentos conectados.",
-        "O utilizador protegido pelo Data Act pode ser uma pessoa singular ou coletiva, ao passo que o RGPD protege exclusivamente o titular enquanto pessoa singular.",
-        "Os \"Gatekeepers\" (Controladores de Acesso) são considerados terceiros prioritários na elegibilidade para receber dados a pedido dos utilizadores."
+        "As disposições gerais e as proibições originais do artigo 5.º aplicam-se desde 2 de fevereiro de 2025.",
+        "As regras sobre modelos de IA de finalidade geral (GPAI) aplicam-se desde 2 de agosto de 2025, e a aplicação geral do regulamento inicia-se a 2 de agosto de 2026.",
+        "As novas proibições introduzidas na revisão de 2026 (relativas a material íntimo não consentido e abuso sexual de crianças) aplicam-se a partir de 2 de dezembro de 2026.",
+        "Todas as regras do AI Act entraram simultaneamente em aplicação no dia 13 de junho de 2024 sem qualquer período transitório."
       ],
-      "resposta_correta": [0, 2],
-      "justificacao": "A opção A está correta, pois em cenário de conflito prevalece o RGPD sobre o Data Act. A opção C está correta, uma vez que o sujeito no Data Act pode ser pessoa singular ou coletiva, mas o titular no RGPD é unicamente pessoa singular. A opção B é falsa, pois o Data Act tem por objeto o acesso a dados pessoais e não pessoais. A opção D é falsa, dado que os Controladores de Acesso não são terceiros elegíveis para receber dados a pedido."
+      "resposta_correta": [0, 1, 2],
+      "justificacao": "Conforme a tabela do diapositivo 5 da Aula 8 (art. 113.º do AI Act com as alterações do Regulamento UE 2026/1744): 2 fev. 2025 (proibições originais do art. 5.º); 2 ago. 2025 (modelos de finalidade geral); 2 ago. 2026 (aplicação geral); 2 dez. 2026 (novas proibições de material íntimo não consentido e abuso infantil); 2 dez. 2027 (Anexo III); e 2 ago. 2028 (art. 6.º, n.º 1 e Anexo I)."
     },
     {
       "id": 21,
-      "pergunta": "Prazos e Execução Prática do Data Act — De acordo com o calendário de aplicação do Regulamento (UE) 2023/2854 (Data Act), a partir de que data se torna obrigatório o acesso aos dados \"por conceção\" (fácil, gratuito e por defeito) em novos produtos conectados colocados no mercado?",
+      "dificuldade": "intermedia",
+      "pergunta": "[Aula 2 — Descompilação e Open Source] Relativamente à operação de descompilação para interoperabilidade (art. 7.º DL n.º 252/94) e às licenças de software de código aberto (open source), selecione a(s) opção(ões) correta(s):",
       "opcoes": [
-        "12 de setembro de 2025",
-        "12 de janeiro de 2027",
-        "12 de setembro de 2026",
-        "Imediatamente, uma vez que a lei já se encontra plenamente em vigor."
+        "A descompilação sem autorização do titular só é lícita se for praticada pelo licenciado legítimo, limitada às partes estritamente indispensáveis para alcançar a interoperabilidade de um programa criado independentemente, e se a informação não estiver já fácil e rapidamente disponível.",
+        "A informação obtida através da descompilação pode ser livremente utilizada para desenvolver e comercializar um programa substancialmente semelhante na sua expressão ao programa originário.",
+        "O software de código aberto (open source) não está em domínio público: continua protegido pelo Direito de Autor, utilizando o titular licenças permissivas ou recíprocas (copyleft, que exigem que obras derivadas sejam distribuídas sob a mesma licença).",
+        "É nula qualquer cláusula contratual que proíba a descompilação quando estejam reunidos os requisitos legais de interoperabilidade."
       ],
-      "resposta_correta": 2,
-      "justificacao": "A opção C está correta, visto que o prazo legal imposto para a obrigatoriedade de acesso aos dados por conceção em novos produtos é o dia 12 de setembro de 2026. (A opção A remete para o início da aplicação geral e a opção B remete para o fim das taxas de mudança de prestador cloud)."
+      "resposta_correta": [0, 2, 3],
+      "justificacao": "Pelo artigo 7.º do DL n.º 252/94 (diapositivos 10 e 11 da Aula 2), a descompilação tem requisitos cumulativos estritos e proíbe a criação de um programa substancialmente semelhante na sua expressão, sendo nula a cláusula que a vede. O software open source mantém a tutela de Direito de Autor, exigindo auditoria para evitar contaminação de licenças copyleft."
     },
     {
       "id": 22,
-      "pergunta": "Contratos Eletrónicos e Contratos à Distância — Relativamente à qualificação e âmbito dos contratos eletrónicos e dos contratos celebrados à distância, selecione a(s) opção(ões) correta(s):",
+      "dificuldade": "intermedia",
+      "pergunta": "[Aula 2 — Nomes de Domínio vs. Marcas] Uma empresa portuguesa regista um domínio '.pt' que reproduz o elemento verbal principal de uma marca registada anterior do mesmo setor digital, acrescentando-lhe apenas uma palavra descritiva. Como se resolve juridicamente este conflito?",
       "opcoes": [
-        "O contrato eletrónico define-se exclusivamente pelo modo de celebração, caracterizado pela ausência física das partes.",
-        "O contrato eletrónico define-se pelo meio técnico utilizado, seja ele um suporte digital ou informático.",
-        "O contrato à distância consubstancia-se na ausência de presença física simultânea das partes.",
-        "Os contratos eletrónicos são aplicáveis apenas a negócios estritamente comerciais."
+        "O registo técnico do domínio não prevalece sobre a marca anterior: a adição de termos secundários ou descritivos não elimina o risco de confusão ou associação quando o elemento dominante coincide.",
+        "Na avaliação da confundibilidade pelo tribunal ou centro de arbitragem, compara-se a impressão global (visual, fonética e conceptual), a força distintiva do sinal e a identidade ou afinidade do setor de atividade.",
+        "O conflito pode ser dirimido por via extrajudicial (ARBITRARE para '.pt' ou UDRP da ICANN para '.com') ou resolvido proporcionalmente através de um acordo de coexistência com diferenciação visual clara, disclaimer e período transitório de reencaminhamento.",
+        "Como o domínio estava livre no DNS, o titular da marca anterior perde o seu direito de exclusivo na internet."
       ],
-      "resposta_correta": [1, 2],
-      "justificacao": "O contrato eletrónico define-se pelo meio técnico utilizado na sua celebração e aplica-se a negócios comerciais e não comerciais. O contrato à distância define-se pelo modo de celebração, consubstanciando-se na ausência de presença física simultânea das partes."
+      "resposta_correta": [0, 1, 2],
+      "justificacao": "Conforme o Caso Prático e o Acórdão do STJ analisados na Aula 2 (diapositivos 22 a 30), a disponibilidade técnica no DNS não afasta a infração de marca anterior (art. 238.º e 249.º CPI). Termos descritivos não descaracterizam o elemento dominante, podendo o litígio ser resolvido no ARBITRARE/UDRP ou por acordo de coexistência."
     },
     {
       "id": 23,
-      "pergunta": "Validade e Exceções na Contratação Eletrónica — Sobre o regime de validade, exclusões legais e vinculação na contratação eletrónica, assinale a(s) opção(ões) correta(s):",
+      "dificuldade": "intermedia",
+      "pergunta": "[Aula 3 — Caso EcoWave: Encomenda de Design, Marca e Desenho] No caso 'EcoWave', uma designer freelancer criou um logótipo com uma onda, ilustrações para garrafas e uma embalagem de formato distintivo. A empresa pagou a fatura de 'serviços de design' (sem cláusula de cessão de direitos), registou apenas a marca 'EcoWave' e passou a estampar as ilustrações alteradas em mochilas e t-shirts, enquanto uma concorrente lançou garrafas 'EcoWaves'. Assinale a(s) afirmação(ões) correta(s):",
       "opcoes": [
-        "Os negócios familiares e sucessórios estão expressamente excluídos da celebração por via eletrónica.",
-        "Todos os negócios reais imobiliários, sem exceção, estão proibidos de ser celebrados eletronicamente.",
-        "A lei permite a inclusão de cláusulas contratuais gerais que imponham unilateralmente a via eletrónica aos consumidores.",
-        "Nos contratos à distância, o envio do \"aviso de receção\" determina sempre o momento da conclusão e vinculação do contrato.",
-        "Nos contratos à distância, o botão de finalização de compra tem de ser inequívoco, sendo que termos ambíguos como \"Continuar\" invalidam a obrigação de informação."
+        "O simples pagamento do serviço de design não implica a transmissão total dos direitos patrimoniais de autor: na falta de convenção escrita sobre a titularidade na encomenda, presume-se que o direito pertence ao criador intelectual (art. 14.º, n.º 2 CDADC), salvo se o nome não figurar na obra segundo o uso universal.",
+        "A designer pode exigir remuneração especial pela exploração das ilustrações em t-shirts e mochilas (vantagens não previstas na remuneração inicial — art. 14.º, n.º 4 CDADC) e invocar os seus direitos morais de integridade contra a alteração não autorizada dos desenhos (art. 56.º CDADC).",
+        "Graças ao registo da marca 'EcoWave' (art. 210.º CPI), a empresa pode reagir contra a concorrente 'EcoWaves' por imitação de marca (art. 238.º CPI: prioridade, identidade de produtos e semelhança gráfica/fonética geradora de confusão).",
+        "A ausência de registo nacional do formato exterior da embalagem como Desenho ou Modelo no INPI em nada afeta a invocação do direito exclusivo de Propriedade Industrial."
       ],
-      "resposta_correta": [0, 4],
-      "justificacao": "Estão legalmente excluídos da via eletrónica os negócios familiares e sucessórios, bem como os negócios reais imobiliários (com exceção do contrato de arrendamento). É proibido o uso de cláusulas contratuais gerais que imponham unilateralmente a celebração eletrónica aos consumidores. O momento de vinculação ocorre com a ação final que confirma a vontade das partes (e não com o mero envio do aviso de receção), sendo que o botão de finalização de encomenda tem de ser inequívoco quanto à obrigação de pagar."
+      "resposta_correta": [0, 1, 2],
+      "justificacao": "De acordo com os critérios de correção oficiais da professora para o Caso EcoWave (páginas 3 a 7), o pagamento não transmite por si só o Direito de Autor (art. 14.º e 41.º CDADC), assistindo à autora direito a remuneração adicional e tutela moral (art. 56.º). O registo da marca protege contra 'EcoWaves', mas a falta de registo da embalagem como Desenho ou Modelo compromete a proteção nacional pelo exclusivo do registo no CPI."
     },
     {
       "id": 24,
-      "pergunta": "Documento Eletrónico e Tipologias de Assinaturas — No que respeita ao valor probatório do documento eletrónico e às modalidades de assinatura eletrónica, assinale a(s) opção(ões) correta(s):",
+      "dificuldade": "intermedia",
+      "pergunta": "[Aula 3 — Caso Patente Nemesis: Software vs. Patente] No caso da patente norte-americana do sistema 'Nemesis' (Warner Bros.), um estúdio concorrente desenvolve código-fonte totalmente independente para um jogo que pretende comercializar nos Estados Unidos. Qual é a afirmação correta?",
       "opcoes": [
-        "O documento eletrónico apenas satisfaz a exigência de forma escrita se possuir uma assinatura eletrónica qualificada.",
-        "A assinatura eletrónica qualificada aplicada num documento particular converte-o automaticamente num documento autêntico.",
-        "A assinatura eletrónica simples não pode ser recusada como meio de prova pelo mero facto de se apresentar em formato eletrónico.",
-        "A assinatura eletrónica avançada possui maior fiabilidade técnica que a simples, mas não é automaticamente equiparada à assinatura manuscrita.",
-        "A Chave Móvel Digital (CMD) permite produzir uma assinatura eletrónica qualificada com a mesma validade que uma assinatura manuscrita."
+        "Como o código-fonte foi escrito de raiz e de forma independente, o estúdio está automaticamente livre de qualquer infração de patente nos Estados Unidos.",
+        "Mesmo com código-fonte diferente e independente (que não viola o Direito de Autor), se a implementação reproduzir todos os elementos técnicos de uma reivindicação da patente Nemesis nos Estados Unidos durante a sua vigência, constitui infração de patente e depende de licença.",
+        "Como as patentes são territoriais e não protegem ideias gerais em abstrato, outros estúdios podem criar mecânicas alternativas que não preencham todos os elementos das reivindicações (ou explorar em territórios onde a patente não esteja em vigor).",
+        "A patente norte-americana proíbe mundialmente qualquer jogo de vídeo de incluir inimigos que se lembrem do jogador."
       ],
-      "resposta_correta": [2, 3, 4],
-      "justificacao": "O documento eletrónico satisfaz a exigência legal de forma escrita sempre que o seu conteúdo seja representável como declaração escrita, independentemente da assinatura. A aposição de assinatura qualificada não transforma um documento particular em autêntico. A assinatura simples não pode ser recusada como prova apenas por ser eletrónica; a avançada não é automaticamente equiparada à manuscrita; e a assinatura qualificada (gerada via Chave Móvel Digital com certificado ativo) equivale juridicamente à assinatura manuscrita."
+      "resposta_correta": [1, 2],
+      "justificacao": "Conforme os diapositivos 39 a 48 da Aula 3, enquanto o Direito de Autor apenas proíbe a cópia da expressão textual do código, a patente protege a solução técnica definida nas reivindicações (claims), impedindo no território abrangido (EUA) implementações independentes que reproduzam todos os elementos reivindicados."
     },
     {
       "id": 25,
-      "pergunta": "Automatização da Vontade na Contratação — Relativamente ao regime dos erros e da formação da vontade na contratação eletrónica automatizada, selecione a(s) opção(ões) correta(s):",
+      "dificuldade": "intermedia",
+      "pergunta": "[Aula 4 — RGPD: Interesse Legítimo, Cookies e Marketing Direto] Sobre o fundamento do interesse legítimo (art. 6.º, n.º 1, al. f do RGPD) e as regras de cookies e marketing eletrónico (Lei n.º 41/2004), assinale a(s) opção(ões) correta(s):",
       "opcoes": [
-        "Um erro de programação num sistema automatizado de contratação configura, para a lei civil, um erro na declaração.",
-        "Um defeito da máquina num processo contratual automatizado configura um erro na declaração.",
-        "Uma mensagem deformada pelo sistema de transmissão enquadra-se legalmente como um erro na transmissão.",
-        "A legislação proíbe a contratação integralmente conduzida por computadores sem qualquer intervenção humana."
+        "Para invocar o interesse legítimo, o responsável tem de realizar e documentar três verificações cumulativas: 1) interesse concreto, real e lícito; 2) necessidade estrita (inexistência de alternativa menos intrusiva); e 3) teste de ponderação face aos direitos e expectativas razoáveis do titular.",
+        "As autoridades públicas podem invocar livremente o interesse legítimo como fundamento para tratar dados dos cidadãos no exercício das suas atribuições oficiais.",
+        "Os cookies de analítica e de publicidade exigem consentimento prévio através de ato positivo claro (não valendo caixas pré-assinaladas), excetuando-se apenas os cookies estritamente necessários para prestar o serviço solicitado (ex.: manter artigos no carrinho de compras).",
+        "A 'exceção de clientela' (art. 13.º-A da Lei n.º 41/2004) permite enviar marketing direto a clientes preexistentes sobre produtos ou serviços próprios análogos aos já adquiridos, desde que lhes seja garantida a recusa gratuita e fácil na recolha e em cada mensagem."
       ],
-      "resposta_correta": [1, 2],
-      "justificacao": "O erro de programação é tratado pela legislação como um erro na formação da vontade. Por sua vez, o defeito da máquina num sistema informático configura um erro na declaração, e a mensagem deformada durante o processo tecnológico configura um erro na transmissão. A legislação civil admite expressamente a contratação integralmente conduzida por computadores sem intervenção humana."
+      "resposta_correta": [0, 2, 3],
+      "justificacao": "Segundo o artigo 6.º, n.º 1, al. f) do RGPD (diapositivo 8 da Aula 5), o interesse legítimo exige o triplo teste documentado e é expressamente vedado a autoridades públicas no exercício das suas funções. Na Lei n.º 41/2004 (diapositivo 16 da Aula 4), cookies analíticos/publicitários exigem consentimento prévio, e no marketing direto vigora a exceção de clientela para produtos análogos com opt-out fácil."
     },
     {
       "id": 26,
-      "pergunta": "Faturação Eletrónica e Documentos Fiscais — Sobre os requisitos legais e prazos de emissão da faturação eletrónica, assinale a(s) opção(ões) correta(s):",
+      "dificuldade": "intermedia",
+      "pergunta": "[Aula 4 e 5 — RGPD: Dever de Informação na Recolha Indireta e Reutilização (Slido)] Uma empresa obtém dados pessoais de potenciais clientes através de outra entidade (ou de perfis públicos na internet) e outra loja online decide reutilizar o histórico de compras dos clientes para uma finalidade diferente da inicialmente comunicada. Quais são as regras aplicáveis?",
       "opcoes": [
-        "A validade legal da fatura eletrónica depende exclusivamente da sua emissão num formato de dados estruturados como o XML.",
-        "O comprovativo bancário de pagamento é documento suficiente para substituir a fatura para efeitos de justificação fiscal.",
-        "Em regra, a fatura deve ser emitida até ao 5.º dia útil seguinte ao facto gerador da transação.",
-        "Em situações pontuais de pagamento antecipado, a fatura tem de ser emitida na data exata em que ocorre o recebimento.",
-        "A validade legal da fatura eletrónica perante o destinatário exige sempre a sua aceitação expressa ou tácita."
+        "Quando os dados não são recolhidos junto do titular (art. 14.º RGPD), o responsável deve informar o titular (incluindo as categorias de dados e a sua origem) num prazo razoável, no máximo até 1 mês, ou no momento da primeira comunicação ou divulgação a outro destinatário, se ocorrer antes.",
+        "O facto de um perfil profissional estar visível na internet constitui uma autorização geral para recolher (scraping) e criar bases comerciais sem necessidade de fundamento de licitude nem dever de informação.",
+        "Para reutilizar o histórico de compras para uma nova finalidade não baseada em consentimento ou obrigação legal, o responsável tem de avaliar previamente a compatibilidade da nova finalidade (art. 6.º, n.º 4 RGPD) e informar o titular antes do novo tratamento.",
+        "Uma empresa que nunca tenha recebido reclamações cumpre automaticamente o RGPD, mesmo que não consiga demonstrar os fundamentos de licitude nem os prazos de conservação."
       ],
-      "resposta_correta": [2, 3, 4],
-      "justificacao": "A fatura eletrónica pode ser validamente apresentada em PDF ou em dados estruturados, e o comprovativo bancário não substitui a fatura. A fatura deve ser emitida até ao 5.º dia útil seguinte ao facto gerador, ou na data exata do recebimento em casos de pagamentos antecipados. A validade legal da fatura eletrónica depende sempre da aceitação (expressa ou por comportamento concludente) do destinatário."
+      "resposta_correta": [0, 2],
+      "justificacao": "Pelos artigos 5.º, n.º 2 (accountability), 6.º, n.º 4, 13.º, n.º 3 e 14.º, n.º 3 do RGPD (diapositivos 9 e 25 a 29 da Aula 5), a visibilidade pública na internet não dispensa base legal nem informação (até 1 mês na recolha indireta); a reutilização exige teste de compatibilidade; e a ausência de reclamações não substitui o dever de comprovar a conformidade."
     },
     {
       "id": 27,
-      "pergunta": "Segurança em Pagamentos Digitais (SCA) e Responsabilidade — No âmbito dos serviços de pagamento eletrónicos, autenticação forte e reversão de operações, assinale a(s) opção(ões) correta(s):",
+      "dificuldade": "intermedia",
+      "pergunta": "[Aula 5 — RGPD: Caso Prático do Ginásio e Contexto Laboral] Tendo em conta o Caso Prático do Ginásio e as regras sobre dados de trabalhadores (Aula 5), assinale a(s) afirmação(ões) correta(s):",
       "opcoes": [
-        "A Autenticação Forte do Cliente (SCA) exige, em cenário de pagamento online, a combinação de pelo menos dois elementos independentes entre conhecimento, posse e inerência.",
-        "O prestador de serviços de pagamento pode decidir isentar certas operações da regra SCA, mas ao optar por fazê-lo assume integralmente o risco operacional associado a fraudes.",
-        "Em caso de suspeita de fraude, o mero registo informático do banco é prova suficiente e absoluta de que o utilizador autorizou licitamente a operação.",
-        "O mecanismo de chargeback baseia-se diretamente na lei imperativa de defesa do consumidor para a devolução de bens.",
-        "O estorno bancário caracteriza-se por ser uma correção técnica de uma operação provocada por mero erro ou por duplicação indevida de débito."
+        "Quando um titular pede o apagamento dos seus dados (art. 17.º RGPD), o responsável deve responder sem demora injustificada e no prazo de 1 mês (prorrogável por mais 2 meses com justificação no 1.º mês), de forma gratuita, só podendo conservar os dados estritamente necessários para cumprir obrigações legais (ex.: fiscais) ou defender direitos em juízo.",
+        "No contexto laboral, devido ao desequilíbrio de poder entre trabalhador e empregador, o consentimento do trabalhador é, por norma, inválido, devendo o tratamento basear-se na execução do contrato de trabalho, cumprimento de obrigação jurídica ou interesse legítimo devidamente ponderado.",
+        "Sempre que um dado é retificado ou apagado, o responsável tem o dever de comunicar essa alteração a todos os destinatários externos a quem transmitiu os dados (art. 19.º RGPD) e de a propagar aos seus sistemas internos de Business Intelligence, salvo impossibilidade ou esforço desproporcionado.",
+        "Basta batizar um projeto comercial de segmentação individual de preços como 'projeto estatístico' para ficar dispensado de cumprir o RGPD."
       ],
-      "resposta_correta": [0, 1, 4],
-      "justificacao": "A Autenticação Forte (SCA) exige a combinação de, no mínimo, dois fatores independentes (Conhecimento, Posse ou Inerência). O prestador que isenta uma operação da SCA assume integralmente o risco operacional em caso de fraude, e o mero registo informático não é prova suficiente de autorização lícita. O chargeback obedece a regras da rede privada de cartões (não correspondendo diretamente ao direito legal do consumidor), enquanto o estorno consiste numa correção técnica motivada por erro interno ou duplicação indevida de débito."
+      "resposta_correta": [0, 1, 2],
+      "justificacao": "Conforme os diapositivos 2 a 6 e 11 a 14 da Aula 5, a resposta aos direitos ocorre em 1 mês gratuitamente (arts. 12.º e 17.º); a retificação/apagamento obriga a comunicação em cadeia aos destinatários e sistemas analíticos (art. 19.º); no trabalho o consentimento é em regra inválido (Considerando 43 e art. 28.º Lei 58/2019); e um projeto que aplica decisões ou preços a clientes individuais não é estatística anónima (Considerando 162)."
+    },
+    {
+      "id": 28,
+      "dificuldade": "intermedia",
+      "pergunta": "[Aula 5 — Data Act: Acesso, Segredos Comerciais e Cláusulas Abusivas B2B] No âmbito do Regulamento (UE) 2023/2854 (Data Act), assinale a(s) opção(ões) correta(s):",
+      "opcoes": [
+        "Diferentemente do direito de portabilidade do artigo 20.º do RGPD (exclusivo de pessoas singulares para dados fornecidos com base em consentimento ou contrato), o direito de acesso e partilha no Data Act pertence ao 'utilizador' do produto conectado (pessoa singular ou coletiva) e abrange dados pessoais e não pessoais.",
+        "O detentor dos dados pode recusar automaticamente todo e qualquer acesso aos dados do produto conectado invocando genericamente que os dados constituem segredo comercial.",
+        "Nas relações entre empresas (capítulo IV do Data Act), uma cláusula contratual imposta unilateralmente ('pegar ou largar') que exclua ou limite a responsabilidade da parte que a impôs por atos intencionais (dolo) ou negligência grosseira é considerada abusiva e não é vinculativa.",
+        "O direito sui generis das bases de dados (Diretiva 96/9/CE) não é aplicável a bases de dados constituídas por dados obtidos ou gerados pela utilização de um produto conectado ou serviço conexo abrangido pelo Data Act (art. 43.º)."
+      ],
+      "resposta_correta": [0, 2, 3],
+      "justificacao": "Pelos artigos 2.º, 4.º, 5.º, 13.º, n.º 4, al. a) e 43.º do Data Act (diapositivos 16 a 23 da Aula 5), o utilizador pode ser uma empresa; o direito sui generis é afastado sobre dados gerados por dispositivos IoT; os segredos comerciais são protegidos por medidas de confidencialidade (acordos/protocolos) não permitindo uma recusa genérica automática; e cláusulas unilaterais que excluam dolo ou negligência grosseira são nulas/não vinculativas."
+    },
+    {
+      "id": 29,
+      "dificuldade": "intermedia",
+      "pergunta": "[Aula 6 — Caso 'Pulse' / 'StreamLab Pro': Dark Patterns e Subscrições (Slido)] Uma plataforma anuncia '7 dias grátis', pede os dados do cartão bancário, utiliza um botão 'Começar' ou 'Ativar', esconde a renovação automática paga (19,99 €/mês) num link no rodapé e oculta o cancelamento em submenus ('Definições > Conta > Outros'). Como se qualifica juridicamente esta conduta?",
+      "opcoes": [
+        "Configura uma prática comercial desleal/enganosa (dark pattern) e viola os deveres imperativos de informação pré-contratual destacada (art. 4.º e 5.º, n.º 2 DL n.º 24/2014) e de botão inequívoco sobre a obrigação de pagamento (art. 5.º, n.º 4), pelo que o consumidor não fica validamente vinculado aos encargos periódicos.",
+        "Para ser lícito, o checkout teria de destacar claramente antes da encomenda a duração do teste gratuito, o preço total com IVA, a periodicidade e um botão inequívoco (ex.: 'Subscrever e pagar X €/mês após o teste'), enviando confirmação em suporte duradouro.",
+        "A prática é totalmente legal porque cabia ao consumidor ler todas as cláusulas do link situado no rodapé antes de clicar em 'Começar'.",
+        "Antes de formular a encomenda, o prestador em rede deve também disponibilizar meios técnicos eficazes para identificar e corrigir erros de introdução (art. 27.º DL n.º 7/2004), exceto nos contratos celebrados exclusivamente por e-mail ou comunicação individual equivalente (art. 30.º)."
+      ],
+      "resposta_correta": [0, 1, 3],
+      "justificacao": "Conforme os casos práticos 'Pulse' e 'StreamLab Pro' e o Slido da Aula 6 (diapositivos 11, 12, 15, 29 a 31, 50, 53 e 54), ocultar renovações pagas sob botões vagos ('Começar'/'Ativar') invalida a vinculação do consumidor (art. 5.º, n.º 9 DL 24/2014). Os artigos 27.º a 29.º do DL 7/2004 exigem meios de correção de erros e aviso de receção, mas não se aplicam a contratos celebrados exclusivamente por e-mail (art. 30.º)."
+    },
+    {
+      "id": 30,
+      "dificuldade": "intermedia",
+      "pergunta": "[Aula 6 — Pagamentos: Duplo Clique, Ónus da Prova e Falha de SCA (Slido)] No âmbito do Regime Jurídico dos Serviços de Pagamento e da Moeda Eletrónica (RJSPME - DL n.º 91/2018), assinale a(s) afirmação(ões) correta(s):",
+      "opcoes": [
+        "Caso o utilizador negue ter autorizado uma operação de pagamento executada, recai sobre o prestador de serviços de pagamento o ónus de provar que a operação foi autenticada, devidamente registada e não foi afetada por avaria técnica, não sendo o mero registo informático suficiente, por si só, para provar a autorização ou negligência grosseira do cliente (art. 113.º).",
+        "Verificando-se um erro de rede ou deficiência técnica que motive um duplo débito da mesma transação (ou uma operação não autorizada), o prestador deve reembolsar ou repor a conta debitada na situação em que estaria (estorno/retificação) até ao final do primeiro dia útil seguinte (arts. 114.º e 130.º).",
+        "Se o prestador de serviços de pagamento do ordenante não exigir Autenticação Forte do Cliente (SCA), o ordenante não suporta quaisquer perdas financeiras (nem sequer a franquia até 50 €), salvo se tiver agido fraudulentamente (art. 115.º, n.º 5).",
+        "O utilizador perde o direito à retificação de uma operação não autorizada se não a comunicar no prazo máximo de 24 horas após o débito."
+      ],
+      "resposta_correta": [0, 1, 2],
+      "justificacao": "Pelos artigos 112.º a 115.º e 130.º do DL n.º 91/2018 (diapositivos 40 a 43 e Slidos 51 e 52 da Aula 6), o ónus da prova cabe ao prestador; o registo informático isolado não basta; sem SCA o cliente não suporta perdas (nem os 50 €); e o prazo máximo para comunicar operações não autorizadas ou incorretamente executadas é de 13 meses a contar da data do débito (sem atraso injustificado após o conhecimento — art. 112.º, n.º 1)."
+    },
+    {
+      "id": 31,
+      "dificuldade": "intermedia",
+      "pergunta": "[Aula 7 — Princípio do País de Origem e Exclusões no DL n.º 7/2004 (Slido)] Um prestador de serviços da sociedade da informação estabelecido em Portugal dirige a sua loja online também a consumidores em Espanha e França, afirmando que, pelo 'princípio do país de origem', a lei portuguesa é exclusivamente aplicável a todos os aspetos da sua atividade, incluindo aos contratos com consumidores estrangeiros e à propriedade intelectual. Como deve ser avaliada esta afirmação?",
+      "opcoes": [
+        "A afirmação está parcialmente incorreta: embora o artigo 4.º, n.º 1 sujeite em regra os prestadores estabelecidos em Portugal à lei portuguesa (controlo no país de origem), o artigo 6.º exclui expressamente desse princípio as obrigações emergentes de contratos celebrados com consumidores e a propriedade intelectual.",
+        "Um Estado-Membro de destino só pode adotar providências restritivas contra um serviço proveniente de outro Estado-Membro se houver lesão ou ameaça grave para a dignidade humana, ordem pública, saúde pública, segurança pública ou consumidores, cumprindo em regra o procedimento prévio de solicitação ao Estado de origem e notificação à Comissão (arts. 7.º e 8.º).",
+        "O princípio do país de origem sobrepõe-se sempre às normas imperativas de proteção do consumidor do país onde o consumidor reside.",
+        "Também estão excluídas do princípio do país de origem (art. 6.º) a permissibilidade do envio de mensagens publicitárias não solicitadas por correio eletrónico (spam) e a validade formal de contratos sobre direitos reais imobiliários."
+      ],
+      "resposta_correta": [0, 1, 3],
+      "justificacao": "Conforme os diapositivos 6, 7 e 19 (Slido) da Aula 7 e os artigos 4.º a 8.º do DL n.º 7/2004, o princípio do país de origem sofre as exclusões expressas do artigo 6.º, onde figuram os contratos celebrados com consumidores, a propriedade intelectual (incluindo bases de dados e semicondutores), os direitos reais sobre imóveis e o spam."
+    },
+    {
+      "id": 32,
+      "dificuldade": "intermedia",
+      "pergunta": "[Aula 7 — Requisitos da Determinação de Remoção no DSA] Nos termos do artigo 9.º do Regulamento dos Serviços Digitais (DSA) e da Lei n.º 12-A/2026, quando uma autoridade judicial ou administrativa emite uma 'determinação' para um prestador intermediário atuar contra um conteúdo ilegal, que elementos obrigatórios deve conter essa ordem?",
+      "opcoes": [
+        "Fundamentação jurídica e factual que indique os motivos exatos pelos quais a informação constitui conteúdo ilegal.",
+        "Identificação precisa da localização eletrónica do conteúdo, nomeadamente o endereço URL exato ou dados adicionais inequívocos.",
+        "Informação clara sobre as vias de recurso e mecanismos de reparação disponíveis tanto para o prestador de serviços como para o destinatário do serviço que publicou o conteúdo.",
+        "Ordem genérica para que o prestador passe a vigiar preventivamente todas as comunicações privadas de todos os utilizadores da plataforma durante 5 anos."
+      ],
+      "resposta_correta": [0, 1, 2],
+      "justificacao": "Segundo o diapositivo 13 da Aula 7 (art. 9.º, n.º 2 do DSA e Lei n.º 12-A/2026), a determinação de atuação sobre conteúdos ilegais tem de ser específica (com URL exato), fundamentada jurídica e factualmente, indicar as vias de recurso e ser tramitada através da plataforma centralizada coordenada pela ANACOM, mantendo-se a proibição de vigilância geral (art. 8.º DSA)."
+    },
+    {
+      "id": 33,
+      "dificuldade": "intermedia",
+      "pergunta": "[Aula 7 — Cessação da Agência e Indemnização de Clientela] No âmbito do contrato de agência (DL n.º 178/86, aplicável por analogia à concessão comercial e à franquia quando se justifique), quais são os requisitos e limites da indemnização de clientela após a cessação do contrato?",
+      "opcoes": [
+        "Exige o preenchimento cumulativo de três requisitos (art. 33.º, n.º 1): a) o agente ter angariado novos clientes ou aumentado substancialmente o volume de negócios com a clientela já existente; b) o principal continuar a beneficiar consideravelmente dessa atividade após a cessação; e c) o agente deixar de receber retribuição por contratos negociados ou concluídos após a cessação com esses clientes.",
+        "O montante da indemnização de clientela é fixado segundo a equidade, mas não pode exceder um valor equivalente a uma indemnização anual calculada segundo a média anual das remunerações recebidas pelo agente nos últimos 5 anos (ou durante o período em que o contrato esteve em vigor, se inferior — art. 34.º).",
+        "Para exercer o direito à indemnização de clientela, o agente tem de comunicar ao principal a sua intenção no prazo de 1 ano a contar da cessação do contrato, devendo a ação judicial ser proposta dentro do ano subsequente a essa comunicação (art. 33.º, n.º 4).",
+        "Na concessão comercial, quando o contrato termina, a lei impõe sempre ao concedente uma obrigação automática e incondicional de recomprar todo o stock sobrante ao concessionário."
+      ],
+      "resposta_correta": [0, 1, 2],
+      "justificacao": "Conforme os diapositivos 43 a 45 da Aula 7 (arts. 33.º e 34.º do DL n.º 178/86), a indemnização de clientela exige os três requisitos cumulativos, tem o teto máximo da média anual dos últimos 5 anos e caduca se não for comunicada em 1 ano (+ 1 ano para a ação). Na concessão não se presume obrigação automática de recompra de todo o stock."
+    },
+    {
+      "id": 34,
+      "dificuldade": "intermedia",
+      "pergunta": "[Aula 8 — AI Act: Pontuação Social vs. Avaliação de Crédito e Policiamento Preditivo] Sobre a distinção entre práticas proibidas (art. 5.º) e sistemas de risco elevado (Anexo III) no Regulamento de IA, selecione a(s) afirmação(ões) correta(s):",
+      "opcoes": [
+        "A pontuação social (social scoring) é proibida pelo artigo 5.º, n.º 1, al. c) quando avalia pessoas ao longo do tempo pelo seu comportamento social ou características pessoais e conduz a um tratamento desfavorável em contextos sociais sem relação com os dados de origem, ou a um tratamento injustificado ou desproporcionado.",
+        "Um sistema destinado a avaliar a solvabilidade ou estabelecer a pontuação de crédito de pessoas singulares (com base em dados financeiros pertinentes) não é proibido à partida, sendo classificado como sistema de Risco Elevado no Anexo III, ponto 5, al. b) (com exceção dos sistemas para detetar fraude financeira).",
+        "O artigo 5.º, n.º 1, al. d) proíbe sistemas de IA que avaliem ou prevejam o risco de uma pessoa singular cometer uma infração penal exclusivamente com base na definição do seu perfil ou na avaliação dos seus traços e características de personalidade.",
+        "A proibição do artigo 5.º, n.º 1, al. d) impede também qualquer utilização de sistemas de IA para apoiar a avaliação humana do envolvimento de uma pessoa numa atividade criminosa que já se baseie em factos objetivos e verificáveis diretamente ligados a essa atividade."
+      ],
+      "resposta_correta": [0, 1, 2],
+      "justificacao": "Segundo os diapositivos 19, 20 e 25 da Aula 8 (art. 5.º, n.º 1, als. c) e d) e Anexo III do AI Act), o credit scoring financeiro legítimo é de risco elevado (não proibido, salvo se desvirtuado em social scoring). O policiamento preditivo individual baseado apenas em perfis/traços de personalidade é proibido, mas a norma preserva o apoio à investigação baseada em factos objetivos e verificáveis."
+    },
+    {
+      "id": 35,
+      "dificuldade": "intermedia",
+      "pergunta": "[Aula 8 — AI Act: As Duas Vias do Risco Elevado e Componentes de Segurança] Como funciona a qualificação de um sistema de IA como de 'Risco Elevado' nos termos do artigo 6.º do Regulamento da Inteligência Artificial?",
+      "opcoes": [
+        "Existe uma primeira via (art. 6.º, n.º 1): sistemas de IA que sejam produtos, ou componentes de segurança de produtos, abrangidos pela legislação de harmonização da União listada no Anexo I (ex.: dispositivos médicos, aviação, automóveis) e que estejam sujeitos a avaliação de conformidade por terceiros.",
+        "As alterações de 2026 clarificam que funções exclusivamente de conveniência ou otimização, sem qualquer relação com a segurança e cuja falha não ponha em perigo a saúde ou segurança, não bastam para qualificar o sistema como componente de segurança de alto risco.",
+        "Existe uma segunda via (art. 6.º, n.º 2): sistemas de IA destinados às utilizações enumeradas no Anexo III (como certos usos em biometria, infraestruturas críticas, educação, emprego/recrutamento, acesso a serviços essenciais/crédito/seguros de vida e saúde, aplicação da lei, migração e justiça).",
+        "Se uma prática preencher os pressupostos de proibição do artigo 5.º, pode ainda assim ser livremente comercializada se o prestador a registar como sistema de Risco Elevado do Anexo III."
+      ],
+      "resposta_correta": [0, 1, 2],
+      "justificacao": "Conforme os diapositivos 27 a 30 da Aula 8 (art. 6.º e Anexos I e III do AI Act), o risco elevado opera pelas duas vias (Anexo I + avaliação por terceiros, ou Anexo III). Funções de mera conveniência não constituem componentes de segurança, e uma prática proibida pelo artigo 5.º mantém-se estritamente proibida mesmo que toque numa área temática do Anexo III."
+    },
+    {
+      "id": 36,
+      "dificuldade": "dificil",
+      "pergunta": "[Aula 8 — AI Act: Exceção do Art. 6.º, n.º 3, Profiling e Transformação em Prestador (Slido)] Uma empresa utiliza um sistema de IA integrado no Anexo III (recrutamento) que cria perfis individuais dos candidatos e os classifica segundo a sua adequação a uma vaga, mas garante que um recrutador humano revê sempre as classificações antes da decisão final. Paralelamente, uma consultora pega num sistema genérico já no mercado, adapta-o para avaliar candidatos e comercializa-o sob a sua própria marca. Qual é o enquadramento jurídico rigoroso de ambas as situações?",
+      "opcoes": [
+        "Na primeira situação, a presença de revisão humana retira automaticamente o sistema da categoria de risco elevado ao abrigo da exceção do artigo 6.º, n.º 3 do AI Act.",
+        "Na primeira situação, o sistema mantém-se obrigatoriamente como de Risco Elevado: por um lado, a mera presença de um revisor humano isoladamente não demonstra influência irrelevante e, por outro, o artigo 6.º, n.º 3 determina que um sistema do Anexo III que efetue definição de perfis (profiling) de pessoas singulares é sempre considerado de risco elevado.",
+        "Na segunda situação, ao colocar a sua própria marca num sistema ou ao atribuir-lhe uma nova finalidade que o transforma num sistema de risco elevado (ou realizar uma modificação substancial), a consultora deixa de ser mera utilizadora e assume legalmente as pesadas obrigações de Prestador (artigo 25.º, n.º 1 do AI Act).",
+        "Mesmo quando um sistema do Anexo III (que não faça profiling) preenche uma das tarefas preparatórias da exceção do artigo 6.º, n.º 3, o prestador tem o dever de documentar a avaliação antes da colocação no mercado e de cumprir o registo previsto no artigo 49.º, n.º 2."
+      ],
+      "resposta_correta": [1, 2, 3],
+      "justificacao": "Questão avançada dos diapositivos 11, 31, 32 e 36 (Slido) da Aula 8: 1) Sempre que haja definição de perfis (profiling) de pessoas singulares, a derrogação do artigo 6.º, n.º 3 está bloqueada — o sistema é sempre de risco elevado, não bastando a revisão por um recrutador humano. 2) Mesmo quando a exceção do n.º 3 é aplicável, exige documentação prévia e registo (art. 6.º, n.º 4 e art. 49.º, n.º 2). 3) Pelo artigo 25.º, n.º 1, colocar marca própria ou alterar a finalidade para alto risco converte o utilizador/distribuidor em Prestador."
+    },
+    {
+      "id": 37,
+      "dificuldade": "dificil",
+      "pergunta": "[Aula 8 — AI Act: Biometria 1:1 vs. 1:N e Condições Cumulativas em Tempo Real (Slido)] Confrontando as operações biométricas no Regulamento de IA (verificação 1:1, categorização e identificação 1:N) e o regime da identificação biométrica à distância em tempo real em espaços acessíveis ao público para aplicação da lei, assinale a(s) opção(ões) correta(s):",
+      "opcoes": [
+        "O sistema que apenas compara o rosto apresentado com o padrão biométrico da identidade reivindicada para desbloquear um dispositivo (comparação 1:1) realiza verificação/autenticação biométrica, ficando excluído do risco elevado do Anexo III (risco mínimo, mantendo-se as obrigações do RGPD).",
+        "Quando uma autoridade policial pretende usar identificação biométrica à distância (1:N), em tempo real e numa praça pública para procurar uma pessoa desaparecida, a simples invocação dessa finalidade legítima basta, por si só, para autorizar imediatamente o uso.",
+        "A finalidade de procurar uma pessoa desaparecida não basta isoladamente: a exceção à proibição do artigo 5.º, n.º 1, al. h) exige cumulativamente lei nacional que a autorize, avaliação de impacto em direitos fundamentais, registo, limites temporais/geográficos/pessoais e autorização prévia de autoridade judicial ou administrativa independente com decisão vinculativa (salvo urgência devidamente justificada).",
+        "Mesmo quando a identificação biométrica à distância em tempo real é validamente autorizada, nenhuma decisão que produza efeitos jurídicos desfavoráveis sobre uma pessoa pode ser tomada com base apenas no resultado desse sistema de identificação."
+      ],
+      "resposta_correta": [0, 2, 3],
+      "justificacao": "Conforme os diapositivos 21, 23, 24, 26 e 34 (Slido) da Aula 8: a verificação 1:1 ('É quem afirma ser?') está excluída do Anexo III, ponto 1, al. a). Já a identificação 1:N à distância em tempo real em espaços públicos para aplicação da lei é proibida (art. 5.º, n.º 1, al. h), e as suas exceções estritas exigem lei nacional, AIPD, registo, autorização judicial/administrativa vinculativa e proibição de decisão desfavorável assente apenas no resultado do sistema (art. 5.º, n.ºs 2 a 5)."
+    },
+    {
+      "id": 38,
+      "dificuldade": "dificil",
+      "pergunta": "[Aula 5 e 8 — Cruzamento RGPD, Data Act e AI Act: Decisões Automatizadas e Modelos (Slido)] Analise a articulação entre o RGPD (arts. 4.º, 9.º e 22.º), o parecer 28/2024 do CEPD sobre Modelos de IA e o Data Act (Regulamento UE 2023/2854), e assinale a(s) opção(ões) correta(s):",
+      "opcoes": [
+        "Se uma empresa utiliza dados de compras para prever interesses dos clientes (definição de perfis), mas um trabalhador analisa efetivamente essas sugestões antes de decidir que propostas apresentar (sem produzir efeitos jurídicos ou similares exclusivamente automatizados), existe tratamento de dados e definição de perfis sujeitos ao RGPD, mas não se preenche automaticamente a proibição de decisão exclusivamente automatizada do artigo 22.º, n.º 1 do RGPD.",
+        "Um modelo de Inteligência Artificial treinado com dados pessoais não é automaticamente considerado anónimo: segundo o Parecer 28/2024 do CEPD, se for razoavelmente possível reidentificar titulares ou extrair/reconstruir dados pessoais de treino por engenharia inversa ou consultas, o próprio modelo continua sujeito ao RGPD.",
+        "No âmbito do artigo 9.º, n.º 2, al. e) do RGPD, uma empresa pode recolher por scraping e tratar livremente dados sensíveis (ex.: opiniões políticas ou estado de saúde) desde que essa informação tenha sido publicada online por um terceiro (como um jornal ou um amigo do titular numa rede social).",
+        "No artigo 2.º, n.º 12 do AI Act, os sistemas de IA lançados sob licenças gratuitas e de código aberto (open source) ficam excluídos do regulamento, A MENOS que sejam colocados no mercado ou em serviço como sistemas de risco elevado ou que sejam abrangidos pelos artigos 5.º (práticas proibidas) ou 50.º (obrigações específicas de transparência)."
+      ],
+      "resposta_correta": [0, 1, 3],
+      "justificacao": "Cruzamento avançado da Aula 5 (diapositivos 9, 13 e Slido 30) e Aula 8 (diapositivo 13): 1) Definição de perfis (art. 4.º, n.º 4) e decisão exclusivamente automatizada (art. 22.º) são conceitos distintos; 2) Modelos de IA vulneráveis a extração/reidentificação de dados de treino continuam sob o RGPD (CEPD, Parecer 28/2024); 3) A exceção do art. 9.º, n.º 2, al. e) do RGPD só vale se os dados sensíveis tiverem sido manifestamente tornados públicos pelo PRÓPRIO titular (nunca por terceiros); 4) A isenção de open source no AI Act cessa perante sistemas de risco elevado, proibições do art. 5.º ou deveres de transparência do art. 50.º."
+    },
+    {
+      "id": 39,
+      "dificuldade": "dificil",
+      "pergunta": "[Aula 4 e 5 — RGPD: Subcontratação, Registo do Art. 30.º, AIPD e Indemnização Civil] Relativamente às obrigações de responsabilidade (accountability), subcontratação (art. 28.º), registo de atividades (art. 30.º), avaliação de impacto (arts. 35.º-36.º) e indemnização civil (art. 82.º e Acórdão TJUE C-300/21), assinale a(s) opção(ões) correta(s):",
+      "opcoes": [
+        "A derrogação do artigo 30.º, n.º 5 do RGPD para empresas com menos de 250 trabalhadores não é uma dispensa absoluta: uma PME com menos de 250 trabalhadores é obrigada a manter registo das atividades de tratamento sempre que o tratamento não seja ocasional (ex.: gestão regular de clientes ou salários), seja suscetível de implicar risco ou abranja categorias especiais ou dados penais.",
+        "Se um subcontratante violar o RGPD ao determinar de forma independente as finalidades e os meios de um tratamento (inversão de papel), passa a ser considerado juridicamente Responsável pelo Tratamento no que respeita a essa operação (art. 28.º, n.º 10); além disso, não pode contratar outro subcontratante sem autorização escrita (específica ou geral) do responsável.",
+        "Se, após realizar uma Avaliação de Impacto sobre a Proteção de Dados (AIPD), subsistir um risco residual elevado que o responsável não consiga atenuar com medidas técnicas e organizativas, este é obrigado a realizar uma Consulta Prévia à CNPD antes de iniciar o tratamento (art. 36.º).",
+        "Segundo a jurisprudência do TJUE (Acórdão C-300/21), a simples infração a uma norma do RGPD confere automaticamente direito a indemnização civil ao titular, mesmo sem qualquer dano sofrido, mas exige que o dano imaterial ultrapasse um limiar mínimo de gravidade extrema."
+      ],
+      "resposta_correta": [0, 1, 2],
+      "justificacao": "Questão difícil da Aula 4 (diapositivos 26, 27, 28 e 32): 1) Abaixo de 250 trabalhadores o registo continua obrigatório se o tratamento não for ocasional; 2) O subcontratante que define finalidades/meios torna-se responsável (art. 28.º, n.º 10); 3) Risco residual elevado após AIPD obriga a consulta prévia à CNPD (art. 36.º); 4) A alínea D inverte as duas regras do Acórdão TJUE C-300/21 (art. 82.º): a mera infração NÃO basta (exige violação + dano + nexo causal), e o dano imaterial NÃO depende de um limiar mínimo de gravidade."
+    },
+    {
+      "id": 40,
+      "dificuldade": "dificil",
+      "pergunta": "[Aula 6 e 7 — Casos Práticos 'Inês/TecnoMais' e 'StreamLab Pro': Canais Mistos e Pagamentos] Confrontando os casos práticos resolvidos nas Aulas 6 e 7 sobre canais mistos de contratação (DL n.º 24/2014), livre resolução vs. incumprimento (arts. 12.º e 19.º) e falhas de checkout/pagamento (DL n.º 91/2018), assinale a(s) afirmação(ões) correta(s):",
+      "opcoes": [
+        "Quando o consumidor pede a devolução do dinheiro porque o bem comprado online com recolha em loja está esgotado, o fundamento jurídico é o incumprimento por indisponibilidade (art. 19.º do DL n.º 24/2014, com prazo de reembolso de 30 dias a contar do conhecimento da indisponibilidade), distinguindo-se do exercício do direito de livre resolução por arrependimento (art. 12.º, cujo prazo de reembolso é de 14 dias).",
+        "Se um consumidor fizer apenas uma reserva online de um produto sem qualquer compromisso vinculativo e, mais tarde, se deslocar à loja física onde decide comprar, celebra o contrato e paga presencialmente, esse contrato não é qualificado como contrato celebrado à distância.",
+        "Se uma máquina de venda automática presencial (vending machine) não fornecer o produto devido a avaria e não restituir imediatamente o dinheiro, o fornecedor deve restituir o valor no prazo máximo de 5 dias úteis após a comunicação, respondendo solidariamente o proprietário da máquina e o titular do espaço.",
+        "Na livre resolução de serviços ou conteúdos digitais não fornecidos em suporte material (art. 17.º, n.º 1, al. l do DL n.º 24/2014), basta a aceitação genérica dos termos e condições gerais para o consumidor perder automaticamente o direito de livre resolução de 14 dias."
+      ],
+      "resposta_correta": [0, 1, 2],
+      "justificacao": "Síntese rigorosa dos casos práticos da Aula 6 (diapositivo 16) e Aula 7 (diapositivos 23, 28, 29, 31 e 32): 1) Distinção crucial entre reembolso por indisponibilidade (30 dias, art. 19.º) e por livre resolução (14 dias, art. 12.º); 2) Reserva online não vinculativa seguida de compra na loja é contrato presencial; 3) Avaria em máquina automática obriga a restituição em 5 dias úteis com responsabilidade solidária; 4) A perda do direito de livre resolução em conteúdos digitais exige consentimento prévio expresso, reconhecimento específico da perda do direito e confirmação em suporte duradouro (não bastando um 'aceito os termos' genérico)."
+    },
+    {
+      "id": 41,
+      "dificuldade": "intermedia",
+      "pergunta": "[Aula 2 — Bases de Dados: Criação vs. Obtenção de Dados] Segundo o regime do Direito Sui Generis sobre bases de dados (art. 12.º do DL n.º 122/2000 e jurisprudência British Horseracing Board do TJUE), como são avaliados os recursos aplicados pelo fabricante?",
+      "opcoes": [
+        "O investimento substancial protegido pelo direito sui generis incide sobre os recursos aplicados na obtenção de elementos existentes, na sua verificação ou na sua apresentação.",
+        "Os recursos utilizados apenas para criar ou gerar os próprios dados novos confundem-se sempre com o investimento na sua obtenção, garantindo proteção automática pelo direito sui generis.",
+        "Para facilitar a prova do investimento substancial em tribunal, a empresa deve documentar os custos e processos de recolha, validação, atualização e arquitetura da base de dados.",
+        "O direito sui generis protege apenas a originalidade estética do logótipo da base de dados."
+      ],
+      "resposta_correta": [0, 2],
+      "justificacao": "Conforme o diapositivo 17 da Aula 2 e o Acórdão British Horseracing Board (C-203/02), o investimento relevante para o direito sui generis é o realizado na obtenção, verificação ou apresentação dos conteúdos já existentes, não se confundindo com os recursos despendidos na mera criação de dados novos."
+    },
+    {
+      "id": 42,
+      "dificuldade": "facil",
+      "pergunta": "[Aula 3 — Patentes: Obrigatoriedade de Exploração] Nos termos do artigo 107.º do Código da Propriedade Industrial, que dever recai sobre o titular de uma patente quanto à exploração da invenção?",
+      "opcoes": [
+        "O titular é obrigado a explorar a invenção patenteada e a comercializar os resultados para satisfazer as necessidades do mercado nacional.",
+        "A exploração deve ter início no prazo de 4 anos a contar da data do pedido de patente, ou no prazo de 3 anos a contar da data da concessão, aplicando-se o prazo mais longo.",
+        "O titular da patente pode manter a invenção inativa durante os 20 anos sem que ninguém possa requerer uma licença obrigatória.",
+        "A exploração deve iniciar-se obrigatoriamente no prazo máximo de 6 meses após o pedido, aplicando-se o prazo mais curto."
+      ],
+      "resposta_correta": [0, 1],
+      "justificacao": "De acordo com o diapositivo 37 da Aula 3 (art. 107.º do CPI), o titular tem o dever de explorar a invenção no prazo de 4 anos a contar do pedido ou 3 anos a contar da concessão, aplicando-se o prazo mais longo."
+    },
+    {
+      "id": 43,
+      "dificuldade": "intermedia",
+      "pergunta": "[Aula 3 — Patentes: Limitações Biomédicas e Titularidade Laboral] Sobre as limitações quanto à patente (art. 52.º CPI) e as regras de titularidade da invenção (arts. 57.º e 58.º CPI), assinale a(s) opção(ões) correta(s):",
+      "opcoes": [
+        "Não podem ser objeto de patente os processos de clonagem de seres humanos, as utilizações de embriões humanos para fins industriais ou comerciais, nem o corpo humano nos vários estádios da sua constituição.",
+        "Os métodos de tratamento cirúrgico ou terapêutico e os métodos de diagnóstico aplicados ao corpo humano ou animal não são patenteáveis, mas podem ser patenteados os produtos, substâncias ou composições utilizados em qualquer desses métodos.",
+        "Se a invenção for feita durante a execução de um contrato de trabalho em que a atividade inventiva esteja prevista, o direito à patente pertence à respetiva empresa.",
+        "Se forem dois ou mais os autores da invenção, nenhum deles pode requerer a patente em benefício de todos."
+      ],
+      "resposta_correta": [0, 1, 2],
+      "justificacao": "Conforme os diapositivos 31, 32 e 33 da Aula 3 (arts. 52.º, 57.º e 58.º do CPI), excluem-se métodos cirúrgicos, terapêuticos e de diagnóstico no corpo humano/animal (mas admitem-se patentes sobre as substâncias/produtos neles usados). Havendo vários inventores, qualquer um pode requerer em benefício de todos; se a atividade inventiva estiver prevista no contrato de trabalho, o direito pertence à empresa."
+    },
+    {
+      "id": 44,
+      "dificuldade": "facil",
+      "pergunta": "[Aula 4 — RGPD: Direito de Acesso, Limitação e Oposição] Relativamente ao exercício dos direitos de acesso (art. 15.º), limitação do tratamento (art. 18.º) e oposição (art. 21.º) no RGPD, selecione a(s) opção(ões) correta(s):",
+      "opcoes": [
+        "No exercício do direito de acesso, a primeira cópia dos dados pessoais objeto de tratamento deve ser fornecida gratuitamente, podendo o responsável cobrar uma taxa razoável baseada nos custos administrativos apenas por cópias adicionais solicitadas pelo titular.",
+        "O titular pode exigir a limitação do tratamento (suspensão de utilizações para além da conservação) quando contesta a exatidão dos dados, quando o tratamento é ilícito e prefere a limitação ao apagamento, ou quando o responsável já não precisa dos dados mas o titular os requer para um processo judicial.",
+        "No direito de oposição ao tratamento para efeitos de marketing direto (incluindo definição de perfis associada), a oposição do titular é absoluta: o tratamento para esse fim tem de cessar imediatamente sem que o responsável possa invocar interesses legítimos prevalecentes.",
+        "O direito de oposição aplica-se apenas a tratamentos baseados num contrato assinado pelo titular."
+      ],
+      "resposta_correta": [0, 1, 2],
+      "justificacao": "Pelos diapositivos 18, 20 e 22 da Aula 4 (arts. 15.º, 18.º e 21.º do RGPD), a 1.ª cópia é gratuita; a limitação suspende o uso mantendo a conservação; e a oposição ao marketing direto obriga a cessar imediatamente o tratamento sem ponderação de interesses (ao contrário da oposição por situação particular no art. 21.º, n.º 1, que incide sobre interesse público ou interesse legítimo)."
+    },
+    {
+      "id": 45,
+      "dificuldade": "facil",
+      "pergunta": "[Aula 4 — RGPD: Proteção desde a Conceção e por Defeito] O que exigem os princípios da proteção de dados desde a conceção (privacy by design) e da proteção de dados por defeito (privacy by default) previstos no artigo 25.º do RGPD?",
+      "opcoes": [
+        "A proteção desde a conceção exige integrar medidas técnicas e organizativas adequadas (como a pseudonimização e a minimização) tanto no momento de definição dos meios de tratamento como durante o próprio tratamento.",
+        "A proteção por defeito exige que as configurações iniciais de uma aplicação ou sistema garantam que, por defeito, só sejam tratados os dados estritamente necessários para cada finalidade específica (ex.: localização dispensável começar desativada).",
+        "A proteção por defeito garante que, sem intervenção humana do titular, os dados pessoais não sejam disponibilizados por defeito a um número indeterminado de pessoas singulares.",
+        "A proteção por defeito permite que uma aplicação recolha e partilhe publicamente todos os dados possíveis no momento da instalação, cabendo ao utilizador procurar os menus de configuração para desativar essas partilhas."
+      ],
+      "resposta_correta": [0, 1, 2],
+      "justificacao": "Segundo o diapositivo 25 da Aula 4 (art. 25.º, n.ºs 1 e 2 do RGPD), as configurações iniciais (por defeito) têm de refletir a minimização dos dados, trazendo funcionalidades dispensáveis desativadas à partida e impedindo a divulgação automática a um número indeterminado de pessoas."
+    },
+    {
+      "id": 46,
+      "dificuldade": "intermedia",
+      "pergunta": "[Aula 4 — RGPD: Transferências Internacionais de Dados] Relativamente às transferências de dados pessoais para países terceiros ou organizações internacionais (Capítulo V, arts. 44.º a 49.º do RGPD), assinale a(s) afirmação(ões) correta(s):",
+      "opcoes": [
+        "A transferência internacional pode apoiar-se numa decisão de adequação da Comissão Europeia (art. 45.º) ou, na sua falta, em garantias adequadas como cláusulas contratuais-tipo ou regras vinculativas aplicáveis às empresas (arts. 46.º e 47.º).",
+        "O acesso remoto a dados pessoais por parte de uma entidade situada num país terceiro pode constituir uma transferência internacional de dados sujeita ao Capítulo V do RGPD, mesmo quando o servidor onde os dados estão alojados se situa fisicamente na União Europeia.",
+        "As derrogações para situações específicas (art. 49.º) têm condições estritas e não constituem uma autorização geral e irrestrita para transferir dados de forma massiva e repetitiva.",
+        "Desde que a base de dados principal esteja num servidor em Portugal, qualquer empresa norte-americana ou asiática pode aceder remotamente aos dados pessoais sem aplicar o Capítulo V do RGPD."
+      ],
+      "resposta_correta": [0, 1, 2],
+      "justificacao": "Conforme o diapositivo 31 da Aula 4 (arts. 44.º a 49.º do RGPD), a proteção do RGPD acompanha os dados: o simples acesso remoto a partir de um país terceiro configura uma transferência internacional, mesmo que o servidor esteja na UE."
+    },
+    {
+      "id": 47,
+      "dificuldade": "intermedia",
+      "pergunta": "[Aula 5 — Data Act: Acesso do Setor Público por Necessidade Excecional] Em que condições podem os organismos do setor público ou instituições da União exigir que uma empresa detentora de dados lhes disponibilize dados ao abrigo do Capítulo V do Data Act (arts. 14.º a 19.º)?",
+      "opcoes": [
+        "Apenas quando demonstrem uma necessidade excecional limitada no tempo e no âmbito, nomeadamente para dar resposta a uma emergência pública ou, tratando-se apenas de dados não pessoais, para cumprir uma função específica de interesse público prevista por lei quando tenham esgotado outros meios.",
+        "O pedido do organismo público tem de ser específico, justificado e proporcional, devendo dar preferência a dados não pessoais (e, quando estritamente necessários dados pessoais em emergência pública, aplicar anonimização ou pseudonimização).",
+        "O Capítulo V do Data Act confere a qualquer câmara municipal ou serviço público um direito geral e permanente de acesso livre a todas as bases de dados comerciais das empresas privadas para fins de fiscalização tributária ou penal.",
+        "Os organismos públicos que recebam dados por necessidade excecional não podem utilizá-los para desenvolver um produto ou serviço que concorra com o do detentor dos dados, devendo apagá-los assim que deixem de ser necessários."
+      ],
+      "resposta_correta": [0, 1, 3],
+      "justificacao": "De acordo com o diapositivo 22 da Aula 5 (arts. 14.º a 19.º do Data Act), o acesso B2G (Business-to-Government) restringe-se a necessidades excecionais comprovadas (emergência pública ou interesse público legalmente previsto para dados não pessoais), não constituindo um direito geral de acesso administrativo nem se aplicando a matéria penal ou fiscal (art. 16.º, n.º 2)."
+    },
+    {
+      "id": 48,
+      "dificuldade": "facil",
+      "pergunta": "[Aula 6 — Assinatura Digital e Criptografia Assimétrica] Como funciona tecnicamente a assinatura digital baseada em criptografia assimétrica e qual a sua relação com a classificação dos documentos em Portugal (eIDAS, DL n.º 12/2021 e Código Civil)?",
+      "opcoes": [
+        "A assinatura digital utiliza um par de chaves assimétricas relacionadas: a chave privada (mantida sob controlo exclusivo do signatário) permite criar a assinatura, e a chave pública permite verificá-la.",
+        "A assinatura eletrónica avançada tem de estar associada de modo único ao signatário, permitir identificá-lo, ser criada com dados sob o seu controlo exclusivo com elevado nível de confiança e estar ligada aos dados de modo que qualquer alteração posterior seja detetável (art. 26.º eIDAS).",
+        "Um documento particular com conteúdo representável como declaração escrita ao qual seja aposta uma assinatura eletrónica qualificada tem a força probatória de documento particular assinado (art. 376.º CC), criando presunção de autoria, intenção de assinar e integridade.",
+        "Na assinatura digital assimétrica, o signatário publica na internet a sua chave privada para que qualquer pessoa possa criar assinaturas em seu nome."
+      ],
+      "resposta_correta": [0, 1, 2],
+      "justificacao": "Conforme os diapositivos 18, 20, 21 e 22 da Aula 6 (arts. 25.º e 26.º eIDAS e art. 3.º DL 12/2021), a chave privada cria a assinatura e nunca é divulgada, enquanto a chave pública permite a sua verificação."
+    },
+    {
+      "id": 49,
+      "dificuldade": "intermedia",
+      "pergunta": "[Aula 6 — Contratação Automatizada: Erro Detetável] Numa loja online cujo preço é gerido de forma totalmente automatizada por computador, um erro informático coloca à venda um computador topo de gama por 1,00 €. Um comprador apercebe-se do erro manifesto e compra imediatamente 50 unidades. À luz do artigo 33.º, n.º 3 do Decreto-Lei n.º 7/2004, pode o comprador impedir a impugnação do contrato por erro?",
+      "opcoes": [
+        "Não: na contratação sem intervenção humana, a outra parte não pode opor-se à impugnação por erro sempre que lhe fosse exigível que dele se apercebesse, nomeadamente pelo uso de dispositivos de deteção de erros ou pela evidência da falha.",
+        "Sim: como o computador emitiu um aviso automático de receção da encomenda, o contrato é irrevogável mesmo que o erro fosse evidente.",
+        "À contratação celebrada exclusivamente por meio de computadores, sem intervenção humana, aplica-se o regime comum dos contratos, salvo quando este pressupuser justamente uma atuação humana (art. 33.º, n.º 1).",
+        "Os contratos celebrados através de APIs ou agentes automáticos são nulos em Portugal por falta de intervenção humana."
+      ],
+      "resposta_correta": [0, 2],
+      "justificacao": "Segundo os diapositivos 25 e 26 da Aula 6 (art. 33.º, n.ºs 1 e 3 do DL n.º 7/2004), a contratação automatizada é válida e rege-se pelo regime comum, mas a contraparte não pode opor-se à anulação/impugnação por erro quando lhe era exigível aperceber-se dele."
+    },
+    {
+      "id": 50,
+      "dificuldade": "intermedia",
+      "pergunta": "[Aula 7 — DL n.º 24/2014 e DSA: Omissão do Dever de Informar sobre a Livre Resolução e Regra KYBC] O que sucede se uma loja online não informar o consumidor, antes da celebração do contrato à distância, sobre a existência do direito de livre resolução? E que obrigação específica impõe o DSA aos marketplaces?",
+      "opcoes": [
+        "Se o fornecedor não cumprir o dever de informação pré-contratual sobre o direito de livre resolução, o prazo para o consumidor resolver livremente o contrato alarga-se de 14 dias para 12 meses (a contar do termo do prazo inicial de 14 dias — art. 10.º, n.º 2 DL n.º 24/2014).",
+        "Em caso de exercício tempestivo do direito de livre resolução, o fornecedor deve reembolsar todos os pagamentos recebidos (incluindo os custos padrão de entrega) no prazo de 14 dias através do mesmo meio de pagamento, sob pena de devolução em dobro em 15 dias úteis (art. 12.º, n.ºs 1, 2 e 6).",
+        "Ao abrigo do Regulamento dos Serviços Digitais (DSA) e da Lei n.º 12-A/2026, os mercados em linha (marketplaces) estão sujeitos à obrigação de rastreabilidade dos comerciantes profissionais (regra KYBC — Know Your Business Customer) e à proibição de interfaces enganosas (dark patterns).",
+        "A omissão de informação sobre o direito de livre resolução extingue o direito do consumidor a devolver o bem."
+      ],
+      "resposta_correta": [0, 1, 2],
+      "justificacao": "Conforme os diapositivos 12 e 26 da Aula 7 (arts. 10.º, n.º 2 e 12.º do DL n.º 24/2014 e DSA), a falta de informação sobre a livre resolução estende o prazo para 12 meses, o atraso no reembolso de 14 dias obriga a devolver em dobro, e os marketplaces têm o dever de rastreabilidade dos comerciantes (KYBC)."
+    },
+    {
+      "id": 51,
+      "dificuldade": "intermedia",
+      "pergunta": "[Aula 8 — AI Act: Técnicas Subliminares, Categorização Biométrica Sensível e Obrigações de Transparência] Relativamente às proibições do artigo 5.º e às obrigações específicas de transparência do artigo 50.º do Regulamento da Inteligência Artificial, assinale a(s) opção(ões) correta(s):",
+      "opcoes": [
+        "É proibida pelo artigo 5.º, n.º 1, al. a) a utilização de sistemas de IA que empreguem técnicas subliminares que contornem a consciência de uma pessoa, ou técnicas manifestamente manipuladoras ou enganadoras, que distorçam materialmente o comportamento e causem ou possam razoavelmente causar dano significativo.",
+        "É proibida pelo artigo 5.º, n.º 1, al. g) a categorização biométrica que classifique individualmente pessoas singulares com base nos seus dados biométricos para deduzir ou inferir a sua raça, opiniões políticas, filiação sindical, convicções religiosas ou filosóficas, vida sexual ou orientação sexual (com a ressalva legal da rotulagem/filtragem lícita no âmbito da aplicação da lei).",
+        "Nos sistemas abrangidos pelo artigo 50.º do AI Act (risco específico de transparência), aplicam-se deveres próprios de transparência, tais como informar a pessoa singular de que está a interagir com um sistema de IA (ex.: chatbot) e rotular conteúdos sintéticos de áudio, imagem, vídeo ou texto gerados ou manipulados por IA (deepfakes).",
+        "Se um sistema de IA empregar técnicas subliminares enganosas que causem danos financeiros graves aos utilizadores, passa a ser permitido desde que o prestador afixe um aviso nos termos e condições."
+      ],
+      "resposta_correta": [0, 1, 2],
+      "justificacao": "Segundo os diapositivos 15, 16, 17, 21 e 22 da Aula 8 (arts. 5.º, n.º 1, als. a) e g), e 50.º do AI Act), técnicas subliminares/manipuladoras danosas e categorização biométrica de atributos sensíveis são estritamente proibidas (não sendo sanadas por avisos nem consentimento), enquanto chatbots e geração de conteúdos sintéticos obedecem aos deveres de transparência do artigo 50.º."
+    },
+    {
+      "id": 52,
+      "dificuldade": "dificil",
+      "pergunta": "[Aula 8 — AI Act: Cadeia de Valor, Fabricante do Produto, GPAI e Alteração Substancial (Slido)] Uma empresa tecnológica desenvolve um modelo de IA de finalidade geral capaz de traduzir, resumir e responder a perguntas. Outra empresa integra-o numa aplicação que recomenda decisões de crédito a bancos. Paralelamente, um fabricante de automóveis integra um sistema de condução autónoma de um terceiro nos veículos que comercializa sob a sua própria marca. À luz do Regulamento de IA, assinale a(s) afirmação(ões) correta(s):",
+      "opcoes": [
+        "O modelo de IA de finalidade geral (Capítulo V) e o sistema de IA têm pressupostos próprios: o que determina se a aplicação financeira que integra o modelo é um sistema de 'Risco Elevado' é a finalidade prevista e o enquadramento concreto dessa aplicação no artigo 6.º e no Anexo III (avaliação de solvabilidade/pontuação de crédito de pessoas singulares), e não o simples facto de usar um modelo de finalidade geral.",
+        "Quando um fabricante de um produto físico abrangido pela legislação de harmonização do Anexo I coloca no mercado esse produto com um sistema de IA integrado sob o seu próprio nome ou marca, esse fabricante pode assumir legalmente as obrigações de Prestador desse sistema de IA (art. 25.º).",
+        "Ocorre uma 'modificação substancial' (art. 3.º, ponto 23) quando um sistema de IA sofre uma alteração após a colocação no mercado ou em serviço que não foi prevista ou planeada pelo prestador na avaliação de conformidade inicial e que afeta a conformidade do sistema com os requisitos de risco elevado ou altera a finalidade prevista.",
+        "Se um modelo de IA de finalidade geral for versátil e puder executar muitas tarefas distintas, é automaticamente proibido pelo artigo 5.º do Regulamento de IA."
+      ],
+      "resposta_correta": [0, 1, 2],
+      "justificacao": "Questão avançada que resolve o Slido da página 23 e os diapositivos 7, 8, 10 e 11 da Aula 8: 1) Um modelo GPAI pode servir múltiplos usos; o que dita se a aplicação final é de Risco Elevado é a finalidade concreta do sistema à luz do artigo 6.º e Anexo III (como recomendar decisões de crédito); 2) O fabricante do produto que integra IA sob sua marca assume obrigações de Prestador; 3) Modificações não previstas na avaliação inicial que afetem a conformidade ou a finalidade constituem alteração substancial."
     }
   ],
   "desenvolvimento": [
     {
       "id": 1,
-      "pergunta": "CASO PRÁTICO (Questão 1 — Software, Patentes e Bases de Dados): Um trabalhador da AgroSmart criou um software no exercício das suas funções. A concorrente BetaTech consultou os manuais, reescreveu as mesmas funcionalidades com código próprio, mas executou um método técnico patenteado pela AgroSmart e extraiu diariamente partes não substanciais da base de dados da AgroSmart causando prejuízo. Avalie a titularidade do software e a licitude das três condutas da BetaTech.",
+      "pergunta": "CASO PRÁTICO BI (Questão 1 — Software, Bases de Dados e Acórdãos TJUE): Uma concorrente de outro Estado-Membro estudou o manual do software analítico da DataPulse BI (sem aceder ao código-fonte) e escreveu código próprio com as mesmas funcionalidades. Paralelamente, extrai diariamente por script partes não substanciais da base de dados pública da DataPulse BI (que exigiu elevado investimento), desviando tráfego. A DataPulse BI pode impedir judicialmente em Portugal a reescrita das funcionalidades E a extração diária da base de dados? (Responda Sim/Não a cada uma, justifique com a lei/TJUE e indique uma medida preventiva em BI).",
       "palavras_chave": [
-        "empregador",
-        "direitos patrimoniais",
-        "direitos morais",
+        "não",
+        "sim",
         "expressão",
         "funcionalidades",
-        "patente",
-        "método",
+        "SAS Institute",
         "sui generis",
         "investimento substancial",
-        "repetida e sistemática",
         "15 anos",
-        "20 anos"
+        "repetida e sistemática",
+        "TJUE"
       ]
     },
     {
       "id": 2,
-      "pergunta": "CASO PRÁTICO (Questão 2 — RGPD e Data Act): Em novembro de 2026, a AgroSmart condicionou o uso da app AgroCloud à aceitação obrigatória (com caixa pré-assinalada) de publicidade e de decisões automatizadas de crédito sem intervenção humana. Além disso, recusou o acesso gratuito do cliente aos dados do sensor IoT e recusou partilhá-los com uma empresa de manutenção e com um Gatekeeper, invocando o Direito Sui Generis. Analise a legalidade destas atuações.",
+      "pergunta": "CASO PRÁTICO BI (Questão 2 — RGPD, Inferências em BI e Data Act): A DataPulse BI obriga os clientes a aceitarem numa única caixa os termos do serviço e publicidade, usa Machine Learning para atribuir etiquetas de risco de crédito sem intervenção humana e recusa o acesso gratuito aos dados de sensores IoT (comprados em outubro de 2026) invocando segredo comercial genérico. O consentimento e a recusa são válidos? E se um cliente corrigir um dado no CRM, basta atualizar no CRM? (Responda Sim/Não e justifique).",
       "palavras_chave": [
+        "não",
         "consentimento",
         "livre",
-        "ato positivo",
+        "dado pessoal",
+        "exatidão",
         "decisões automatizadas",
         "intervenção humana",
         "12 de setembro de 2026",
         "conceção",
         "gratuito",
-        "controlador de acesso",
-        "sui generis",
-        "prevalece o RGPD"
+        "destinatários",
+        "analíticos"
       ]
     },
     {
       "id": 3,
-      "pergunta": "CASO PRÁTICO (Questão 3 — Contratação Eletrónica, Assinaturas e Faturação): Devido a um defeito da máquina, um sensor de 1.000 € surgiu a 10 € no site da AgroSmart. O consumidor clicou num botão que dizia apenas 'Continuar', recebeu um aviso automático de receção, um contrato PDF com assinatura eletrónica avançada e uma fatura eletrónica não aceite previamente. Qualifique o erro informático, a vinculação contratual do consumidor, o valor da assinatura face à Chave Móvel Digital e a validade da fatura.",
+      "pergunta": "CASO PRÁTICO BI (Questão 3 — Contratação Eletrónica, Dark Patterns e Click & Collect): Na subscrição do dashboard 'DataPulse Pro' para consumidores, o anúncio destaca '7 dias grátis' e o botão final diz apenas 'Começar' (estando o preço mensal num link no rodapé). Noutro equipamento comprado online com recolha em loja (Click & Collect), o bem esgotou e a empresa impôs um vale de compras alegando que a compra era presencial. O consumidor fica vinculado pelo botão 'Começar' e é obrigado a aceitar o vale? (Responda Sim/Não e justifique).",
       "palavras_chave": [
-        "erro na declaração",
-        "erro na formação da vontade",
-        "erro na transmissão",
-        "aviso de receção",
+        "não",
         "obrigação de pagar",
-        "assinatura eletrónica avançada",
-        "assinatura eletrónica qualificada",
-        "assinatura manuscrita",
-        "chave móvel digital",
-        "aceitação",
-        "5.º dia útil"
+        "vinculado",
+        "contrato à distância",
+        "indisponibilidade",
+        "reembolso",
+        "30 dias",
+        "dobro",
+        "suporte duradouro"
       ]
     },
     {
       "id": 4,
-      "pergunta": "CASO PRÁTICO (Questão 4 — Serviços de Pagamento e Autenticação Forte): Numa compra online de 1.000 €, o banco isentou a operação de Autenticação Forte do Cliente (SCA). O cliente negou ter autorizado a operação, mas o banco recusou o reembolso invocando que o registo informático prova a autorização e exigiu que o cliente suportasse os primeiros 50 € de perda. Avalie os argumentos do banco à luz do RJSPME.",
+      "pergunta": "CASO PRÁTICO BI (Questão 4 — Faturação Eletrónica, Assinaturas e Pagamentos SCA): Após o pagamento online, a DataPulse BI enviou apenas um comprovativo bancário (ou fatura PDF sem aceitação prévia do cliente). Devido a falha de rede e duplo clique, ocorreu um duplo débito num pagamento remoto sem identificação do beneficiário nem Autenticação Forte (SCA), recusando o banco o reembolso com base no mero registo informático. O comprovativo bancário substitui a fatura? E pode o banco recusar o reembolso ou exigir a franquia de 50 €? (Responda Sim/Não e justifique).",
       "palavras_chave": [
+        "não",
+        "fatura",
+        "5.º dia útil",
+        "aceitação",
         "autenticação forte",
-        "conhecimento",
-        "posse",
-        "inerência",
-        "registo informático",
+        "beneficiário",
         "ónus da prova",
-        "negligência grosseira",
+        "registo informático",
         "50 euros",
-        "risco",
-        "reembolso",
+        "estorno",
         "primeiro dia útil"
       ]
     }

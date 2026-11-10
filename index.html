@@ -95,12 +95,17 @@
                     </li>
                     <li>
                         <a href="#" onclick="abrirAulaDireta(5); return false;">
-                            <i class="ri-markdown-line"></i> Aula 05 — Contratação, IA e Crime
+                            <i class="ri-markdown-line"></i> Aula 05 — Proteção de Dados e Data Act
                         </a>
                     </li>
                     <li>
                         <a href="#" onclick="abrirAulaDireta(6); return false;">
-                            <i class="ri-markdown-line"></i> Aula 06 — Contratação Eletrónica
+                            <i class="ri-markdown-line"></i> Aula 06 — Contratação Eletrónica I
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="abrirAulaDireta(7); return false;">
+                            <i class="ri-markdown-line"></i> Aula 07 — Contratação Eletrónica II
                         </a>
                     </li>
                 </ul>
@@ -143,7 +148,7 @@
                         <div class="kpi-icon"><i class="ri-book-open-line"></i></div>
                         <div class="kpi-info">
                             <span class="kpi-label">Aulas</span>
-                            <strong class="kpi-value" id="kpi-aulas">6 Aulas</strong>
+                            <strong class="kpi-value" id="kpi-aulas">7 Aulas</strong>
                             <span class="kpi-sub">42h Contacto | 60h Autónomo</span>
                         </div>
                     </div>
@@ -192,7 +197,7 @@
                     </div>
                 </div>
 
-                <!-- Lista das 5 Aulas (Mapeadas para Aula01 a Aula05) -->
+                <!-- Lista das 7 Aulas (Mapeadas para Aula01 a Aula07) -->
                 <div class="moodle-block">
                     <div class="block-header">
                         <h2><i class="ri-folder-open-line"></i> Repositório de Aulas</h2>
@@ -265,7 +270,7 @@
                         <!-- Aula 05 -->
                         <article class="topic-item">
                             <div class="topic-info">
-                                <h3>Aula 05: Desafios Emergentes (Contratação Eletrónica, IA e Cibercrime)</h3>
+                                <h3>Aula 05: Proteção de Dados Pessoais (Continuação: RGPD e Data Act)</h3>
                                 <p>Ficheiros: <code>aulas/Aula05.md</code> e <code>aulas/Aula05.mp4</code></p>
                             </div>
                             <div class="topic-actions">
@@ -281,7 +286,7 @@
                         <!-- Aula 06 -->
                         <article class="topic-item">
                             <div class="topic-info">
-                                <h3>Aula 06: Contratação Eletrónica</h3>
+                                <h3>Aula 06: Contratação Eletrónica, Assinaturas, Faturação e Pagamentos</h3>
                                 <p>Ficheiros: <code>aulas/Aula06.md</code> e <code>aulas/Aula06.mp4</code></p>
                             </div>
                             <div class="topic-actions">
@@ -289,6 +294,22 @@
                                     <i class="ri-markdown-line"></i> Ler Resumo (.md)
                                 </button>
                                 <button class="btn-outline" onclick="abrirAulaDireta(6, 'video')">
+                                    <i class="ri-video-line"></i> Vídeo Aula
+                                </button>
+                            </div>
+                        </article>
+
+                        <!-- Aula 07 -->
+                        <article class="topic-item">
+                            <div class="topic-info">
+                                <h3>Aula 07: Contratação Eletrónica (Continuação: LCE, DSA, Consumo e Distribuição)</h3>
+                                <p>Ficheiros: <code>aulas/Aula07.md</code> e <code>aulas/Aula07.mp4</code></p>
+                            </div>
+                            <div class="topic-actions">
+                                <button class="btn-outline" onclick="abrirAulaDireta(7, 'md')">
+                                    <i class="ri-markdown-line"></i> Ler Resumo (.md)
+                                </button>
+                                <button class="btn-outline" onclick="abrirAulaDireta(7, 'video')">
                                     <i class="ri-video-line"></i> Vídeo Aula
                                 </button>
                             </div>
@@ -310,8 +331,9 @@
                                 <option value="2">Aula 02 — Propriedade Intelectual na Era Digital I</option>
                                 <option value="3">Aula 03 — Propriedade Intelectual na Era Digital II</option>
                                 <option value="4">Aula 04 — Proteção de Dados Pessoais (RGPD e CNPD)</option>
-                                <option value="5">Aula 05 — Contratação Eletrónica, IA e Cibercrime</option>
-                                <option value="6">Aula 06 — Contratação Eletrónica</option>
+                                <option value="5">Aula 05 — Proteção de Dados (Continuação) e Data Act</option>
+                                <option value="6">Aula 06 — Contratação Eletrónica, Assinaturas e Pagamentos</option>
+                                <option value="7">Aula 07 — Contratação Eletrónica (Continuação) e Distribuição</option>
                             </select>
                         </div>
 
@@ -381,7 +403,7 @@
                                     <i class="ri-check-double-line"></i> Submeter e Corrigir Prova
                                 </button>
                                 <button type="button" class="btn-secondary" onclick="reiniciarTesteEM()">
-                                    <i class="ri-refresh-line"></i> Limpar Tentativa
+                                    <i class="ri-refresh-line"></i> Limpar Tentativa / Novo Sorteio
                                 </button>
                             </div>
                         </form>
